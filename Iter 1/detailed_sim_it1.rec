@@ -12,126 +12,25 @@ from job import *
 from sketch import *
 from visualization import *
 from connectorBehavior import *
-mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
-mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
-    'clientHost': 'Daniel-Gutierrez', 'handle': 0, 'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'THIS KEYWORD IS NOT AVAILABLE FOR THIS LICENSE', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'THIS KEYWORD IS NOT AVAILABLE FOR THIS LICENSE', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'NODE SET ASSEMBLY_SET-3 HAS NO MEMBERS AND WILL BE IGNORED.  NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED BECAUSE THEY WERE NOT CONNECTED TO ANY ELEMENTS.', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST PHILSM IS ONLY VALID WITH XFEM', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST PSILSM IS ONLY VALID WITH XFEM', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT VARIABLE CFAILURE HAS NO COMPONENTS IN THIS ANALYSIS FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT VARIABLE DMICRT HAS NO COMPONENTS IN THIS ANALYSIS FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST MMIXDME IS NOT AVAILABLE FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST MMIXDMI IS NOT AVAILABLE FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'NODE SET ASSEMBLY_SET-3 HAS NOT BEEN DEFINED', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'A CONCENTRATED LOAD HAS BEEN SPECIFIED ON NODE SET ASSEMBLY_SET-3.  THIS NODE SET IS NOT ACTIVE IN THE MODEL', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST CF HAS BEEN REMOVED AS THERE ARE NO APPLICABLE LOADS IN THIS STEP', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
-    'file': 'C:\\SIMULIA\\EstProducts\\2022\\win_b64\\resources\\install\\cmdDirFeature\\Job-1.odb', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ABORTED, {'phase': BATCHPRE_PHASE, 
-    'message': 'Analysis phase failed due to errors', 'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {
-    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-1.dat file for possible error messages if the file exists.', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(JOB_ABORTED, {
-    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-1.dat file for possible error messages if the file exists.', 
-    'jobName': 'Job-1'})
-mdb.models['Model-1'].rootAssembly.ReferencePoint(point=
-    mdb.models['Model-1'].rootAssembly.referencePoints[6])
-mdb.models['Model-1'].parts['Part-1'].ReferencePoint(point=
-    mdb.models['Model-1'].parts['Part-1'].InterestingPoint(
-    mdb.models['Model-1'].parts['Part-1'].edges[0], CENTER))
-mdb.models['Model-1'].rootAssembly.regenerate()
-mdb.models['Model-1'].rootAssembly.deleteFeatures(('RP-2', 'RP-1'))
+del mdb.jobs['Job-1']
 del mdb.models['Model-1'].rootAssembly.sets['Set-3']
+del mdb.models['Model-1'].loads['Load-1']
 mdb.models['Model-1'].rootAssembly.Set(name='Set-3', referencePoints=(
-    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].referencePoints[10], 
-    ))
-mdb.models['Model-1'].loads['Load-1'].setValues(distributionType=UNIFORM, 
-    field='', region=mdb.models['Model-1'].rootAssembly.sets['Set-3'])
+    mdb.models['Model-1'].rootAssembly.referencePoints[6], ))
+mdb.models['Model-1'].ConcentratedForce(cf2=-6.5, createStepName='Step-1', 
+    distributionType=UNIFORM, field='', localCsys=None, name='Load-3', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-3'])
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-1', nodalOutputPrecision=SINGLE, 
+    numCpus=8, numDomains=8, numGPUs=0, numThreadsPerMpiProcess=1, queue=None, 
+    resultsFormat=ODB, scratch='', type=ANALYSIS, userSubroutine='', waitHours=
+    0, waitMinutes=0)
 mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
-mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
-    'clientHost': 'Daniel-Gutierrez', 'handle': 0, 'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'THIS KEYWORD IS NOT AVAILABLE FOR THIS LICENSE', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'THIS KEYWORD IS NOT AVAILABLE FOR THIS LICENSE', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'NODE SET ASSEMBLY_PART-1-1_PART-1-REFPT_ HAS NO MEMBERS AND WILL BE IGNORED.  NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED BECAUSE THEY WERE NOT CONNECTED TO ANY ELEMENTS.', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'NODE SET ASSEMBLY_SET-3 HAS NO MEMBERS AND WILL BE IGNORED.  NODES DEFINED IN THIS SET MAY HAVE BEEN DELETED BECAUSE THEY WERE NOT CONNECTED TO ANY ELEMENTS.', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST PHILSM IS ONLY VALID WITH XFEM', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST PSILSM IS ONLY VALID WITH XFEM', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT VARIABLE CFAILURE HAS NO COMPONENTS IN THIS ANALYSIS FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT VARIABLE DMICRT HAS NO COMPONENTS IN THIS ANALYSIS FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST MMIXDME IS NOT AVAILABLE FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST MMIXDMI IS NOT AVAILABLE FOR ELEMENT TYPE C3D8R', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'NODE SET ASSEMBLY_SET-3 HAS NOT BEEN DEFINED', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ERROR, {'phase': BATCHPRE_PHASE, 
-    'message': 'A CONCENTRATED LOAD HAS BEEN SPECIFIED ON NODE SET ASSEMBLY_SET-3.  THIS NODE SET IS NOT ACTIVE IN THE MODEL', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
-    'message': 'OUTPUT REQUEST CF HAS BEEN REMOVED AS THERE ARE NO APPLICABLE LOADS IN THIS STEP', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
-    'file': 'C:\\SIMULIA\\EstProducts\\2022\\win_b64\\resources\\install\\cmdDirFeature\\Job-1.odb', 
-    'jobName': 'Job-1'})
-mdb.jobs['Job-1']._Message(ABORTED, {'phase': BATCHPRE_PHASE, 
-    'message': 'Analysis phase failed due to errors', 'jobName': 'Job-1'})
 mdb.jobs['Job-1']._Message(ERROR, {
-    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-1.dat file for possible error messages if the file exists.', 
-    'jobName': 'Job-1'})
+    'message': 'Error checking out Abaqus license.', 'jobName': 'Job-1'})
 mdb.jobs['Job-1']._Message(JOB_ABORTED, {
-    'message': 'Analysis Input File Processor exited with an error - Please see the  Job-1.dat file for possible error messages if the file exists.', 
-    'jobName': 'Job-1'})
-del mdb.models['Model-1'].rootAssembly.sets['Set-3']
+    'message': 'Error checking out Abaqus license.', 'jobName': 'Job-1'})

@@ -1,0 +1,20 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Job-1
+Abaqus 2022
+Licensed number of users already reached.
+Feature:       parallel_teaching
+License path:  27007@abaqusae.cc.ic.ac.uk;
+FlexNet Licensing error:-4,132
+For further information, refer to the FlexNet Licensing documentation,
+available at "www.flexerasoftware.com".
+Number of requested licenses: 8
+Number of total licenses:     4
+Number of licenses in use:    4
+Number of available licenses: 0
+
+This may be due to insufficient licenses.
+
+Traceback (most recent call last):
+Exception: can't parse host/port from umbrella
+Abaqus Error: Error checking out Abaqus license.
+Abaqus/Analysis exited with errors
