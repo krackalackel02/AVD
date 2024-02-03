@@ -1,0 +1,48 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].TopologyTask(name='Task-1', region=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].sets['Aluminum blank'])
+mdb.models['Model-1'].optimizationTasks['Task-1'].SingleTermDesignResponse(
+    drivingRegion=None, identifier='SIG_TOPO_MISES', name='D-Response-1', 
+    operation=MAXIMUM, region=MODEL, stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].SingleTermDesignResponse(
+    drivingRegion=None, identifier='WEIGHT', name='D-Response-2', operation=SUM
+    , region=MODEL, stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].OptimizationConstraint(
+    designResponse='D-Response-2', name='Opt-Constraint-1', restrictionMethod=
+    RELATIVE_LESS_THAN_EQUAL, restrictionValue=0.5)
+mdb.OptimizationProcess(dataSaveFrequency=OPT_DATASAVE_EVERY_CYCLE, 
+    description='', maxDesignCycle=40, model='Model-1', name='Opt-Process-1', 
+    odbMergeFrequency=2, prototypeJob='Opt-Process-1-Job', task='Task-1')
+mdb.optimizationProcesses['Opt-Process-1'].Job(atTime=None, 
+    getMemoryFromAnalysis=True, memory=90, memoryUnits=PERCENTAGE, model=
+    'Model-1', multiprocessingMode=DEFAULT, name='Opt-Process-1-Job', numCpus=1
+    , numGPUs=0, numThreadsPerMpiProcess=1, queue=None, waitHours=0, 
+    waitMinutes=0)
+mdb.optimizationProcesses['Opt-Process-1'].submit()
+#* ValueError: An Objective Function is required, but it has been
+#* suppressed or does not exist.
+#* 
+#* Create an Objective Function in the Optimization module.
+#* 
+#* 
+#* The optimization parameter file was not generated.
+#* ValueError: An Objective Function is required, but it has been
+#* suppressed or does not exist.
+#* 
+#* Create an Objective Function in the Optimization module.
+#* 
+#* 
+#* The optimization parameter file was not generated.

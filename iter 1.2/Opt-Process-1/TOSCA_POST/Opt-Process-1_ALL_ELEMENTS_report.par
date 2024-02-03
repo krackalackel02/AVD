@@ -1,0 +1,21 @@
+! Auto generated file by SIMULIA Tosca Structure Driver
+
+REPORT
+  ID_NAME = Opt-Process-1_ALL_ELEMENTS_report
+  CONTOURPLOT = TOPO_MAT_Opt-Process-1_ALL_ELEMENTS_report
+  DATABASE = opt_res_database
+  OUTPUT_FILE = TOSCA_POST\Opt-Process-1_ALL_ELEMENTS_report
+END_
+
+CONTOURPLOT
+  ID_NAME = TOPO_MAT_Opt-Process-1_ALL_ELEMENTS_report
+  TYPE_PROPERTY = ELEMENT_FILL_FILTER
+  TITLE = "Relative Material Distribution, soft elements filtered"
+  LEGEND_TITLE = "Relative Material Distribution"
+  DESCRIPTION = "Tosca Structure.topology Optimization Result. Job: Opt-Process-1 Group:ALL_ELEMENTS"
+  FRINGE_RESULT = MAT_PROP_NORMALIZED
+  FILTER = 0.05,1
+  ITERATION = ALL
+  GROUP = ALL_ELEMENTS
+END_
+
