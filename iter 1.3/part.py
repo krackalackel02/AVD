@@ -32,3 +32,4 @@ mdb.models[MODEL_NAME].parts[PART_NAME].BaseSolidExtrude(depth=6.3, sketch=
 
 # Possible Delete?
 del mdb.models[MODEL_NAME].sketches['__profile__']
+

@@ -2,6 +2,17 @@
 mdb.models[MODEL_NAME].rootAssembly.DatumCsysByDefault(CARTESIAN)
 mdb.models[MODEL_NAME].rootAssembly.Instance(dependent=OFF, name='Blank-1', 
     part=mdb.models[MODEL_NAME].parts[PART_NAME])
+mdb.models[MODEL_NAME].ConstrainedSketch(gridSpacing=28.4, name='_profile_', 
+    sheetSize=1136.05, transform=
+    mdb.models[MODEL_NAME].rootAssembly.MakeSketchTransform(
+    sketchPlane=mdb.models[MODEL_NAME].rootAssembly.instances['Blank-1'].faces[7], 
+    sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models[MODEL_NAME].rootAssembly.instances['Blank-1'].edges[0], 
+    sketchOrientation=RIGHT, origin=(260.193908, 114.272207, 6.3)))
+
+print("HERE")
+
+
 
 # Defining Refereance point
 mdb.models[MODEL_NAME].rootAssembly.ReferencePoint(point=(170.0, 118.6, 3.15))
@@ -68,3 +79,51 @@ mdb.models[MODEL_NAME].constraints['Loading Constraint'].setValues(controlPoint=
     mdb.models[MODEL_NAME].rootAssembly.sets['Loading point'])
 mdb.models[MODEL_NAME].constraints['Loading Constraint'].setValues(surface=
     mdb.models[MODEL_NAME].rootAssembly.sets['loading inner circle set'])
+
+#partition
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=28.4, name='_profile_', 
+    sheetSize=1136.05, transform=
+    mdb.models['Model-1'].rootAssembly.MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces[7], 
+    sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].edges[0], 
+    sketchOrientation=RIGHT, origin=(260.193908, 114.272207, 6.3)))
+mdb.models['Model-1'].rootAssembly.projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['_profile_'])
+mdb.models['Model-1'].sketches['_profile_'].CircleByCenterPerimeter(center=(
+    -229.806092, -4.327793), point1=(-205.9, -21.3))
+mdb.models['Model-1'].sketches['_profile_'].CircleByCenterPerimeter(center=(
+    90.193908, -4.327793), point1=(71.0, -28.4))
+mdb.models['Model-1'].sketches['_profile_'].CircleByCenterPerimeter(center=(
+    230.193908, -4.327793), point1=(213.0, -28.4))
+mdb.models['Model-1'].sketches['_profile_'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['_profile_'].geometry[9], radius=30.0, 
+    textPoint=(-205.057526326172, 43.1434533378906))
+mdb.models['Model-1'].sketches['_profile_'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['_profile_'].geometry[10], radius=30.0, 
+    textPoint=(21.3653252363281, 25.3408715507812))
+mdb.models['Model-1'].sketches['_profile_'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['_profile_'].geometry[11], radius=30.0, 
+    textPoint=(159.536772990234, 29.7915246269531))
+mdb.models['Model-1'].rootAssembly.PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces.getSequenceFromMask(
+    ('[#80 ]', ), ), sketch=mdb.models['Model-1'].sketches['_profile_'], 
+    sketchUpEdge=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].edges[0])
+# del mdb.models[MODEL_NAME].sketches['__profile__']
+
+
+print("THERE")
+current_directory = os.getcwd()
+print("Here1")
+texts_directory = os.path.join(current_directory, 'texts')
+print("Here3")
+# Check if the 'texts' directory exists, and create it if not
+if not os.path.exists(texts_directory):
+    os.makedirs(texts_directory)
+# MASS
+print("Here4")
+# Display the mass properties
+print("Mass:", mdb.models[MODEL_NAME].parts[PART_NAME].getMassProperties()['mass'])
+with open(os.path.join(texts_directory,'mass.txt'), 'w') as file:
+    file.write("Mass: {}\n".format( mdb.models[MODEL_NAME].parts[PART_NAME].getMassProperties()['mass']))
