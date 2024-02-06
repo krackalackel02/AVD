@@ -10,7 +10,7 @@ mdb.models[MODEL_NAME].ConstrainedSketch(gridSpacing=28.4, name='_profile_',
     sketchUpEdge=mdb.models[MODEL_NAME].rootAssembly.instances['Blank-1'].edges[0], 
     sketchOrientation=RIGHT, origin=(260.193908, 114.272207, 6.3)))
 
-print("HERE")
+#print("HERE")
 
 
 
@@ -113,17 +113,17 @@ mdb.models['Model-1'].rootAssembly.PartitionFaceBySketch(faces=
 # del mdb.models[MODEL_NAME].sketches['__profile__']
 
 
-print("THERE")
+#print("THERE")
 current_directory = os.getcwd()
-print("Here1")
+#print("Here1")
 texts_directory = os.path.join(current_directory, 'texts')
-print("Here3")
+#print("Here3")
 # Check if the 'texts' directory exists, and create it if not
 if not os.path.exists(texts_directory):
     os.makedirs(texts_directory)
 # MASS
-print("Here4")
+#print("Here4")
 # Display the mass properties
-print("Mass:", mdb.models[MODEL_NAME].parts[PART_NAME].getMassProperties()['mass'])
+#print("Mass:", mdb.models[MODEL_NAME].parts[PART_NAME].getMassProperties()['mass'])
 with open(os.path.join(texts_directory,'mass.txt'), 'w') as file:
     file.write("Mass: {}\n".format( mdb.models[MODEL_NAME].parts[PART_NAME].getMassProperties()['mass']))

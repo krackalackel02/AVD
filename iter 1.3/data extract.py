@@ -1,12 +1,12 @@
 
 # Get the current working directory
 current_directory = os.getcwd()
-print("Here1")
+#print("Here1")
 
 
 # Join the current working directory with the relative path
 absolute_path = os.path.join(current_directory, relative_path+".odb")
-print("Here2")
+#print("Here2")
 
 a = mdb.models[MODEL_NAME].rootAssembly
 session.viewports['Viewport: 1'].setValues(displayedObject=a)

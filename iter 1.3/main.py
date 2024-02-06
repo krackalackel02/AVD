@@ -12,6 +12,9 @@ from sketch import *
 from visualization import *
 from connectorBehavior import *
 import os
+# import matplotlib
+# matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 def runMesh(MESH_SIZE):
     relative_path = 'Job-MESH-'+str(int(MESH_SIZE))
@@ -29,6 +32,64 @@ def runMesh(MESH_SIZE):
 
     with open("buckling job.py") as file:
         exec(file.read())   
+    
+    with open("data scrape.py") as file:
+        exec(file.read())   
+
+def plotdeflect(DEFLECTION, ELEMENTS):
+    current_directory = os.getcwd()
+    texts_directory = os.path.join(current_directory, 'texts')
+    plt.figure()
+    plt.title('Plot of Deflection against x')
+    plt.xlabel('X')
+    plt.ylabel('V')
+    colors = ['red', 'blue', 'yellow', 'green','blue','pink','purple','brown']
+    plt.grid(True)
+    for i in range(len(DEFLECTION)):
+        deflection = DEFLECTION[i]
+        c = colors[i]
+        e = ELEMENTS[i]
+        x_values = [point[0] for point in deflection]
+        y_values = [point[1] for point in deflection]
+        plt.plot(x_values, y_values, marker='o', linestyle='-', color=c, label=str(e) + " elements")
+    plt.legend()
+    plt.savefig(os.path.join(texts_directory, 'deflect_plot.png'))
+    plt.close()
+
+def plotstress(STRESS, ELEMENTS):
+    current_directory = os.getcwd()
+    texts_directory = os.path.join(current_directory, 'texts')
+    plt.figure()
+    plt.title('Plot of stress against elements')
+    plt.xlabel('N')
+    plt.ylabel('S')
+    plt.grid(True)
+    c = 'red'
+    x_values = ELEMENTS
+    y_values = STRESS
+    plt.plot(x_values, y_values, marker='o', linestyle='-', color=c)
+    plt.legend()
+    plt.savefig(os.path.join(texts_directory, 'stress_plot.png'))
+    plt.close()
+
+def plotbuckle(BUCKLE, ELEMENTS):
+    current_directory = os.getcwd()
+    texts_directory = os.path.join(current_directory, 'texts')
+    plt.figure()
+    plt.title('Plot of buckle against elements')
+    plt.xlabel('N')
+    plt.ylabel('B')
+    plt.grid(True)
+    c = 'red'
+    x_values = ELEMENTS
+    y_values = BUCKLE
+    plt.plot(x_values, y_values, marker='o', linestyle='-', color=c)
+    plt.legend()
+    plt.savefig(os.path.join(texts_directory, 'buckle_plot.png'))
+    plt.close()
+
+
+
 
 MODEL_NAME = "Model-1"
 PART_NAME = "Blank"
@@ -50,8 +111,20 @@ with open("material.py") as file:
 with open("deflection loading.py") as file:
     exec(file.read())
 
-# runMesh(20.0)
-# runMesh(10.0)
-runMesh(5.0)
-runMesh(2.0)
+STRESS = [];
+ELEMENTS = [];
+BUCKLING=[];
+DEFLECTION=[];
+MESH = [200,100,50,20.0,10.0,7.5,5.0]
+# MESH = [250]
+for m in MESH:
+    runMesh(m)
+
+
+
+plotdeflect(DEFLECTION,ELEMENTS)
+plotstress(STRESS,ELEMENTS)
+plotbuckle(BUCKLING,ELEMENTS)
+
+
 
