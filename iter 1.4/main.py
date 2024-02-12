@@ -17,41 +17,36 @@ import os
 import matplotlib.pyplot as plt
 
 def runMesh(MESH_SIZE):
+    # Define the relative path to the ODB file
     relative_path = 'Job-MESH-'+str(int(MESH_SIZE))
     with open("meshing.py") as file:
         exec(file.read())   
-    # Define the relative path to the ODB file
     with open("deflection job.py") as file:
         exec(file.read())   
 
-    # with open("data extract.py") as file:
-    #     exec(file.read())   
+    with open("data extract.py") as file:
+        exec(file.read())   
 
-    # with open("buckling loading.py") as file:
-    #     exec(file.read())   
+    with open("buckling loading.py") as file:
+        exec(file.read())   
 
-    # with open("buckling job.py") as file:
-    #     exec(file.read())   
+    with open("buckling job.py") as file:
+        exec(file.read())   
     
-    # with open("data scrape.py") as file:
-    #     exec(file.read())   
+    with open("data scrape.py") as file:
+        exec(file.read())   
 
 def plotdeflect(DEFLECTION, ELEMENTS):
     current_directory = os.getcwd()
     texts_directory = os.path.join(current_directory, 'texts')
     plt.figure()
-    plt.title('Plot of Deflection against x')
-    plt.xlabel('X')
+    plt.title('Plot of max Deflection against elements')
+    plt.xlabel('N')
     plt.ylabel('V')
-    colors = ['red', 'blue', 'yellow', 'green','blue','pink','purple','brown']
-    plt.grid(True)
-    for i in range(len(DEFLECTION)):
-        deflection = DEFLECTION[i]
-        c = colors[i]
-        e = ELEMENTS[i]
-        x_values = [point[0] for point in deflection]
-        y_values = [point[1] for point in deflection]
-        plt.plot(x_values, y_values, marker='o', linestyle='-', color=c, label=str(e) + " elements")
+    c = 'red'
+    x_values = ELEMENTS
+    y_values = DEFLECTION
+    plt.plot(x_values, y_values, marker='o', linestyle='-', color=c)
     plt.legend()
     plt.savefig(os.path.join(texts_directory, 'deflect_plot.png'))
     plt.close()
@@ -115,16 +110,16 @@ STRESS = [];
 ELEMENTS = [];
 BUCKLING=[];
 DEFLECTION=[];
-# MESH = [200,100,50,20.0,10.0,7.5,5.0]
-MESH = [20]
+MESH = [200,100,50,20.0,10.0,7.5,5.0,4.0 ,3.0]
+# MESH = [3]
 for m in MESH:
     runMesh(m)
 
 
 
-# plotdeflect(DEFLECTION,ELEMENTS)
-# plotstress(STRESS,ELEMENTS)
-# plotbuckle(BUCKLING,ELEMENTS)
+plotdeflect(DEFLECTION,ELEMENTS)
+plotstress(STRESS,ELEMENTS)
+plotbuckle(BUCKLING,ELEMENTS)
 
 
 

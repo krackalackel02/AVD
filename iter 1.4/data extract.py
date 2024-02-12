@@ -28,8 +28,8 @@ session.viewports['Viewport: 1'].setValues(
 session.viewports['Viewport: 1'].assemblyDisplay.setValues(
     optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
 # Make Centreline Probe
-session.Path(name='Path-1', type=POINT_LIST, expression=((170.0, 0.0, 3.15), (
-    170.0, 228.0, 3.15)))
+session.Path(name='Path-1', type=POINT_LIST, expression=((170.0, 103.6, 3.15), (
+    170.0, 133.6, 3.15)))
 
 session.viewports['Viewport: 1'].setValues(displayedObject=o3)
 session.viewports['Viewport: 1'].makeCurrent()

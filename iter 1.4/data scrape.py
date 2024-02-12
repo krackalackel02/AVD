@@ -40,23 +40,26 @@ def find_deflections(file_path):
     # Open the text file
     with open(file_path, "r") as file:
         lines = file.readlines()
+    # Check if the file exists
+    deflect_values = []
 
-    # Initialize variables to store stress values
-    stress_values = []
-
-    # Iterate through the lines and extract stress values
-    res = [];
     for line in lines:
         if any(char.isdigit() for char in line):  # Check if the line is not empty
             # Split the line by whitespace and extract stress value
             parts = line.split()
             
             if len(parts) >= 2:  # Check if there are at least 2 parts (node label and stress value)
-                res.append((float(parts[0]),float(parts[1])))
+                deflect_values.append(abs(float(parts[1])))
                 
+    if not deflect_values:
+        return None
 
+    # Find the maximum stress value
+    max_deflect = max(deflect_values)
 
-    return res
+    return max_deflect
+
+    return deflect_values
 def find_buckle(file_path):
     
 

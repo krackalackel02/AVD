@@ -20,16 +20,31 @@ mdb.models[MODEL_NAME].rootAssembly.ReferencePoint(point=(170.0, 118.6, 3.15))
 # define RP Set
 mdb.models[MODEL_NAME].rootAssembly.Set(name='Loading point', referencePoints=(
     mdb.models[MODEL_NAME].rootAssembly.referencePoints[4], ))
-mdb.models[MODEL_NAME].rootAssembly.Set(faces=
-    mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getSequenceFromMask(
-    ('[#80 ]', ), ), name='Loading set')
+
+point = (160, 105, -0.5)
+point2 = (200, 128, 6.5)
+x_min = min(point[0], point2[0])
+x_max = max(point[0], point2[0])
+y_min = min(point[1], point2[1])
+y_max = max(point[1], point2[1])
+z_min = min(point[2], point2[2])
+z_max = max(point[2], point2[2])
+face = mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getByBoundingBox(x_min, y_min, z_min ,x_max, y_max, z_max)
+mdb.models[MODEL_NAME].rootAssembly.Set(faces=face, name='Loading set')
 
 # Genereate MPC TIE
+point = (160, 105, -0.5)
+point2 = (180, 128, 6.5)
+x_min = min(point[0], point2[0])
+x_max = max(point[0], point2[0])
+y_min = min(point[1], point2[1])
+y_max = max(point[1], point2[1])
+z_min = min(point[2], point2[2])
+z_max = max(point[2], point2[2])
+face = mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getByBoundingBox(x_min, y_min, z_min ,x_max, y_max, z_max)
+mdb.models[MODEL_NAME].rootAssembly.Set(faces=face, name='s_Set-3')
 mdb.models[MODEL_NAME].rootAssembly.Set(name='m_Set-3', referencePoints=(
     mdb.models[MODEL_NAME].rootAssembly.referencePoints[4], ))
-mdb.models[MODEL_NAME].rootAssembly.Set(faces=
-    mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getSequenceFromMask(
-    ('[#10 ]', ), ), name='s_Set-3')
 mdb.models[MODEL_NAME].MultipointConstraint(controlPoint=
     mdb.models[MODEL_NAME].rootAssembly.sets['m_Set-3'], csys=None, mpcType=
     BEAM_MPC, name='Constraint-1', surface=
@@ -48,27 +63,41 @@ mdb.models[MODEL_NAME].rootAssembly.sets.changeKey(fromName='s_Set-3', toName=
 mdb.models[MODEL_NAME].StaticStep(description=
     'Loading of the blank with gravity', name='Loading down with g', previous=
     'Initial')
-mdb.models[MODEL_NAME].rootAssembly.Set(faces=
-    mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getSequenceFromMask(
-    ('[#20 ]', ), ), name='Inner left')
 
-# BCs
+point = (20, 105, -0.5)
+point2 = (40, 128, 6.5)
+x_min = min(point[0], point2[0])
+x_max = max(point[0], point2[0])
+y_min = min(point[1], point2[1])
+y_max = max(point[1], point2[1])
+z_min = min(point[2], point2[2])
+z_max = max(point[2], point2[2])
+face = mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getByBoundingBox(x_min, y_min, z_min ,x_max, y_max, z_max)
+mdb.models[MODEL_NAME].rootAssembly.Set(faces=face, name='Inner left')
 mdb.models[MODEL_NAME].PinnedBC(createStepName='Loading down with g', localCsys=
     None, name='Fixed left', region=
     mdb.models[MODEL_NAME].rootAssembly.sets['Inner left'])
-mdb.models[MODEL_NAME].rootAssembly.Set(faces=
-    mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getSequenceFromMask(
-    ('[#40 ]', ), ), name='Inner right')
+
+point = (480, 105, -0.5)
+point2 = (520, 128, 6.5)
+x_min = min(point[0], point2[0])
+x_max = max(point[0], point2[0])
+y_min = min(point[1], point2[1])
+y_max = max(point[1], point2[1])
+z_min = min(point[2], point2[2])
+z_max = max(point[2], point2[2])
+face = mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].faces.getByBoundingBox(x_min, y_min, z_min ,x_max, y_max, z_max)
+mdb.models[MODEL_NAME].rootAssembly.Set(faces=face, name='Inner right')
 mdb.models[MODEL_NAME].PinnedBC(createStepName='Loading down with g', localCsys=
     None, name='Inner right', region=
     mdb.models[MODEL_NAME].rootAssembly.sets['Inner right'])
 
-## Gravity Load
-#mdb.models[MODEL_NAME].Gravity(comp2=-9800.0, createStepName=
-#    'Loading down with g', distributionType=UNIFORM, field='', name='Gravity')
-#mdb.models[MODEL_NAME].loads['Gravity'].setValues(distributionType=UNIFORM, 
-#    field='', region=
-#    mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].sets['Aluminum blank'])
+# Gravity Load
+mdb.models[MODEL_NAME].Gravity(comp2=-9800.0, createStepName=
+   'Loading down with g', distributionType=UNIFORM, field='', name='Gravity')
+mdb.models[MODEL_NAME].loads['Gravity'].setValues(distributionType=UNIFORM, 
+   field='', region=
+   mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].sets['Aluminum blank'])
 # Actual Load
 mdb.models[MODEL_NAME].ConcentratedForce(cf2=-5000.0, createStepName=
     'Loading down with g', distributionType=UNIFORM, field='', localCsys=None, 
