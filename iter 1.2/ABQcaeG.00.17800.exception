@@ -1,0 +1,33 @@
+<Description>
+   ABQcaeG.exe / rank 0 / thread 0  encountered an unhandled exception
+
+</Description>
+
+<Context>
+   ABQcaeG
+</Context>
+
+<Callstack>
+  1)  KERNELBASE.dll              RaiseException                          
+  2)  VCRUNTIME140_1.dll          _NLG_Return2                            
+  3)  ntdll.dll                   RtlCaptureContext2                      
+  4)  ABQcaeG.exe               unknown                                 
+</Callstack>
+
+<Memory>
+   <Current>             100 MB </Current>
+   <Resident>            159 MB </Resident>
+   <Physical>          24296 MB </Physical>
+   <Limit>                 0 MB </Limit>
+   <Accessible>        24296 MB </Accessible>
+   <Allocator>            DL    </Allocator>
+</Memory>
+
+<Directories>
+  <current> C:\Users\paulk\Desktop\AVD\AVD\iter 1.2 </current> <free>    260 GB </free>   <used>    671 GB </used> 
+     <temp> C:\Users\paulk\AppData\Local\Temp </temp>    <free>    260 GB </free>
+</Directories>
+
+<Installation>
+</Installation>
+
