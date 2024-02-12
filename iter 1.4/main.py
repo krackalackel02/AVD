@@ -87,7 +87,7 @@ def plotbuckle(BUCKLE, ELEMENTS):
 current_directory = os.getcwd()
 texts_directory = os.path.join(current_directory, 'texts')
 
-PART_NAME = "Test_fusion"
+PART_NAME = "GenDes4"
 GEOMETRY_FILE = os.path.join(current_directory,PART_NAME+".step")
 MODEL_NAME = "Model-1"
 MATERIAL_NAME = 'Aluminium alloy 6061-T6'
@@ -110,8 +110,8 @@ STRESS = [];
 ELEMENTS = [];
 BUCKLING=[];
 DEFLECTION=[];
-MESH = [200,100,50,20.0,10.0,7.5,5.0,4.0 ,3.0]
-# MESH = [3]
+# MESH = [200,100,50,20.0,10.0,7.5,5.0,4.0 ,3.0]
+MESH = [3]
 for m in MESH:
     runMesh(m)
 
