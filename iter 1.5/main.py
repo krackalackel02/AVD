@@ -88,32 +88,43 @@ MATERIAL_POISSON = 0.33
 
 # MESH = [20.0]
 
-start = 10
-stop = 2.75
-steps = 5
-MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)]
 
-MODELS = ['GenDes1',
-          'GenDes2',
-          'GenDes3',
-          'GenDes4',
-          'TopOp',
-          'Blank'
-          ]
+
+# MODELS = ['GenDes1',
+#           'GenDes2',
+#           'GenDes3',
+#           'GenDes4',
+#           'TopOp',
+#           'Blank'
+#           ]
 
 # MODELS = ['GenDes1',
 #           'GenDes2'
 #           ]
 
-# MODELS = ['GenDes1'
-#           ]
+MODELS = ['Blank'
+          ]
 
+def mesh_number(PART_NAME,start,stop,steps):
+    if PART_NAME == "Blank":
+        start = 3.0+2.5*steps if start<3.0 else start
+        stop = 3.0 if stop<3.0 else stop
+        MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)] if steps>1 else [start]
+        return MESH
+    else:
+        MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)] if steps>1 else [start]
+        return MESH
+        
+start=10.0
+stop=2.75
+steps=1
 
 
 for part in MODELS:
     PART_NAME = part
     MODEL_NAME = part+'-1'
     GEOMETRY_FILE = os.path.join(current_directory,PART_NAME+".step")
+    MESH = mesh_number(part,start,stop,steps)
     with open("part.py") as file:
         exec(file.read())
 
