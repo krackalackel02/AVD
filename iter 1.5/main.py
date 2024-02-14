@@ -88,7 +88,7 @@ MATERIAL_POISSON = 0.33
 
 # MESH = [20.0]
 
-start = 20
+start = 10
 stop = 2.75
 steps = 5
 MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)]
@@ -97,7 +97,8 @@ MODELS = ['GenDes1',
           'GenDes2',
           'GenDes3',
           'GenDes4',
-          'TopOp'
+          'TopOp',
+          'Blank'
           ]
 
 # MODELS = ['GenDes1',
