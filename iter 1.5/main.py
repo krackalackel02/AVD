@@ -116,9 +116,9 @@ def mesh_number(PART_NAME,start,stop,steps):
         MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)] if steps>1 else [start]
         return MESH
         
-start=3.0
+start=20
 stop=2.75
-steps=1
+steps=10
 
 
 for part in MODELS:

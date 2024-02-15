@@ -21,7 +21,7 @@ mdb.models[MODEL_NAME].rootAssembly.Set(name='Loading point', referencePoints=(
     mdb.models[MODEL_NAME].rootAssembly.referencePoints[4], ))
 
 point = (160, 105, -0.5)
-point2 = (200, 128, 6.5)
+point2 = (180, 128, 6.5)
 x_min = min(point[0], point2[0])
 x_max = max(point[0], point2[0])
 y_min = min(point[1], point2[1])
@@ -78,7 +78,7 @@ mdb.models[MODEL_NAME].PinnedBC(createStepName='Loading down with g', localCsys=
     mdb.models[MODEL_NAME].rootAssembly.sets['Inner left'])
 
 point = (480, 105, -0.5)
-point2 = (520, 128, 6.5)
+point2 = (500, 128, 6.5)
 x_min = min(point[0], point2[0])
 x_max = max(point[0], point2[0])
 y_min = min(point[1], point2[1])
