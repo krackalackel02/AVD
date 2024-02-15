@@ -98,7 +98,7 @@ mdb.models[MODEL_NAME].loads['Gravity'].setValues(distributionType=UNIFORM,
    field='', region=
    mdb.models[MODEL_NAME].rootAssembly.instances[PART_NAME+'-1'].sets['Aluminum blank'])
 # Actual Load
-mdb.models[MODEL_NAME].ConcentratedForce(cf2=-5000.0, createStepName=
+mdb.models[MODEL_NAME].ConcentratedForce(cf2=MODEL_LOAD, createStepName=
     'Loading down with g', distributionType=UNIFORM, field='', localCsys=None, 
     name='Loading centre', region=
     mdb.models[MODEL_NAME].rootAssembly.sets['Loading point'])

@@ -83,6 +83,7 @@ MATERIAL_NAME = 'Aluminium alloy 6061-T6'
 MATERIAL_DESNITY = 2.7e-9
 MATERIAL_YOUNGS = 68.9e3
 MATERIAL_POISSON = 0.33
+MODEL_LOAD = -7.5e3
 
 # MESH = [4.5,4.0,3.5,3.0,2.5]
 
@@ -90,20 +91,20 @@ MATERIAL_POISSON = 0.33
 
 
 
-# MODELS = ['GenDes1',
-#           'GenDes2',
-#           'GenDes3',
-#           'GenDes4',
-#           'TopOp',
-#           'Blank'
-#           ]
+MODELS = ['GenDes1',
+          'GenDes2',
+          'GenDes3',
+          'GenDes4',
+          'TopOp',
+          'Blank'
+          ]
 
 # MODELS = ['GenDes1',
 #           'GenDes2'
 #           ]
 
-MODELS = ['Blank'
-          ]
+# MODELS = ['Blank'
+#           ]
 
 def mesh_number(PART_NAME,start,stop,steps):
     if PART_NAME == "Blank":
@@ -117,7 +118,7 @@ def mesh_number(PART_NAME,start,stop,steps):
         
 start=10.0
 stop=2.75
-steps=1
+steps=5
 
 
 for part in MODELS:
