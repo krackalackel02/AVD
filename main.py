@@ -87,30 +87,33 @@ MODEL_LOAD = -7.5e3
 
 # MESH = [20.0]
 
-GEOMETRY_FOLDER = "iter 1_6"
+GEOMETRY_FOLDER = "iter 1_8"
 current_directory = os.getcwd()
 geometry_directory = os.path.join(current_directory,GEOMETRY_FOLDER,'Geometry')
 texts_directory = os.path.join(current_directory,GEOMETRY_FOLDER, 'Results')
 
+# # # # # # # # # # # # # MESH PICKER
+MESH_START=3.0
+MESH_STOP=2.75
+MESH_STEPS=1
 
+# # # # # # # # # # # # # MODEL PICKER
 
-
-
+# # # # Run all geometrys in folder
 MODELS = [os.path.splitext(file)[0] for file in os.listdir(geometry_directory) if file.endswith('.step')]
 
-# MODELS = ['GenDes2Fixed',
-#           'GenDes2v2',
-#           'GenDes2v3',
-#           'GenDes4v4',
-#           'GenDes',
-#           'Blank'
+
+###Run only 1 of the models
+MODELS = MODELS[:1]
+
+# # # # Run Select Files
+# MODELS = ['TopOptNewv1',
+#           'TopOpv3',
+#           'TopOpv2',
 #           ]
 
-# MODELS = ['GenDes1',
-#           'GenDes2'
-#           ]
-
-# MODELS = ['Blank'
+# # # # # Run Single File
+# MODELS = ['TopOptNewv1'
 #           ]
 
 def mesh_number(PART_NAME,start,stop,steps):
@@ -123,16 +126,13 @@ def mesh_number(PART_NAME,start,stop,steps):
         MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)] if steps>1 else [start]
         return MESH
         
-start=20
-stop=2.75
-steps=1
 
 
 for part in MODELS:
     PART_NAME = part
     MODEL_NAME = part+'-1'
     GEOMETRY_FILE = os.path.join(geometry_directory,PART_NAME+".step")
-    MESH = mesh_number(part,start,stop,steps)
+    MESH = mesh_number(part,MESH_START,MESH_STOP,MESH_STEPS)
     with open("part.py") as file:
         exec(file.read())
 
@@ -162,15 +162,21 @@ for part in MODELS:
             session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
                 variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
                 'Mises'), )
+            session.viewports['Viewport: 1'].view.fitView()
+            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
             session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_stress_visualisation'), format=PNG, canvasObjects=(
                 session.viewports['Viewport: 1'], ))
             session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
                 variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U2'), )
+            session.viewports['Viewport: 1'].view.fitView()
+            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
             session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_deflection_visualisation'), format=PNG, canvasObjects=(
                 session.viewports['Viewport: 1'], ))
             session.printOptions.setValues(vpBackground=ON, compass=ON)
             session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
                 UNDEFORMED, ))
+            session.viewports['Viewport: 1'].view.fitView()
+            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
             session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_undeformed_visualisation'), format=PNG, canvasObjects=(
                 session.viewports['Viewport: 1'], ))
             print("HERE1")
@@ -187,6 +193,8 @@ for part in MODELS:
             session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
                 variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
                 'Magnitude'), )
+            session.viewports['Viewport: 1'].view.fitView()
+            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
             session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_buckled_visualisation'), format=PNG, canvasObjects=(
                 session.viewports['Viewport: 1'], ))
             print("THERE")
