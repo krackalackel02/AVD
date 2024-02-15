@@ -1,0 +1,82 @@
+(NOTICE  ) [10:21:31.290471|tosca_python] ------------------------------------------------------
+(NOTICE  ) [10:21:31.290471|tosca_python] |                                                    |
+(NOTICE  ) [10:21:31.290471|tosca_python] |           Tosca Structure Python Control           |
+(NOTICE  ) [10:21:31.290471|tosca_python] |                                                    |
+(NOTICE  ) [10:21:31.290471|tosca_python] |                3DEXPERIENCE R2022x                 |
+(NOTICE  ) [10:21:31.290471|tosca_python] |                                                    |
+(NOTICE  ) [10:21:31.290471|tosca_python] ------------------------------------------------------
+(NOTICE  ) [10:21:31.290471|tosca_python] 
+(NOTICE  ) [10:21:31.290471|tosca_python] Tosca started at Fri, 09 Feb 2024 10:21:31
+(NOTICE  ) [10:21:31.290471|tosca_python] 
+(NOTICE  ) [10:21:31.290471|tosca_python] Log file        : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-2-Copy\TOSCA_POST.OUT
+(INFO    ) [10:21:31.296435|tosca_python] Executing user configuration
+(INFO    ) [10:21:31.302214|tosca_python] --------------------------
+(INFO    ) [10:21:31.302214|tosca_python] Loading User Configuration
+(INFO    ) [10:21:31.302214|tosca_python] --------------------------
+(INFO    ) [10:21:31.302214|tosca_python] Executing: C:\SIMULIA\EstProducts\2022\win_b64\SMATsoResources\config\tosca.cfg
+(INFO    ) [10:21:31.324209|tosca_python] --------------------------------
+(INFO    ) [10:21:31.328186|tosca_python] Log level               : INFO
+(INFO    ) [10:21:31.328186|tosca_python] Job name                : Opt-Process-2-Copy
+(INFO    ) [10:21:31.328186|tosca_python] Input directory         : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2
+(INFO    ) [10:21:31.328186|tosca_python] Parameter file          : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-2-Copy_surface.par
+(INFO    ) [10:21:31.328186|tosca_python] Working directory       : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-2-Copy
+(INFO    ) [10:21:31.328186|tosca_python] Startup directory       : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2
+(INFO    ) [10:21:31.328186|tosca_python] Platform                : win_b64
+(INFO    ) [10:21:31.328186|tosca_python] Macros directory        : C:\SIMULIA\EstProducts\2022\win_b64\SMATsoResources\macros
+(INFO    ) [10:21:31.328186|tosca_python] ---------------
+(INFO    ) [10:21:31.328186|tosca_python] Post-Processing
+(INFO    ) [10:21:31.328186|tosca_python] ---------------
+(INFO    ) [10:21:31.328186|tosca_python] * Smooth
+(INFO    ) [10:21:31.328186|tosca_python] 
+(NOTICE  ) [10:21:31.329775|tosca_python] Starting post-processing for job Opt-Process-2-Copy
+(INFO    ) [10:21:31.329775|tosca_python] Number of smooth commands found: 1
+(NOTICE  ) [10:21:31.329775|tosca_python] Starting SIMULIA Tosca Structure smooth module
+(INFO    ) [10:21:31.352409|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtTStructSmoothMain.exe --loglevel INFO C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-2-Copy\TOSCA_POST\Opt-Process-2-Copy_surface_ALL(1)
+(INFO    ) [10:21:31.631678|smooth|12760|SMATocApplication|FED_Application] SIMULIA Tosca Structure.smooth - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [10:21:32.753089|smooth|12760|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_SMOOTH
+(INFO    ) [10:21:32.762582|smooth|12760|smooth|Options]  -----------------------------------------------------------------------------
+(INFO    ) [10:21:32.762582|SMATrtTStructSmoothMain] | Processing a SMOOTH task with ID_NAME = "Opt-Process-2-Copy_surface_ALL"... |
+(INFO    ) [10:21:32.762582|SMATrtTStructSmoothMain] -----------------------------------------------------------------------------
+(INFO    ) [10:21:32.762582|smooth|12760|smooth|OnfSurfaceGenerator]  << opt_res_database:
+(INFO    ) [10:21:32.762582|smooth|12760|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [10:21:32.787344|smooth|12760|smooth|OnfSurfaceGenerator] Model data loaded (ONF)
+(INFO    ) [10:21:32.839161|smooth|12760|smooth|SMOOTH_SurfaceGenerator] Preparations for isocut finished
+(INFO    ) [10:21:32.839161|smooth|12760|smooth|SMOOTH_SurfaceGenerator] Starting 0 cycles of result filtering.
+(INFO    ) [10:21:32.839161|smooth|12760|smooth|SMOOTH_SurfaceGenerator] Result filtering finished.
+(INFO    ) [10:21:32.931285|smooth|12760|smooth|SMOOTH_SurfaceGenerator] No non-conform configurations found in the model
+(INFO    ) [10:21:33.052960|smooth|12760|smooth|SMOOTH_SurfaceGenerator] ISO cut surface generation finished.
+(INFO    ) [10:21:33.063547|smooth|12760|smooth|MainClass] Surface generation finished
+(INFO    ) [10:21:33.066484|smooth|12760|smooth|SMOOTH_SurfaceGenerator] Model data released
+(INFO    ) [10:21:33.074146|smooth|12760|smooth|MainClass] Surface orientation test finished
+(INFO    ) [10:21:33.105228|smooth|12760|smooth|MainClass] Cell raster check before smoothing is successful, trying to smooth without self-intersection checks...
+(INFO    ) [10:21:33.108799|smooth|12760|smooth|MainClass] Performing 5 cycles of SMOOTH_BorderSmoothing, 876 nodes are checked...
+(INFO    ) [10:21:33.108799|smooth|12760|smooth|MainClass] cycle 0
+(INFO    ) [10:21:33.110794|smooth|12760|smooth|MainClass] cycle 1
+(INFO    ) [10:21:33.112795|smooth|12760|smooth|MainClass] cycle 2
+(INFO    ) [10:21:33.113791|smooth|12760|smooth|MainClass] cycle 3
+(INFO    ) [10:21:33.115820|smooth|12760|smooth|MainClass] cycle 4
+(INFO    ) [10:21:33.117779|smooth|12760|smooth|MainClass] Performing 5 cycles of LaplaceSmoothing, 0 nodes are checked...
+(INFO    ) [10:21:33.117779|smooth|12760|smooth|MainClass] cycle 0
+(INFO    ) [10:21:33.117779|smooth|12760|smooth|MainClass] cycle 1
+(INFO    ) [10:21:33.117779|smooth|12760|smooth|MainClass] cycle 2
+(INFO    ) [10:21:33.117779|smooth|12760|smooth|MainClass] cycle 3
+(INFO    ) [10:21:33.117779|smooth|12760|smooth|MainClass] cycle 4
+(INFO    ) [10:21:33.117779|smooth|12760|smooth|LaplaceSmoothing] Laplace Smoothing finished.
+(INFO    ) [10:21:33.140076|smooth|12760|smooth|MainClass] Smoothing finished
+(INFO    ) [10:21:33.142390|smooth|12760|smooth|MainClass] Isosurface successfully generated
+(INFO    ) [10:21:33.142390|smooth|12760|smooth|MainClass]     - isovalue: 0.300
+(INFO    ) [10:21:33.142390|smooth|12760|smooth|MainClass]     - relative volume: 21.8%
+(INFO    ) [10:21:33.143368|smooth|12760|smooth|Surface]  >> Opt-Process-2-Copy_surface_ALL.inp:
+(INFO    ) [10:21:33.195930|smooth|12760|smooth|Surface] 7196 faces saved (INP)
+(INFO    ) [10:21:33.220454|smooth|12760|smooth|MainClass] SMOOTH task with ID_NAME = "Opt-Process-2-Copy_surface_ALL" finished successfully.
+(INFO    ) [10:21:33.220454|smooth|12760|SMATrtTStructSmoothMain|main] SIMULIA Tosca Structure.smooth finished
+(INFO    ) [10:21:33.236783|tosca_python] Module SMATrtTStructSmoothMain has finished with exit code 0
+(INFO    ) [10:21:33.236783|tosca_python] Elapsed time of SMATrtTStructSmoothMain : 0:00:01.884374  -  current time: 2024-02-09 10:21:33.236783
+(NOTICE  ) [10:21:33.237754|tosca_python] Application finished successfully
+(INFO    ) [10:21:33.237754|tosca_python] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [10:21:33.237754|tosca_python] Time consumption overview table
+(INFO    ) [10:21:33.237754|tosca_python] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [10:21:33.237754|tosca_python] Cumulative elapsed time for module   SMATrtTStructSmoothMain: 0:00:01.884374 - 98.763% (1 calls)
+(INFO    ) [10:21:33.237754|tosca_python] Total elapsed time for this script                          : 0:00:00.023605 - 1.237%
+(INFO    ) [10:21:33.237754|tosca_python] Total elapsed time of SIMULIA Tosca Structure               : 0:00:01.907979 - Current time 10:21:33.237754
+(INFO    ) [10:21:33.237754|tosca_python] --------------------------------------------------------------------------------------------------------------

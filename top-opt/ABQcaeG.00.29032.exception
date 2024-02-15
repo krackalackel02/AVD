@@ -1,0 +1,33 @@
+<Description>
+   ABQcaeG.exe / rank 0 / thread 0  encountered an unhandled exception
+
+</Description>
+
+<Context>
+   ABQcaeG
+</Context>
+
+<Callstack>
+  1)  KERNELBASE.dll              RaiseException                          
+  2)  VCRUNTIME140_1.dll          _NLG_Return2                            
+  3)  ntdll.dll                   RtlCaptureContext2                      
+  4)  ABQcaeG.exe               unknown                                 
+</Callstack>
+
+<Memory>
+   <Current>             110 MB </Current>
+   <Resident>            127 MB </Resident>
+   <Physical>          16046 MB </Physical>
+   <Limit>                 0 MB </Limit>
+   <Accessible>        16046 MB </Accessible>
+   <Allocator>            DL    </Allocator>
+</Memory>
+
+<Directories>
+  <current> C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2 </current> <free>    180 GB </free>   <used>    751 GB </used> 
+     <temp> C:\Users\DANIEL~1\AppData\Local\Temp </temp>    <free>    180 GB </free>
+</Directories>
+
+<Installation>
+</Installation>
+

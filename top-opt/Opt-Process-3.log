@@ -1,0 +1,30 @@
+Tosca                           : C:\SIMULIA\EstProducts\2022\win_b64
+Tosca Structure Server          : C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATocToscaServerMain.exe
+Environment file                : C:\SIMULIA\EstProducts\2022\win_b64\code\command\tosca_env.cmd
+Python interpreter              : C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe
+Tosca Structure Python launcher : C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc
+Python path                     : C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\
+(NOTICE  ) [13:43:47.076257|tosca_python] ------------------------------------------------------
+(NOTICE  ) [13:43:47.077254|tosca_python] |                                                    |
+(NOTICE  ) [13:43:47.077254|tosca_python] |           Tosca Structure Python Control           |
+(NOTICE  ) [13:43:47.077254|tosca_python] |                                                    |
+(NOTICE  ) [13:43:47.077254|tosca_python] |                3DEXPERIENCE R2022x                 |
+(NOTICE  ) [13:43:47.077254|tosca_python] |                                                    |
+(NOTICE  ) [13:43:47.077254|tosca_python] ------------------------------------------------------
+(NOTICE  ) [13:43:47.077254|tosca_python] 
+(NOTICE  ) [13:43:47.077254|tosca_python] Tosca started at Tue, 06 Feb 2024 13:43:47
+(NOTICE  ) [13:43:47.077254|tosca_python] 
+(NOTICE  ) [13:43:47.664134|tosca_python] Starting job Opt-Process-3
+(NOTICE  ) [13:43:47.664134|tosca_python] Checking User Configuration
+(NOTICE  ) [13:43:47.896169|tosca_python] Starting SIMULIA Tosca Structure Preprocessor
+(NOTICE  ) [13:43:54.309559|tosca_python] Checking Final Configuration
+(NOTICE  ) [13:43:54.482393|tosca_python] Starting abaqus analysis - design cycle 0
+(NOTICE  ) [13:44:05.065990|tosca_python] Starting SIMULIA Tosca Structure optimization module - design cycle 0
+(NOTICE  ) [13:44:07.279257|tosca_python] Starting abaqus analysis - design cycle 1
+(NOTICE  ) [13:44:10.385836|tosca_python] Starting SIMULIA Tosca Structure optimization module - design cycle 1
+(NOTICE  ) [13:44:12.780617|tosca_python] Starting abaqus analysis - design cycle 2
+(ERROR   ) [13:44:22.358786|tosca_python] Success check string was not found in the solver output file
+(ERROR   ) [13:44:22.358786|tosca_python] Module abaqus failed
+(NOTICE  ) [13:44:32.671656|tosca_python] Starting SIMULIA Tosca Structure report module
+(ERROR   ) [13:44:32.928037|tosca_python] Tosca Structure failed to run the optimization task
+Optimization process failed with an error.

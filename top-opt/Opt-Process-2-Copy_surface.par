@@ -1,0 +1,14 @@
+SMOOTH
+   ID_NAME             = Opt-Process-2-Copy_surface_ALL
+   RESULT              = "SAVE.onf\TP_038.onf"
+   OUTPUT_FILE         = "Opt-Process-2-Copy_surface_ALL"
+   TASK                = ISO
+   ISO_VALUE           = 0.3
+   SMOOTH_CYCLES       = 5
+   REDUCTION_RATE      = 0
+   REDUCTION_ANGLE     = 15
+   TARGET_VOLUME       = 0
+   RESULT_FILTERING    = OFF
+   FORMAT              = INP
+END_
+

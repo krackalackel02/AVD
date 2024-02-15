@@ -1,0 +1,432 @@
+(INFO    ) [13:38:23.888371|authorization|1584|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:23.890747|authorization|1584|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [13:38:23.894001|authorization|1584|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-1" "-p" "Opt-Process-1" "-s" "abaqus"
+(INFO    ) [13:38:23.910604|authorization|1584|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [13:38:25.562498|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [13:38:25.570795|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [13:38:25.570795|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [13:38:26.651939|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [13:38:26.652935|authorization|1584|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:39:01.012344|authorization|1584|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [13:39:01.013420|authorization|1584|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [13:40:39.504907|authorization|5480|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:40:39.506901|authorization|5480|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [13:40:39.509905|authorization|5480|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-1" "-p" "Opt-Process-1" "-s" "abaqus"
+(INFO    ) [13:40:39.525216|authorization|5480|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [13:40:39.865648|authorization|5480|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [13:40:39.865648|authorization|5480|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [13:41:23.659569|authorization|15388|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:41:23.660718|authorization|15388|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [13:41:23.663170|authorization|15388|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-2" "-p" "Opt-Process-2" "-s" "abaqus"
+(INFO    ) [13:41:23.674670|authorization|15388|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [13:41:25.219115|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [13:41:25.219115|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [13:41:25.219115|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [13:41:26.275810|authorization|15388|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:42:01.608038|authorization|15388|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [13:42:01.609035|authorization|15388|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [13:43:46.773473|authorization|15952|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:43:46.774470|authorization|15952|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [13:43:46.776463|authorization|15952|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-3" "-p" "Opt-Process-3" "-s" "abaqus"
+(INFO    ) [13:43:46.788423|authorization|15952|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [13:43:48.080253|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [13:43:48.081250|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [13:43:48.081250|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [13:43:49.128501|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [13:43:49.129497|authorization|15952|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:44:32.937008|authorization|15952|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [13:44:32.938017|authorization|15952|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [13:51:18.024746|authorization|11796|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:51:18.026928|authorization|11796|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [13:51:18.030424|authorization|11796|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-1" "-p" "Opt-Process-1" "-s" "abaqus"
+(INFO    ) [13:51:18.041575|authorization|11796|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [13:51:18.338141|authorization|11796|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [13:51:18.338141|authorization|11796|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [13:53:45.683350|authorization|24804|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:53:45.686342|authorization|24804|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [13:53:45.689335|authorization|24804|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-1" "-p" "Opt-Process-1" "-s" "abaqus"
+(INFO    ) [13:53:45.713247|authorization|24804|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [13:53:46.200104|authorization|24804|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [13:53:46.201018|authorization|24804|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [13:54:12.923366|authorization|13756|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:54:12.926170|authorization|13756|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [13:54:12.931197|authorization|13756|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-2" "-p" "Opt-Process-2" "-s" "abaqus"
+(INFO    ) [13:54:12.957390|authorization|13756|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [13:54:15.268629|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [13:54:15.269624|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [13:54:15.269624|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [13:54:16.338206|authorization|13756|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [13:57:53.835834|authorization|13756|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [13:57:53.836840|authorization|13756|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [12:04:50.130413|authorization|23728|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [12:04:50.132406|authorization|23728|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [12:04:50.137390|authorization|23728|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-2" "-p" "Opt-Process-2" "-s" "abaqus"
+(INFO    ) [12:04:50.155423|authorization|23728|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [12:04:50.749738|authorization|23728|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [12:04:50.751953|authorization|23728|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [12:05:15.278333|authorization|27108|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [12:05:15.280383|authorization|27108|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [12:05:15.283646|authorization|27108|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "optimize" "-j" "Opt-Process-2-Copy" "-p" "Opt-Process-2-Copy" "-s" "abaqus"
+(INFO    ) [12:05:15.302801|authorization|27108|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [12:05:17.473823|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [12:05:17.500078|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [12:05:17.500078|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [12:05:18.635171|authorization|27108|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [12:09:01.245974|authorization|27108|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [12:09:01.247306|authorization|27108|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [12:35:46.949971|authorization|18740|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [12:35:46.951924|authorization|18740|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [12:35:46.956396|authorization|18740|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "post" "--job" "Opt-Process-2-Copy" "--par" "Opt-Process-2-Copy_surface.par" "--smooth"
+(INFO    ) [12:35:46.972405|authorization|18740|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [12:35:48.670445|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [12:35:48.688476|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [12:35:48.688476|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [12:35:49.759685|authorization|18740|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [12:35:50.494886|authorization|18740|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [12:35:50.497038|authorization|18740|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [10:16:40.405643|authorization|34120|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [10:16:40.409590|authorization|34120|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [10:16:40.414558|authorization|34120|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "post" "--job" "Opt-Process-2-Copy" "--par" "Opt-Process-2-Copy_surface.par" "--smooth"
+(INFO    ) [10:16:40.437513|authorization|34120|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [10:16:42.684692|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [10:16:42.711222|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [10:16:42.712190|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [10:16:43.792236|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [10:16:43.793301|authorization|34120|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [10:16:47.787280|authorization|34120|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [10:16:47.788470|authorization|34120|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped
+(INFO    ) [10:21:28.706926|authorization|26992|SMATocApplication|FED_Application] SIMULIA Tosca Structure.authorization - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [10:21:28.709953|authorization|26992|SMATocLicenseDaemon|FED_LicenseManager] Setting up license management system
+(INFO    ) [10:21:28.713886|authorization|26992|SMATocLicenseDaemon|FED_ApplicationThread] Commandline for started application: C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe "-E" "-u" "C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc" "post" "--job" "Opt-Process-2-Copy" "--par" "Opt-Process-2-Copy_surface.par" "--smooth"
+(INFO    ) [10:21:28.734366|authorization|26992|SMATocLicenseDaemon|FED_ApplicationThread] Waiting for batch process to finish
+(INFO    ) [10:21:31.643761|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] Using DS FlexNet licensing with license file 27007@abaqusae.cc.ic.ac.uk
+(INFO    ) [10:21:31.645264|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] Successfully initialized FlexNet client library
+(INFO    ) [10:21:31.645264|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] # Listing available licenses...
+(INFO    ) [10:21:32.701932|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [10:21:32.701932|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] |Features                                                                                                  |
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] abaqus_extended_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] catiav5_assoc_import_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] catiav5_import_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] catiav6_assoc_import_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] sw_assoc_import_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] abaqus_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] cse_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] euler_lagrange_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] parallel_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tomee
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] pydriver_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] cae_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] safe_ex_gui
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] gateway
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] rtgateway
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] cfd_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] explicit_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] standard_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] cse_token_teaching
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] simflow
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] safe_ex_engine
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_topo
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_shape
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_bead
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_sizing
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_int_abaqus
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_int_ansys
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_int_nastran
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_nonlinear
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_durability
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_adv_morph
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_smooth
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tosca_report
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tfluid_topo
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tfluid_smooth
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tfluid_parallel
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_ccmp
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] tfluid_int_fluent
+(INFO    ) [10:21:32.702980|authorization|26992|SMATocToscaServer|FED_DsFlexProvider] +----------------------------------------------------------------------------------------------------------+
+(INFO    ) [10:21:33.250823|authorization|26992|SMATocLicenseDaemon|FED_ApplicationThread] Execution of batch process has finished
+(INFO    ) [10:21:33.250823|authorization|26992|SMATocLicenseDaemon|FED_ServerThread] Socket listener successfully stopped

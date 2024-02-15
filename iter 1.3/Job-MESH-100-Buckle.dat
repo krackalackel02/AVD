@@ -1,0 +1,479 @@
+1
+
+   Abaqus 2022                                  Date 06-Feb-2024   Time 13:10:41
+   For use by IMPERIAL COLLEGE OF SCIENCE TECHNOLOGYMEDICINE under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine Daniel-Gutierrez 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Mar-2024
+
+                          Your site id is: 200000000048523 
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2022                       * 
+                *                                                         * 
+                *          BUILD ID: 2021_09_15-18.57.30 176069           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2022 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *   This program may not be used for commercial purposes  * 
+                *           without payment of a commercial fee.          * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+          jobDescription                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  *Node
+  *Element, type=C3D10
+  *Nset, nset="ASSEMBLY_BLANK-1_Aluminum blank"
+  *Elset, elset="ASSEMBLY_BLANK-1_Aluminum blank"
+  *Node
+  *Nset, nset="ASSEMBLY_Inner left"
+  *Nset, nset="ASSEMBLY_Inner right"
+  *Nset, nset="ASSEMBLY_Loading point"
+  *Nset, nset="ASSEMBLY_Loading set"
+  *Nset, nset="ASSEMBLY_loading inner circle set"
+  *Nset, nset="ASSEMBLY_loading point set"
+  *Elset, elset="ASSEMBLY_Inner left"
+  *Elset, elset="ASSEMBLY_Inner right"
+  *Elset, elset="ASSEMBLY_Loading set"
+  *Elset, elset="ASSEMBLY_loading inner circle set"
+  *material, name="Aluminium alloy 6061-T6"
+  *density
+  *elastic
+  *solidsection, elset="ASSEMBLY_BLANK-1_Aluminum blank", material="Aluminium alloy 6061-T6"
+  *solidsection, elset="ASSEMBLY_BLANK-1_Aluminum blank", material="Aluminium alloy 6061-T6"
+  *surface, type=NODE, name="ASSEMBLY_loading inner circle set_CNS_"
+  *surface, type=NODE, name="ASSEMBLY_loading inner circle set_CNS_"
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *mpc
+  *surface, type=NODE, name="ASSEMBLY_loading inner circle set_CNS_"
+  *output, field, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, field, variable=PRESELECT
+
+ ***NOTE: MPCS (EXTERNAL or INTERNAL, including those generated from rigid body 
+          definitions), KINEMATIC COUPLINGS, AND/OR EQUATIONS WILL ACTIVATE 
+          ADDITIONAL DEGREES OF FREEDOM
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 138 elements are distorted. Either the isoparametric angles are 
+             out of the suggested limits or the triangular or tetrahedral 
+             quality measure is bad. The elements have been identified in 
+             element set WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted tetrahedral elements
+  
+      Element      Quality measure     Min angle        Max angle     Adjusted nodes 
+ ----------------- ---------------- ---------------- ---------------- -------------- 
+         BLANK-1.2        0.0136596           15.098          158.387       NO       
+         BLANK-1.3        0.0153632          9.17026          154.253       NO       
+        BLANK-1.11         0.141466          6.23113          94.5816       NO       
+        BLANK-1.13         0.147071          8.79445          134.962       NO       
+        BLANK-1.15        0.0289738          6.11937          100.764       NO       
+        BLANK-1.16       0.00189711          34.8506          152.622       NO       
+        BLANK-1.23         0.030632          6.57115          100.116       NO       
+        BLANK-1.24         0.046974          8.02372          93.4804       NO       
+        BLANK-1.27         0.117103          5.47066              90.       NO       
+        BLANK-1.29        0.0187767          11.5532          150.048       NO       
+        BLANK-1.30       0.00790848          12.9811           146.95       NO       
+        BLANK-1.45        0.0173597          11.6644           130.22       NO       
+        BLANK-1.51        0.0157373          18.5264          132.664       NO       
+        BLANK-1.54        0.0482695          6.09306          97.5643       NO       
+        BLANK-1.57        0.0156722          11.8687          138.209       NO       
+        BLANK-1.60         0.110313          6.03978              90.       NO       
+        BLANK-1.63        0.0165853          23.1509          132.098       NO       
+        BLANK-1.66        0.0157666          18.6642          139.287       NO       
+        BLANK-1.71        0.0150604          7.41646          158.928       NO       
+        BLANK-1.73         0.149643          6.46419          95.5125       NO       
+        BLANK-1.76        0.0996507           5.3611          99.2579       NO       
+        BLANK-1.77        0.0168254          23.7771          146.426       NO       
+        BLANK-1.84        0.0325333           8.3606          143.703       NO       
+        BLANK-1.85        0.0142194          9.67912          134.215       NO       
+        BLANK-1.89        0.0574865          5.15283          110.029       NO       
+        BLANK-1.90        0.0520952          7.43498          152.239       NO       
+        BLANK-1.91        0.0651862          5.18186           96.139       NO       
+        BLANK-1.92        0.0828188          9.49025          128.184       NO       
+        BLANK-1.93       0.00993153          8.62265          136.981       NO       
+        BLANK-1.95         0.027147            7.151          93.7351       NO       
+        BLANK-1.97          0.12602          9.79758          149.606       NO       
+       BLANK-1.101       0.00178642          6.51489           96.864       NO       
+       BLANK-1.104         0.112095          6.77397          142.215       NO       
+       BLANK-1.112         0.056155          6.42423          149.484       NO       
+       BLANK-1.122       0.00709023          16.6649          146.672       NO       
+       BLANK-1.124        0.0171386          17.3055          143.532       NO       
+       BLANK-1.125       0.00719598          13.1884          156.713       NO       
+       BLANK-1.128        0.0962312          8.85995          153.867       NO       
+       BLANK-1.137        0.0361092          8.24604          112.843       NO       
+       BLANK-1.138        0.0105977          24.0256          143.528       NO       
+       BLANK-1.142        0.0125004          12.8896          152.101       NO       
+       BLANK-1.145        0.0028795          16.6132          156.464       NO       
+       BLANK-1.158        0.0287101          9.28293          144.738       NO       
+       BLANK-1.165        0.0501183          8.47509           155.28       NO       
+       BLANK-1.166         0.116471          6.90474          90.1122       NO       
+       BLANK-1.168         0.045331          6.36884           97.807       NO       
+       BLANK-1.170         0.108929          6.10033          101.421       NO       
+       BLANK-1.176         0.129452          6.92212              90.       NO       
+       BLANK-1.177         0.045331          5.67919          91.9344       NO       
+       BLANK-1.182        0.0160146          12.4761          149.089       NO       
+       BLANK-1.184        0.0651862           5.3979          90.7979       NO       
+       BLANK-1.186        0.0608843          6.27074          95.7779       NO       
+       BLANK-1.187        0.0834594          4.51297          94.5758       NO       
+       BLANK-1.188        0.0192295           8.0098          135.011       NO       
+       BLANK-1.198       0.00193316          17.9939          154.483       NO       
+       BLANK-1.201         0.003904          17.7713          152.544       NO       
+       BLANK-1.203        0.0834594          4.93787              90.       NO       
+       BLANK-1.219        0.0482695           5.6897          91.7861       NO       
+       BLANK-1.225        0.0182939          11.9143          146.914       NO       
+       BLANK-1.226        0.0321591          9.77562          155.051       NO       
+       BLANK-1.228        0.0930251          4.87443              90.       NO       
+       BLANK-1.229        0.0939451          4.93963              90.       NO       
+       BLANK-1.232       0.00769029          12.9454          151.266       NO       
+       BLANK-1.233        0.0141692           10.681          143.643       NO       
+       BLANK-1.236        0.0289092          8.24644          130.911       NO       
+       BLANK-1.238         0.013216            6.772          94.4829       NO       
+       BLANK-1.239        0.0289887          9.06567           150.58       NO       
+       BLANK-1.240        0.0295311          7.85552          112.448       NO       
+       BLANK-1.242         0.127157          6.40472              90.       NO       
+       BLANK-1.248       0.00411582          10.7119          155.498       NO       
+       BLANK-1.252         0.116302          6.38614              90.       NO       
+       BLANK-1.267        0.0114497          14.1565           155.42       NO       
+       BLANK-1.268         0.179454          7.85226              90.       NO       
+       BLANK-1.275         0.114374          5.81385              90.       NO       
+       BLANK-1.303         0.147924          7.68382              90.       NO       
+       BLANK-1.307        0.0268765          9.86237          121.832       NO       
+       BLANK-1.310         0.114241          5.56222              90.       NO       
+       BLANK-1.318        0.0814702          6.24881          103.438       NO       
+       BLANK-1.322        0.0359553           6.4194          92.9677       NO       
+       BLANK-1.323         0.119636          7.22374          100.872       NO       
+       BLANK-1.338         0.158406          9.42568          96.6959       NO       
+       BLANK-1.339        0.0362301          8.01086          93.7183       NO       
+       BLANK-1.350        0.0219004          7.35701           94.398       NO       
+       BLANK-1.358        0.0299291          6.45498          93.1759       NO       
+       BLANK-1.361       0.00977886          30.6382          153.211       NO       
+       BLANK-1.363        0.0289738          7.76734          93.8697       NO       
+       BLANK-1.366         0.160978          7.02856          96.6044       NO       
+       BLANK-1.367        0.0171162          17.2528          143.139       NO       
+       BLANK-1.380        0.0187911          9.68179          152.501       NO       
+       BLANK-1.384       0.00121327          22.4089          164.827       NO       
+       BLANK-1.394        0.0173638          8.42473          95.5502       NO       
+       BLANK-1.398        0.0193342          21.5966           136.59       NO       
+       BLANK-1.404         0.116132          6.14457              90.       NO       
+       BLANK-1.405        0.0692172          9.75875          159.015       NO       
+       BLANK-1.419       0.00111852          27.7035          129.986       NO       
+       BLANK-1.423        0.0159255          11.9601          145.046       NO       
+       BLANK-1.424       0.00267969          12.9603          139.925       NO       
+       BLANK-1.436        0.0784733          5.41378              90.       NO       
+       BLANK-1.438       0.00948394          24.4851          140.936       NO       
+       BLANK-1.444      0.000733879          25.5399          133.361       NO       
+       BLANK-1.446        0.0091481          15.7074          125.223       NO       
+       BLANK-1.450       0.00968812           20.001          144.902       NO       
+       BLANK-1.451       0.00581283          14.5437          158.207       NO       
+       BLANK-1.495       0.00241487          16.3518          152.066       NO       
+       BLANK-1.499       0.00969787          11.8874          160.066       NO       
+       BLANK-1.503       0.00173368          25.0948          103.957       NO       
+       BLANK-1.504        0.0206508          8.00244          118.491       NO       
+       BLANK-1.505        0.0778939          7.77124          153.671       NO       
+       BLANK-1.506        0.0029641          32.1915          145.299       NO       
+       BLANK-1.507        0.0901045          4.75424              90.       NO       
+       BLANK-1.508         0.030632          6.97443          93.3911       NO       
+       BLANK-1.513         0.107146          8.21333          139.795       NO       
+       BLANK-1.518        0.0159001          12.4788          157.065       NO       
+       BLANK-1.520         0.052313           5.0266          91.3086       NO       
+       BLANK-1.526        0.0314306          9.54402          142.424       NO       
+       BLANK-1.531        0.0174489          28.2148          115.146       NO       
+       BLANK-1.532        0.0108991          6.26036          94.2827       NO       
+       BLANK-1.545        0.0178408          18.9403          125.692       NO       
+       BLANK-1.548       0.00154869          14.5799          144.593       NO       
+       BLANK-1.572        0.0154607          19.0018          157.832       NO       
+       BLANK-1.574        0.0134142           11.698          142.602       NO       
+       BLANK-1.575         0.107544          5.87211              90.       NO       
+       BLANK-1.585        0.0577033          6.34273          91.9823       NO       
+       BLANK-1.587       0.00618244           17.997          127.866       NO       
+       BLANK-1.589         0.180365          9.89925          98.2679       NO       
+       BLANK-1.606        0.0137039           10.634          139.229       NO       
+       BLANK-1.607        0.0104928          13.1079          150.582       NO       
+       BLANK-1.609        0.0608843          4.74148           90.808       NO       
+       BLANK-1.610        0.0108115          9.45776          107.642       NO       
+       BLANK-1.616       0.00769066          8.49936          146.028       NO       
+       BLANK-1.623        0.0441715          7.29286          92.4387       NO       
+       BLANK-1.637       0.00967599          17.4744          113.081       NO       
+       BLANK-1.639       0.00617409          12.5585          128.376       NO       
+       BLANK-1.666         0.078435          9.29024          145.597       NO       
+       BLANK-1.681      0.000870751          24.8387          113.204       NO       
+       BLANK-1.683        0.0738017           5.9649          90.0154       NO       
+       BLANK-1.691      0.000850981          4.86024          98.1978       NO       
+       BLANK-1.696        0.0188975          11.9651          153.056       NO       
+  
+  
+  *Step, name=buckling, nlgeom=NO, perturbation
+  *output, field, variable=PRESELECT
+  *Step, name=buckling, nlgeom=NO, perturbation
+  *Step, name=buckling, nlgeom=NO, perturbation
+  buckling                                                                        
+  *buckle, eigensolver=LANCZOS
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *output, field, variable=PRESELECT
+  *endstep
+  *Step, name=buckling, nlgeom=NO, perturbation
+  *buckle, eigensolver=LANCZOS
+  *buckle, eigensolver=LANCZOS
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *boundary, op=NEW, loadcase=1
+  *boundary, op=NEW, loadcase=2
+  *cload
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                   709
+          NUMBER OF NODES IS                                     1496
+          NUMBER OF NODES DEFINED BY THE USER                    1496
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                 4599
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.10000    
+       SYSTEM TIME (SEC)    =   0.0000    
+       TOTAL CPU TIME (SEC) =  0.10000    
+       WALLCLOCK TIME (SEC) =          0
+1
+
+   Abaqus 2022                                  Date 06-Feb-2024   Time 13:10:42
+   For use by IMPERIAL COLLEGE OF SCIENCE TECHNOLOGYMEDICINE under license from Dassault Systemes or its subsidiary.
+
+     jobDescription                                                                            STEP    1  INCREMENT    1
+     buckling                                                                             TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     C A L C U L A T I O N   O F   E I G E N V A L U E S
+
+                                            F O R   B U C K L I N G   P R E D I C T I O N
+
+
+
+          buckling                                                                        
+
+     THE LANCZOS EIGENSOLVER IS USED FOR THIS ANALYSIS
+     Abaqus WILL COMPUTE UNCOUPLED
+      STRUCTURAL AND ACOUSTIC MODES
+     NUMBER OF EIGENVALUES                      1
+     SMALLEST EIGENVALUE OF INTEREST                 0.0000    
+     MAXIMUM NUMBER OF STEPS WITHIN RUN               40
+     BLOCK SIZE FOR LANCZOS PROCEDURE                  1
+     THE BUCKLING MODE CONSTRAINTS 
+      ARE DEFINED AS LOAD CASE 2
+                              ONLY INITIAL STRESS EFFECTS ARE INCLUDED IN THE
+                              STIFFNESS MATRIX
+
+     THIS IS A LINEAR PERTURBATION STEP.
+     ALL LOADS ARE DEFINED AS CHANGE IN LOAD TO THE REFERENCE STATE
+
+
+
+                    TOTAL MASS OF MODEL
+
+                      2.0091511E-03
+
+
+                    LOCATION OF THE CENTER OF MASS OF THE MODEL
+
+                       260.1825           114.2726           3.150029    
+
+
+                    MOMENTS OF INERTIA ABOUT THE ORIGIN
+                           I(XX)               I(YY)               I(ZZ)
+
+                       35.06757           181.1117           216.1261    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE ORIGIN
+                           I(XY)               I(XZ)               I(YZ)
+
+                      -59.73707          -1.646651         -0.7232187    
+
+
+                    MOMENTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XX)               I(YY)               I(ZZ)
+
+                       8.811671           45.08240           53.88078    
+
+
+                    PRODUCTS OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XY)               I(XZ)               I(YZ)
+
+                     -1.5146826E-03      1.3801608E-05     -4.8136691E-07
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          1.07E+08               23                 41
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+                              E I G E N V A L U E    O U T P U T     
+
+ BUCKLING LOAD ESTIMATE = ("DEAD" LOADS) + EIGENVALUE * ("LIVE" LOADS).
+          "DEAD" LOADS = TOTAL LOAD BEFORE  *BUCKLE STEP.
+          "LIVE" LOADS = INCREMENTAL LOAD IN *BUCKLE STEP
+
+
+ MODE NO      EIGENVALUE
+
+
+       1       91519.    
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE DAT FILE
+                              AND       1 WARNING MESSAGES ON THE MSG FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.20000    
+       SYSTEM TIME (SEC)    =   0.0000    
+       TOTAL CPU TIME (SEC) =  0.20000    
+       WALLCLOCK TIME (SEC) =          1

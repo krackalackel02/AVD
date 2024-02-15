@@ -1,0 +1,920 @@
+(NOTICE  ) [13:38:24.288250|tosca_python] ------------------------------------------------------
+(NOTICE  ) [13:38:24.288250|tosca_python] |                                                    |
+(NOTICE  ) [13:38:24.288250|tosca_python] |           Tosca Structure Python Control           |
+(NOTICE  ) [13:38:24.288250|tosca_python] |                                                    |
+(NOTICE  ) [13:38:24.288250|tosca_python] |                3DEXPERIENCE R2022x                 |
+(NOTICE  ) [13:38:24.288250|tosca_python] |                                                    |
+(NOTICE  ) [13:38:24.288250|tosca_python] ------------------------------------------------------
+(NOTICE  ) [13:38:24.288250|tosca_python] 
+(NOTICE  ) [13:38:24.288250|tosca_python] Tosca started at Tue, 06 Feb 2024 13:38:24
+(NOTICE  ) [13:38:24.288250|tosca_python] 
+(INFO    ) [13:38:24.878107|tosca_python] --------------------------
+(INFO    ) [13:38:24.878107|tosca_python] Loading User Configuration
+(INFO    ) [13:38:24.878107|tosca_python] --------------------------
+(INFO    ) [13:38:24.878107|tosca_python] Executing: C:\SIMULIA\EstProducts\2022\win_b64\SMATsoResources\config\tosca.cfg
+(INFO    ) [13:38:24.954359|tosca_python] Executing: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1.par
+(INFO    ) [13:38:24.968313|tosca_python] Log level               : INFO
+(INFO    ) [13:38:24.968313|tosca_python] Job name                : Opt-Process-1
+(INFO    ) [13:38:24.968313|tosca_python] Input directory         : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2
+(INFO    ) [13:38:24.968313|tosca_python] Parameter file          : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1.par
+(INFO    ) [13:38:24.968313|tosca_python] Working directory       : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1
+(INFO    ) [13:38:24.968313|tosca_python] Startup directory       : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2
+(INFO    ) [13:38:24.968313|tosca_python] Platform                : win_b64
+(INFO    ) [13:38:24.968313|tosca_python] Optimization type       : Topo Sensitivity
+(INFO    ) [13:38:24.968313|tosca_python] Macros directory        : C:\SIMULIA\EstProducts\2022\win_b64\SMATsoResources\macros
+(INFO    ) [13:38:24.968313|tosca_python] Test type               : ALL
+(INFO    ) [13:38:24.968313|tosca_python] Fe-Solver               : abaqus
+(INFO    ) [13:38:24.968313|tosca_python] -----------
+(INFO    ) [13:38:24.968313|tosca_python] Input Files
+(INFO    ) [13:38:24.968313|tosca_python] -----------
+(INFO    ) [13:38:24.968313|tosca_python] Master input deck       : C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1-Job.inp
+(INFO    ) [13:38:24.969310|tosca_python] ---------------
+(INFO    ) [13:38:24.969310|tosca_python] Post-Processing
+(INFO    ) [13:38:24.969310|tosca_python] ---------------
+(INFO    ) [13:38:24.969310|tosca_python] * Report to VTFX
+(INFO    ) [13:38:24.969310|tosca_python] * Smooth
+(INFO    ) [13:38:24.969310|tosca_python] 
+(NOTICE  ) [13:38:24.970306|tosca_python] Starting job Opt-Process-1
+(INFO    ) [13:38:24.970306|tosca_python] ---------------------------
+(NOTICE  ) [13:38:24.970306|tosca_python] Checking User Configuration
+(INFO    ) [13:38:24.970306|tosca_python] ---------------------------
+(INFO    ) [13:38:24.970306|tosca_python] ------------------------------
+(INFO    ) [13:38:24.971303|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoFemInclude.exe --loglevel INFO --solver abaqus --out C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\_included_files.json C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1-Job.inp
+(INFO    ) [13:38:25.071743|SMATsoFemInclude|11808|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoFemInclude - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:25.078721|SMATsoFemInclude|11808|SMATsoFemIncludeMain|main] SIMULIA Tosca Structure.SMATsoFemInclude finished successfully
+(INFO    ) [13:38:25.088701|tosca_python] Module SMATsoFemInclude has finished with exit code 0
+(INFO    ) [13:38:25.088701|tosca_python] Elapsed time of SMATsoFemInclude : 0:00:00.117398  -  current time: 2024-02-06 13:38:25.088701
+(INFO    ) [13:38:25.090694|tosca_python] ----------------------------
+(INFO    ) [13:38:25.090694|tosca_python] Creating archive directories
+(INFO    ) [13:38:25.090694|tosca_python] ----------------------------
+(INFO    ) [13:38:25.091691|tosca_python] Directory created: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\TOSCA_POST
+(INFO    ) [13:38:25.095678|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoFemToOnf.exe --loglevel INFO --solver abaqus C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.inp
+(INFO    ) [13:38:25.184648|SMATsoFem2Onf|16792|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoFem2Onf - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:25.190159|SMATsoFem2Onf|16792|SMATsoFemToOnfMain|main] Translating the Abaqus input file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.inp to the optimization neutral format
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] 
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] --------------------------------------------------------------------
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] |                          LOADCASE TABLE                          |
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] --------------------------------------------------------------------
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] | # | Type |         Name          |         File          | Line  |
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] ====================================================================
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] | 1 | STEP | "Loading down with g" | Opt-Process-1-Job.inp | 17937 |
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] |   |      |                       | Opt-Process-1-Job.inp | 17971 |
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] --------------------------------------------------------------------
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] 
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] -----------------------------------------------------------------
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] |                        MATERIAL TABLE                         |
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] -----------------------------------------------------------------
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] | # |           Name            |         File          | Line  |
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] =================================================================
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] | 1 | "Aluminium alloy 6061-T6" | Opt-Process-1-Job.inp | 17928 |
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] -----------------------------------------------------------------
+(INFO    ) [13:38:25.219593|SMATsoFem2Onf|16792|SMATsoAbaqusBasics|ABAQUSInputFile] 
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group ""Blank-1_Aluminum blank"" as ""Blank-1_Aluminum blank_ELEM""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group ""Blank-1_Aluminum blank"" as ""Blank-1_Aluminum blank_NODE""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group ""Inner left"" as ""Inner left_ELEM""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group ""Inner left"" as ""Inner left_NODE""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group ""Inner right"" as ""Inner right_ELEM""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group ""Inner right"" as ""Inner right_NODE""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group ""Loading set"" as ""Loading set_ELEM""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group ""Loading set"" as ""Loading set_NODE""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group ""loading inner circle set"" as ""loading inner circle set_ELEM""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group ""loading inner circle set"" as ""loading inner circle set_NODE""
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group "SET-10" as "SET-10_ELEM"
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group "SET-10" as "SET-10_NODE"
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group "SET-11" as "SET-11_ELEM"
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group "SET-11" as "SET-11_NODE"
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group "SET-8" as "SET-8_ELEM"
+(INFO    ) [13:38:25.226904|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group "SET-8" as "SET-8_NODE"
+(INFO    ) [13:38:25.227908|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of elements group "SET-9" as "SET-9_ELEM"
+(INFO    ) [13:38:25.227908|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Creating a copy of nodes group "SET-9" as "SET-9_NODE"
+(INFO    ) [13:38:25.227908|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfGroupsFile] Writing ONF group file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job_grp.onf
+(INFO    ) [13:38:25.229915|SMATsoFem2Onf|16792|SMATocOnfEngine|OnfModelFile] Writing ONF input file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job_fem.onf
+(INFO    ) [13:38:25.249994|SMATsoFem2Onf|16792|SMATsoFemToOnfMain|main] SIMULIA Tosca Structure.SMATsoFem2Onf finished successfully
+(INFO    ) [13:38:25.257484|tosca_python] Module SMATsoFemToOnf has finished with exit code 0
+(INFO    ) [13:38:25.258513|tosca_python] Elapsed time of SMATsoFemToOnf : 0:00:00.161806  -  current time: 2024-02-06 13:38:25.257484
+(NOTICE  ) [13:38:25.258513|tosca_python] Starting SIMULIA Tosca Structure Preprocessor
+(INFO    ) [13:38:25.258513|tosca_python] Setting up the VTM cache size to 1024 MB
+(INFO    ) [13:38:25.258513|tosca_python] Setting up TOSCA_SIZE to 150000
+(INFO    ) [13:38:25.258513|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoToscaPrep.exe --loglevel INFO --input C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1.par
+(INFO    ) [13:38:25.432196|SMATsoToscaPrep|9360|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoToscaPrep - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:25.529150|SMATsoToscaPrep|9360|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:25.531321|SMATsoToscaPrep|9360|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:25.531321|SMATsoToscaPrep|9360|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:25.553541|SMATsoToscaPrep] Initializing license interface
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |               ___ ___ __  __ _   _ _    ___   _                          |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |              / __|_ _|  \/  | | | | |  |_ _| /_\                         |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |              \__ \| || |\/| | |_| | |__ | | / _ \                        |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |              |___/___|_|  |_|\___/|____|___/_/ \_\                       |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                                                                          |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                    _______                                               |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                   |__   __|                                              |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                      | | ___  ___  ___ __ _                              |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                      | |/ _ \/ __|/ __/ _` |                             |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                      | | (_) \__ \ (_| (_| |                             |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                      |_|\___/|___/\___\__,_|                             |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                                                                          |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |           _____ _                   _                                    |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |          / ____| |                 | |                                   |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |         | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ ___                   |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |          \___ \| __| '__| | | |/ __| __| | | | '__/ _ \                  |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |          ____) | |_| |  | |_| | (__| |_| |_| | | |  __/                  |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |         |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  \___|                  |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                        OPTIMIZATION PREPROCESSOR                         |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |                        of SIMULIA Tosca Structure                        |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] |       Copyright(c) 2020 Dassault Systemes SIMULIA Corp.                  |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] | Version 3DEXPERIENCE R2021x                                              |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep] | DATE:   2/6/2024                                                         |
+(INFO    ) [13:38:26.652935|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [13:38:26.655925|SMATsoToscaPrep] Reading command          : FEM_INPUT
+(INFO    ) [13:38:26.961426|SMATsoToscaPrep] Reading command          : DRESP
+(INFO    ) [13:38:26.961426|SMATsoToscaPrep] Reading command          : DRESP
+(INFO    ) [13:38:26.961426|SMATsoToscaPrep] Reading command          : DV_TOPO
+(INFO    ) [13:38:26.961426|SMATsoToscaPrep] Reading command          : OBJ_FUNC
+(INFO    ) [13:38:26.961426|SMATsoToscaPrep] Reading command          : CONSTRAINT
+(INFO    ) [13:38:26.961426|SMATsoToscaPrep] Reading command          : DVCON_TOPO
+(INFO    ) [13:38:26.962423|SMATsoToscaPrep] Reading command          : DVCON_TOPO
+(INFO    ) [13:38:26.962423|SMATsoToscaPrep] Reading command          : DVCON_TOPO
+(INFO    ) [13:38:26.962423|SMATsoToscaPrep] Reading command          : OPTIMIZE
+(INFO    ) [13:38:26.962423|SMATsoToscaPrep] Reading command          : OPT_PARAM
+(INFO    ) [13:38:26.962423|SMATsoToscaPrep] Reading command          : STOP
+(INFO    ) [13:38:26.963419|SMATsoToscaPrep] Reading command          : DRIVER
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep|9360|SMATocMesh|FED_GroupPool] Loading all groups from the database
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] | ELEMENTS with LOADS are AUTOFROZEN                                       |
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] System detected the following ELEMENTS as
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] loaded by pressure, boundary conditions or the.
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] connected nodes are loaded by forces, displacements
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] or with concentrated loads.
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] Number of elements:            0
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] 
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] The following LIST of elements can be used
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] for the topology optimization.
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] Number of elements:         5832
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep]     1    ->  5832
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] 
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] 
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] | Automatic definition of checkerboard filter                              |
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] 
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] SYSTEM defined a checkerboard filter in topology optimization
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] to automatically prevent checkerboards.
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] 
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] Filter radius:      6.350678
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] Filter diameter:    12.70136
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] 
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] 
+(INFO    ) [13:38:26.965413|SMATsoToscaPrep] DV Cluster information:
+(INFO    ) [13:38:26.979367|SMATsoToscaPrep]  Number of clustering groups          :            0
+(INFO    ) [13:38:26.979367|SMATsoToscaPrep]  Number of dv-elements being clustered:            0
+(INFO    ) [13:38:26.979367|SMATsoToscaPrep]  Number of free dv-elements           :         5397
+(INFO    ) [13:38:26.979367|SMATsoToscaPrep]  Number of DV after clustering        :         5397
+(INFO    ) [13:38:27.243013|SMATsoToscaPrep|9360|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_ADV_NONLINEAR
+(INFO    ) [13:38:27.244009|SMATsoToscaPrep|9360|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_TOPO
+(INFO    ) [13:38:27.244009|SMATsoToscaPrep|9360|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_INT_ABAQUS
+(INFO    ) [13:38:27.324251|SMATsoToscaPrep] Application finished successfully
+(INFO    ) [13:38:27.357724|tosca_python] Module SMATsoToscaPrep has finished with exit code 0
+(INFO    ) [13:38:27.357724|tosca_python] Elapsed time of SMATsoToscaPrep : 0:00:02.099211  -  current time: 2024-02-06 13:38:27.357724
+(INFO    ) [13:38:27.357724|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtOptResExportTool.exe --loglevel INFO --cycle -1 --static_data
+(INFO    ) [13:38:27.443786|SMATrtOptResExportTool|29408|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATrtOptResExportTool - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:27.444784|SMATrtOptResExportTool|29408|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:27.446776|SMATrtOptResExportTool|29408|SMATrtOptResExportTool|main] Extracting results from opt_res_database
+(INFO    ) [13:38:27.538570|SMATrtOptResExportTool|29408|SMATrtOptResExportTool|main] SIMULIA Tosca Structure.SMATrtOptResExportTool finished successfully
+(INFO    ) [13:38:27.548536|tosca_python] Module SMATrtOptResExportTool has finished with exit code 0
+(INFO    ) [13:38:27.548536|tosca_python] Elapsed time of SMATrtOptResExportTool : 0:00:00.190812  -  current time: 2024-02-06 13:38:27.548536
+(INFO    ) [13:38:28.088564|tosca_python] --------------------------
+(INFO    ) [13:38:28.089556|tosca_python] Loading User Configuration
+(INFO    ) [13:38:28.089556|tosca_python] --------------------------
+(INFO    ) [13:38:28.089556|tosca_python] Executing: C:\SIMULIA\EstProducts\2022\win_b64\SMATsoResources\config\tosca.cfg
+(INFO    ) [13:38:28.187746|tosca_python] Executing: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1.par
+(INFO    ) [13:38:28.217157|tosca_python] ----------------------------
+(NOTICE  ) [13:38:28.217157|tosca_python] Checking Final Configuration
+(INFO    ) [13:38:28.217157|tosca_python] ----------------------------
+(INFO    ) [13:38:28.217157|tosca_python] ---------------------------
+(INFO    ) [13:38:28.238614|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoFemModif.exe --loglevel INFO --solver abaqus --cycle 000 --perturbation 0 --format_matrices sim --pseudo_step_to_lc C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.inp
+(INFO    ) [13:38:28.314783|SMATsoFemModif|30388|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoFemModif - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:28.316902|SMATsoFemModif|30388|SMATocOnfEngine|OnfModifFile] Reading modification instructions from ONF file:
+(INFO    ) [13:38:28.316902|SMATsoFemModif|30388|SMATocOnfEngine|OnfModifFile] C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job_mod.onf
+(INFO    ) [13:38:28.321963|SMATsoFemModif|30388|SMATsoFemModifMain|main] Reading ONF model file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job_fem.onf
+(INFO    ) [13:38:28.387895|SMATsoFemModif|30388|SMATsoFemModifMain|main] SIMULIA Tosca Structure.SMATsoFemModif finished successfully
+(INFO    ) [13:38:28.399369|tosca_python] Module SMATsoFemModif has finished with exit code 0
+(INFO    ) [13:38:28.400366|tosca_python] Elapsed time of SMATsoFemModif : 0:00:00.159740  -  current time: 2024-02-06 13:38:28.399369
+(NOTICE  ) [13:38:28.403356|tosca_python] Starting abaqus analysis - design cycle 0
+(INFO    ) [13:38:28.403356|tosca_python] Starting the solver
+(INFO    ) [13:38:28.404353|tosca_python] Calling hooks before module abaqus
+(INFO    ) [13:38:28.405352|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoAbaqusTsProvider.exe -j Opt-Process-1-Job -p C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 --cycle 0
+(INFO    ) [13:38:28.425285|hook] Timestamp file written successfully
+(INFO    ) [13:38:28.520588|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:28.520588|tosca_python] Elapsed time of hook : 0:00:00.115236  -  current time: 2024-02-06 13:38:28.520588
+(INFO    ) [13:38:28.520588|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMALauncher.exe -unified -job Opt-Process-1-Job analysis interactive -resultsFormat ODB message messaging_mechanism=DIRECT listener_name=Daniel-Gutierrez listener_resource=28208 direct_port=51861 memory=90%
+(INFO    ) [13:38:39.184559|abaqus] Analysis initiated from SIMULIA established products
+(INFO    ) [13:38:39.184559|abaqus] Abaqus JOB Opt-Process-1-Job
+(INFO    ) [13:38:39.184559|abaqus] Abaqus 2022
+(INFO    ) [13:38:39.184559|abaqus] Abaqus License Manager checked out the following licenses:
+(INFO    ) [13:38:39.184559|abaqus] Abaqus/Standard checked out 5 tokens from Flexnet server abaqusae.cc.ic.ac.uk.
+(INFO    ) [13:38:39.184559|abaqus] <3131 out of 3200 licenses remain available>.
+(INFO    ) [13:38:39.184559|abaqus] Begin Abaqus/Standard Analysis
+(INFO    ) [13:38:39.184559|abaqus] 06/02/2024 13:38:36
+(INFO    ) [13:38:39.184559|abaqus] Run abaqusstd.exe
+(INFO    ) [13:38:39.184559|tosca_python] Fe-solver abaqus finished with job Opt-Process-1-Job.inp
+(INFO    ) [13:38:39.184559|tosca_python] Elapsed time of abaqus : 0:00:10.781203  -  current time: 13:38:39.184559
+(INFO    ) [13:38:39.184559|tosca_python] Solution complete
+(INFO    ) [13:38:39.185552|tosca_python] Checking solver output file: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.msg
+(INFO    ) [13:38:39.189542|tosca_python] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [13:38:39.190539|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoOdbToVtmMain.exe --solver abaqus --loglevel INFO --format_matrices sim --cycle 0 --perturbation 0 C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:39.385117|res2vtm|25032|SMATocApplication|FED_Application] SIMULIA Tosca Structure.res2vtm - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:39.387106|res2vtm|25032|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:39.425492|res2vtm|25032|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:39.430476|res2vtm|25032|SMATsoOdbToVtmMain|main] Reading Abaqus ODB output file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:39.448416|res2vtm|25032|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading results from the abaqus result database C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.odb
+(INFO    ) [13:38:39.454395|res2vtm|25032|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of design responses for step 1, incr. 1
+(INFO    ) [13:38:39.478315|res2vtm|25032|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of sensitivities (element-based) for step 1, incr. 1
+(INFO    ) [13:38:39.494260|res2vtm|25032|SMATsoOdbToVtmMain|main] SIMULIA Tosca Structure.res2vtm finished successfully
+(INFO    ) [13:38:39.511207|tosca_python] Module SMATsoOdbToVtmMain has finished with exit code 0
+(INFO    ) [13:38:39.511207|tosca_python] Elapsed time of SMATsoOdbToVtmMain : 0:00:00.320668  -  current time: 2024-02-06 13:38:39.511207
+(NOTICE  ) [13:38:39.511207|tosca_python] Starting SIMULIA Tosca Structure optimization module - design cycle 0
+(INFO    ) [13:38:39.511207|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoToscaOpt.exe --loglevel INFO
+(INFO    ) [13:38:39.613884|SMATsoToscaOpt|26096|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoToscaOpt - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:39.618866|SMATsoToscaOpt|26096|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:39.639801|SMATsoToscaOpt|26096|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:39.642787|SMATsoToscaOpt|26096|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt|26096|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_ADV_NONLINEAR
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt|26096|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_TOPO
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt|26096|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_INT_ABAQUS
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |               ___ ___ __  __ _   _ _    ___   _                          |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |              / __|_ _|  \/  | | | | |  |_ _| /_\                         |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |              \__ \| || |\/| | |_| | |__ | | / _ \                        |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |              |___/___|_|  |_|\___/|____|___/_/ \_\                       |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                    _______                                               |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                   |__   __|                                              |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                      | | ___  ___  ___ __ _                              |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                      | |/ _ \/ __|/ __/ _` |                             |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                      | | (_) \__ \ (_| (_| |                             |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                      |_|\___/|___/\___\__,_|                             |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |           _____ _                   _                                    |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |          / ____| |                 | |                                   |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |         | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ ___                   |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |          \___ \| __| '__| | | |/ __| __| | | | '__/ _ \                  |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |          ____) | |_| |  | |_| | (__| |_| |_| | | |  __/                  |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |         |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  \___|                  |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                           OPTIMIZATION MODULE                            |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] |                        of SIMULIA Tosca Structure                        |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] | Version 3DEXPERIENCE R2021x                                              |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt] | DATE:   2/6/2024                                                         |
+(INFO    ) [13:38:39.884005|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.887992|SMATsoToscaOpt] 
+(INFO    ) [13:38:39.887992|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.887992|SMATsoToscaOpt] | Begin of DESIGN CYCLE NUMBER: 0                                          |
+(INFO    ) [13:38:39.887992|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.887992|SMATsoToscaOpt] 
+(INFO    ) [13:38:39.889985|SMATsoToscaOpt] Checking for existence of results
+(INFO    ) [13:38:39.985176|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.985176|SMATsoToscaOpt] | Update of Design Variable Constraints                                    |
+(INFO    ) [13:38:39.985176|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:39.985176|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] | TSTRUCT --- Report of OPTIMIZATION Results                               |
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  DESIGN CYCLE                :   0 (values of startmodel)
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  OPTIMIZE name               : TASK-1
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  OBJ_FUNC name               : OBJECTIVE-1
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  OBJ_FUNC value              :     2258.87
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] (Value of OBJ_FUNC calculated without frozen elements)
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] | Name   of OBJ_FUNC_TERM         Value          Weight        Reference   |
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]                   D-RESPONSE-2    2258.87        1.00000        0.00000
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  Value of OBJ_FUNC (based on objective function terms):     2258.87
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] | Name   of CONSTRAINT            act. Value         TARGET VALUE    NORM  |
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]              OPT-CONSTRAINT-1   0.401923E-03  <=    0.401923E-03    1.0      FALSE
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.048260|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.051293|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.051293|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:40.051293|SMATsoToscaOpt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [13:38:40.051293|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:40.301756|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.301756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.301756|SMATsoToscaOpt] | End of DESIGN CYCLE NUMBER: 0                                            |
+(INFO    ) [13:38:40.301756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:40.301756|SMATsoToscaOpt] 
+(INFO    ) [13:38:40.381001|SMATsoToscaOpt] Application finished successfully
+(INFO    ) [13:38:40.399770|tosca_python] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [13:38:40.399770|tosca_python] Elapsed time of SMATsoToscaOpt : 0:00:00.888563  -  current time: 2024-02-06 13:38:40.399770
+(INFO    ) [13:38:40.399770|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtOptResExportTool.exe --loglevel INFO --cycle 0
+(INFO    ) [13:38:40.554369|SMATrtOptResExportTool|16328|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATrtOptResExportTool - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:40.555366|SMATrtOptResExportTool|16328|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:40.557359|SMATrtOptResExportTool|16328|SMATrtOptResExportTool|main] Extracting results from opt_res_database
+(INFO    ) [13:38:40.591246|SMATrtOptResExportTool|16328|SMATrtOptResExportTool|main] SIMULIA Tosca Structure.SMATrtOptResExportTool finished successfully
+(INFO    ) [13:38:40.599224|tosca_python] Module SMATrtOptResExportTool has finished with exit code 0
+(INFO    ) [13:38:40.600225|tosca_python] Elapsed time of SMATrtOptResExportTool : 0:00:00.199454  -  current time: 2024-02-06 13:38:40.599224
+(INFO    ) [13:38:40.861070|tosca_python] Calling hooks after check point 'Design Cycle Complete'
+(INFO    ) [13:38:40.862067|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMALauncher.exe python -m driverWriteOnfToOdb --type TP --inp Opt-Process-1-Job --cycle 0 --perturbation 0
+(INFO    ) [13:38:41.982997|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:41.982997|tosca_python] Elapsed time of hook : 0:00:01.120930  -  current time: 2024-02-06 13:38:41.982997
+(NOTICE  ) [13:38:41.986984|tosca_python] Starting abaqus analysis - design cycle 1
+(INFO    ) [13:38:41.987980|tosca_python] Activating the solver
+(INFO    ) [13:38:41.987980|tosca_python] Calling hooks before module abaqus
+(INFO    ) [13:38:41.987980|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoAbaqusTsProvider.exe -j Opt-Process-1-Job -p C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 --cycle 1
+(INFO    ) [13:38:41.995954|hook] Timestamp file written successfully
+(INFO    ) [13:38:42.173224|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:42.173224|tosca_python] Elapsed time of hook : 0:00:00.185244  -  current time: 2024-02-06 13:38:42.173224
+(INFO    ) [13:38:43.381444|tosca_python] Fe-solver abaqus finished with job Opt-Process-1-Job.inp
+(INFO    ) [13:38:43.381444|tosca_python] Elapsed time (inc. overhead): 0:00:01.208220
+(INFO    ) [13:38:43.381444|tosca_python] Elapsed time of abaqus : 0:00:01.393464  -  current time: 13:38:43.381444
+(INFO    ) [13:38:43.381444|tosca_python] Solution complete
+(INFO    ) [13:38:43.381444|tosca_python] Checking solver output file: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.msg
+(INFO    ) [13:38:43.388419|tosca_python] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [13:38:43.389416|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoOdbToVtmMain.exe --solver abaqus --loglevel INFO --format_matrices sim --cycle 1 --perturbation 0 C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:43.516317|res2vtm|30384|SMATocApplication|FED_Application] SIMULIA Tosca Structure.res2vtm - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:43.518815|res2vtm|30384|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:43.561849|res2vtm|30384|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:43.567353|res2vtm|30384|SMATsoOdbToVtmMain|main] Reading Abaqus ODB output file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:43.587243|res2vtm|30384|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading results from the abaqus result database C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.odb
+(INFO    ) [13:38:43.592226|res2vtm|30384|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of design responses for step 1, incr. 1
+(INFO    ) [13:38:43.613370|res2vtm|30384|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of sensitivities (element-based) for step 1, incr. 1
+(INFO    ) [13:38:43.635845|res2vtm|30384|SMATsoOdbToVtmMain|main] SIMULIA Tosca Structure.res2vtm finished successfully
+(INFO    ) [13:38:43.655258|tosca_python] Module SMATsoOdbToVtmMain has finished with exit code 0
+(INFO    ) [13:38:43.655258|tosca_python] Elapsed time of SMATsoOdbToVtmMain : 0:00:00.265842  -  current time: 2024-02-06 13:38:43.655258
+(NOTICE  ) [13:38:43.656255|tosca_python] Starting SIMULIA Tosca Structure optimization module - design cycle 1
+(INFO    ) [13:38:43.656255|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoToscaOpt.exe --loglevel INFO
+(INFO    ) [13:38:43.818550|SMATsoToscaOpt|15960|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoToscaOpt - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:43.819565|SMATsoToscaOpt|15960|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:43.846516|SMATsoToscaOpt|15960|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:43.849613|SMATsoToscaOpt|15960|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:44.045198|SMATsoToscaOpt|15960|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_ADV_NONLINEAR
+(INFO    ) [13:38:44.045198|SMATsoToscaOpt|15960|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_TOPO
+(INFO    ) [13:38:44.045198|SMATsoToscaOpt|15960|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_INT_ABAQUS
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |               ___ ___ __  __ _   _ _    ___   _                          |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |              / __|_ _|  \/  | | | | |  |_ _| /_\                         |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |              \__ \| || |\/| | |_| | |__ | | / _ \                        |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |              |___/___|_|  |_|\___/|____|___/_/ \_\                       |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                    _______                                               |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                   |__   __|                                              |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                      | | ___  ___  ___ __ _                              |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                      | |/ _ \/ __|/ __/ _` |                             |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                      | | (_) \__ \ (_| (_| |                             |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                      |_|\___/|___/\___\__,_|                             |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |           _____ _                   _                                    |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |          / ____| |                 | |                                   |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |         | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ ___                   |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |          \___ \| __| '__| | | |/ __| __| | | | '__/ _ \                  |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |          ____) | |_| |  | |_| | (__| |_| |_| | | |  __/                  |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |         |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  \___|                  |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                           OPTIMIZATION MODULE                            |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] |                        of SIMULIA Tosca Structure                        |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] | Version 3DEXPERIENCE R2021x                                              |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] | DATE:   2/6/2024                                                         |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] | Begin of DESIGN CYCLE NUMBER: 1                                          |
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.046194|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.047191|SMATsoToscaOpt] Checking for existence of results
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt] | Calculating the convergence criteria                                     |
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt] Change in objective function:                  0.99184
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt] Criterion for change in objective function:    0.00100
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt] Change in design variables:                    0.13902
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt] Criterion for change in design variables:      0.00500
+(INFO    ) [13:38:44.094033|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.096031|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.096031|SMATsoToscaOpt] | Update of Design Variable Constraints                                    |
+(INFO    ) [13:38:44.096031|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.096031|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.127434|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.127434|SMATsoToscaOpt] | TSTRUCT --- Report of OPTIMIZATION Results                               |
+(INFO    ) [13:38:44.127434|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.127434|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.127434|SMATsoToscaOpt]  DESIGN CYCLE                :   1
+(INFO    ) [13:38:44.127434|SMATsoToscaOpt]  OPTIMIZE name               : TASK-1
+(INFO    ) [13:38:44.127434|SMATsoToscaOpt]  OBJ_FUNC name               : OBJECTIVE-1
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  OBJ_FUNC value              :     276823.
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] (Value of OBJ_FUNC calculated without frozen elements)
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] | Name   of OBJ_FUNC_TERM         Value          Weight        Reference   |
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]                   D-RESPONSE-2    276823.        1.00000        0.00000
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  Value of OBJ_FUNC (based on objective function terms):     276823.
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] | Name   of CONSTRAINT            act. Value         TARGET VALUE    NORM  |
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]              OPT-CONSTRAINT-1   0.141373E-03  <=    0.401923E-03   0.35      TRUE
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [13:38:44.128431|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:44.293398|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.293398|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.293398|SMATsoToscaOpt] | End of DESIGN CYCLE NUMBER: 1                                            |
+(INFO    ) [13:38:44.293398|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:44.293398|SMATsoToscaOpt] 
+(INFO    ) [13:38:44.346751|SMATsoToscaOpt] Application finished successfully
+(INFO    ) [13:38:44.364686|tosca_python] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [13:38:44.364686|tosca_python] Elapsed time of SMATsoToscaOpt : 0:00:00.708431  -  current time: 2024-02-06 13:38:44.364686
+(INFO    ) [13:38:44.365682|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtOptResExportTool.exe --loglevel INFO --cycle 1
+(INFO    ) [13:38:44.436980|SMATrtOptResExportTool|3588|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATrtOptResExportTool - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:44.438397|SMATrtOptResExportTool|3588|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:44.440703|SMATrtOptResExportTool|3588|SMATrtOptResExportTool|main] Extracting results from opt_res_database
+(INFO    ) [13:38:44.470477|SMATrtOptResExportTool|3588|SMATrtOptResExportTool|main] SIMULIA Tosca Structure.SMATrtOptResExportTool finished successfully
+(INFO    ) [13:38:44.478540|tosca_python] Module SMATrtOptResExportTool has finished with exit code 0
+(INFO    ) [13:38:44.478540|tosca_python] Elapsed time of SMATrtOptResExportTool : 0:00:00.112858  -  current time: 2024-02-06 13:38:44.478540
+(INFO    ) [13:38:44.683754|tosca_python] Calling hooks after check point 'Design Cycle Complete'
+(INFO    ) [13:38:44.683754|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMALauncher.exe python -m driverWriteOnfToOdb --type TP --inp Opt-Process-1-Job --cycle 1 --perturbation 0
+(INFO    ) [13:38:45.798428|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:45.798428|tosca_python] Elapsed time of hook : 0:00:01.114674  -  current time: 2024-02-06 13:38:45.798428
+(NOTICE  ) [13:38:45.803410|tosca_python] Starting abaqus analysis - design cycle 2
+(INFO    ) [13:38:45.803410|tosca_python] Activating the solver
+(INFO    ) [13:38:45.804407|tosca_python] Calling hooks before module abaqus
+(INFO    ) [13:38:45.804407|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoAbaqusTsProvider.exe -j Opt-Process-1-Job -p C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 --cycle 2
+(INFO    ) [13:38:45.811436|hook] Timestamp file written successfully
+(INFO    ) [13:38:45.902564|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:45.902564|tosca_python] Elapsed time of hook : 0:00:00.098157  -  current time: 2024-02-06 13:38:45.902564
+(INFO    ) [13:38:47.114101|tosca_python] Fe-solver abaqus finished with job Opt-Process-1-Job.inp
+(INFO    ) [13:38:47.114101|tosca_python] Elapsed time (inc. overhead): 0:00:01.210540
+(INFO    ) [13:38:47.114101|tosca_python] Elapsed time of abaqus : 0:00:01.310691  -  current time: 13:38:47.114101
+(INFO    ) [13:38:47.114101|tosca_python] Solution complete
+(INFO    ) [13:38:47.114101|tosca_python] Checking solver output file: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.msg
+(INFO    ) [13:38:47.119175|tosca_python] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [13:38:47.120176|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoOdbToVtmMain.exe --solver abaqus --loglevel INFO --format_matrices sim --cycle 2 --perturbation 0 C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:47.293203|res2vtm|220|SMATocApplication|FED_Application] SIMULIA Tosca Structure.res2vtm - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:47.294239|res2vtm|220|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:47.327941|res2vtm|220|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:47.334224|res2vtm|220|SMATsoOdbToVtmMain|main] Reading Abaqus ODB output file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:47.359937|res2vtm|220|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading results from the abaqus result database C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.odb
+(INFO    ) [13:38:47.364920|res2vtm|220|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of design responses for step 1, incr. 1
+(INFO    ) [13:38:47.390746|res2vtm|220|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of sensitivities (element-based) for step 1, incr. 1
+(INFO    ) [13:38:47.414604|res2vtm|220|SMATsoOdbToVtmMain|main] SIMULIA Tosca Structure.res2vtm finished successfully
+(INFO    ) [13:38:47.432593|tosca_python] Module SMATsoOdbToVtmMain has finished with exit code 0
+(INFO    ) [13:38:47.432593|tosca_python] Elapsed time of SMATsoOdbToVtmMain : 0:00:00.312417  -  current time: 2024-02-06 13:38:47.432593
+(NOTICE  ) [13:38:47.432593|tosca_python] Starting SIMULIA Tosca Structure optimization module - design cycle 2
+(INFO    ) [13:38:47.433586|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoToscaOpt.exe --loglevel INFO
+(INFO    ) [13:38:47.592574|SMATsoToscaOpt|24476|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoToscaOpt - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:47.594556|SMATsoToscaOpt|24476|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:47.621478|SMATsoToscaOpt|24476|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:47.623471|SMATsoToscaOpt|24476|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt|24476|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_ADV_NONLINEAR
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt|24476|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_TOPO
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt|24476|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_INT_ABAQUS
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |               ___ ___ __  __ _   _ _    ___   _                          |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |              / __|_ _|  \/  | | | | |  |_ _| /_\                         |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |              \__ \| || |\/| | |_| | |__ | | / _ \                        |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |              |___/___|_|  |_|\___/|____|___/_/ \_\                       |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                    _______                                               |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                   |__   __|                                              |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                      | | ___  ___  ___ __ _                              |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                      | |/ _ \/ __|/ __/ _` |                             |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                      | | (_) \__ \ (_| (_| |                             |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                      |_|\___/|___/\___\__,_|                             |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |           _____ _                   _                                    |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |          / ____| |                 | |                                   |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |         | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ ___                   |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |          \___ \| __| '__| | | |/ __| __| | | | '__/ _ \                  |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |          ____) | |_| |  | |_| | (__| |_| |_| | | |  __/                  |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |         |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  \___|                  |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                           OPTIMIZATION MODULE                            |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] |                        of SIMULIA Tosca Structure                        |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] | Version 3DEXPERIENCE R2021x                                              |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] | DATE:   2/6/2024                                                         |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] | Begin of DESIGN CYCLE NUMBER: 2                                          |
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.807504|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.808496|SMATsoToscaOpt] Checking for existence of results
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] | Calculating the convergence criteria                                     |
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] The density criterion is fulfilled
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] Change in objective function:                  0.00308
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] Criterion for change in objective function:    0.00100
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] Change in design variables:                    0.00400
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] Criterion for change in design variables:      0.00500
+(INFO    ) [13:38:47.853862|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.856852|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.856852|SMATsoToscaOpt] | Update of Design Variable Constraints                                    |
+(INFO    ) [13:38:47.856852|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.856852|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] | TSTRUCT --- Report of OPTIMIZATION Results                               |
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  DESIGN CYCLE                :   2
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  OPTIMIZE name               : TASK-1
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  OBJ_FUNC name               : OBJECTIVE-1
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  OBJ_FUNC value              :     277678.
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] (Value of OBJ_FUNC calculated without frozen elements)
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] | Name   of OBJ_FUNC_TERM         Value          Weight        Reference   |
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]                   D-RESPONSE-2    277678.        1.00000        0.00000
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  Value of OBJ_FUNC (based on objective function terms):     277678.
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] | Name   of CONSTRAINT            act. Value         TARGET VALUE    NORM  |
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]              OPT-CONSTRAINT-1   0.133229E-03  <=    0.401923E-03   0.33      TRUE
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] 
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [13:38:47.885756|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:48.047265|SMATsoToscaOpt] 
+(INFO    ) [13:38:48.047265|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:48.047265|SMATsoToscaOpt] | End of DESIGN CYCLE NUMBER: 2                                            |
+(INFO    ) [13:38:48.047265|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:48.047265|SMATsoToscaOpt] 
+(INFO    ) [13:38:48.099087|SMATsoToscaOpt] Application finished successfully
+(INFO    ) [13:38:48.119021|tosca_python] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [13:38:48.119021|tosca_python] Elapsed time of SMATsoToscaOpt : 0:00:00.685435  -  current time: 2024-02-06 13:38:48.119021
+(INFO    ) [13:38:48.120018|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtOptResExportTool.exe --loglevel INFO --cycle 2
+(INFO    ) [13:38:48.210230|SMATrtOptResExportTool|10516|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATrtOptResExportTool - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:48.211235|SMATrtOptResExportTool|10516|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:48.214225|SMATrtOptResExportTool|10516|SMATrtOptResExportTool|main] Extracting results from opt_res_database
+(INFO    ) [13:38:48.243654|SMATrtOptResExportTool|10516|SMATrtOptResExportTool|main] SIMULIA Tosca Structure.SMATrtOptResExportTool finished successfully
+(INFO    ) [13:38:48.251622|tosca_python] Module SMATrtOptResExportTool has finished with exit code 0
+(INFO    ) [13:38:48.251622|tosca_python] Elapsed time of SMATrtOptResExportTool : 0:00:00.131604  -  current time: 2024-02-06 13:38:48.251622
+(INFO    ) [13:38:48.446030|tosca_python] Calling hooks after check point 'Design Cycle Complete'
+(INFO    ) [13:38:48.446030|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMALauncher.exe python -m driverWriteOnfToOdb --type TP --inp Opt-Process-1-Job --cycle 2 --perturbation 0
+(INFO    ) [13:38:49.553050|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:49.553050|tosca_python] Elapsed time of hook : 0:00:01.107020  -  current time: 2024-02-06 13:38:49.553050
+(NOTICE  ) [13:38:49.557517|tosca_python] Starting abaqus analysis - design cycle 3
+(INFO    ) [13:38:49.557517|tosca_python] Activating the solver
+(INFO    ) [13:38:49.558602|tosca_python] Calling hooks before module abaqus
+(INFO    ) [13:38:49.558602|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoAbaqusTsProvider.exe -j Opt-Process-1-Job -p C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 --cycle 3
+(INFO    ) [13:38:49.566837|hook] Timestamp file written successfully
+(INFO    ) [13:38:49.677964|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:49.677964|tosca_python] Elapsed time of hook : 0:00:00.119362  -  current time: 2024-02-06 13:38:49.677964
+(INFO    ) [13:38:50.884656|tosca_python] Fe-solver abaqus finished with job Opt-Process-1-Job.inp
+(INFO    ) [13:38:50.884656|tosca_python] Elapsed time (inc. overhead): 0:00:01.206692
+(INFO    ) [13:38:50.884656|tosca_python] Elapsed time of abaqus : 0:00:01.326054  -  current time: 13:38:50.884656
+(INFO    ) [13:38:50.884656|tosca_python] Solution complete
+(INFO    ) [13:38:50.884656|tosca_python] Checking solver output file: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.msg
+(INFO    ) [13:38:50.891782|tosca_python] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [13:38:50.891782|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoOdbToVtmMain.exe --solver abaqus --loglevel INFO --format_matrices sim --cycle 3 --perturbation 0 C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:51.061539|res2vtm|5016|SMATocApplication|FED_Application] SIMULIA Tosca Structure.res2vtm - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:51.062536|res2vtm|5016|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:51.106389|res2vtm|5016|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:51.109379|res2vtm|5016|SMATsoOdbToVtmMain|main] Reading Abaqus ODB output file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:51.127321|res2vtm|5016|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading results from the abaqus result database C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.odb
+(INFO    ) [13:38:51.130818|res2vtm|5016|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of design responses for step 1, incr. 1
+(INFO    ) [13:38:51.148759|res2vtm|5016|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of sensitivities (element-based) for step 1, incr. 1
+(INFO    ) [13:38:51.169690|res2vtm|5016|SMATsoOdbToVtmMain|main] SIMULIA Tosca Structure.res2vtm finished successfully
+(INFO    ) [13:38:51.187675|tosca_python] Module SMATsoOdbToVtmMain has finished with exit code 0
+(INFO    ) [13:38:51.187675|tosca_python] Elapsed time of SMATsoOdbToVtmMain : 0:00:00.295893  -  current time: 2024-02-06 13:38:51.187675
+(NOTICE  ) [13:38:51.187675|tosca_python] Starting SIMULIA Tosca Structure optimization module - design cycle 3
+(INFO    ) [13:38:51.187675|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoToscaOpt.exe --loglevel INFO
+(INFO    ) [13:38:51.347939|SMATsoToscaOpt|24252|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoToscaOpt - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:51.349933|SMATsoToscaOpt|24252|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:51.373852|SMATsoToscaOpt|24252|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:51.375846|SMATsoToscaOpt|24252|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt|24252|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_ADV_NONLINEAR
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt|24252|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_TOPO
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt|24252|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_INT_ABAQUS
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |               ___ ___ __  __ _   _ _    ___   _                          |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |              / __|_ _|  \/  | | | | |  |_ _| /_\                         |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |              \__ \| || |\/| | |_| | |__ | | / _ \                        |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |              |___/___|_|  |_|\___/|____|___/_/ \_\                       |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                    _______                                               |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                   |__   __|                                              |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                      | | ___  ___  ___ __ _                              |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                      | |/ _ \/ __|/ __/ _` |                             |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                      | | (_) \__ \ (_| (_| |                             |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                      |_|\___/|___/\___\__,_|                             |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |           _____ _                   _                                    |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |          / ____| |                 | |                                   |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |         | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ ___                   |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |          \___ \| __| '__| | | |/ __| __| | | | '__/ _ \                  |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |          ____) | |_| |  | |_| | (__| |_| |_| | | |  __/                  |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |         |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  \___|                  |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                           OPTIMIZATION MODULE                            |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] |                        of SIMULIA Tosca Structure                        |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] | Version 3DEXPERIENCE R2021x                                              |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] | DATE:   2/6/2024                                                         |
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.602060|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.603051|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.603051|SMATsoToscaOpt] | Begin of DESIGN CYCLE NUMBER: 3                                          |
+(INFO    ) [13:38:51.603051|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.603051|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.603051|SMATsoToscaOpt] Checking for existence of results
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] | Calculating the convergence criteria                                     |
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] The objective function criterion is fulfilled
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] The density criterion is fulfilled
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] Change in objective function:                  0.00000
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] Criterion for change in objective function:    0.00100
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] Change in design variables:                    0.00009
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] Criterion for change in design variables:      0.00500
+(INFO    ) [13:38:51.646425|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.649419|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.649419|SMATsoToscaOpt] | Update of Design Variable Constraints                                    |
+(INFO    ) [13:38:51.649419|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.649419|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] | TSTRUCT --- Report of OPTIMIZATION Results                               |
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  DESIGN CYCLE                :   3
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  OPTIMIZE name               : TASK-1
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  OBJ_FUNC name               : OBJECTIVE-1
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  OBJ_FUNC value              :     277678.
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] (Value of OBJ_FUNC calculated without frozen elements)
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] | Name   of OBJ_FUNC_TERM         Value          Weight        Reference   |
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]                   D-RESPONSE-2    277678.        1.00000        0.00000
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  Value of OBJ_FUNC (based on objective function terms):     277678.
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] | Name   of CONSTRAINT            act. Value         TARGET VALUE    NORM  |
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]              OPT-CONSTRAINT-1   0.133105E-03  <=    0.401923E-03   0.33      TRUE
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] | Some STOP CRITERIA NOT satisfied this iteration                          |
+(INFO    ) [13:38:51.681308|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:51.844823|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.844823|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.844823|SMATsoToscaOpt] | End of DESIGN CYCLE NUMBER: 3                                            |
+(INFO    ) [13:38:51.844823|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:51.844823|SMATsoToscaOpt] 
+(INFO    ) [13:38:51.897647|SMATsoToscaOpt] Application finished successfully
+(INFO    ) [13:38:51.919580|tosca_python] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [13:38:51.919580|tosca_python] Elapsed time of SMATsoToscaOpt : 0:00:00.731905  -  current time: 2024-02-06 13:38:51.919580
+(INFO    ) [13:38:51.920575|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtOptResExportTool.exe --loglevel INFO --cycle 3
+(INFO    ) [13:38:51.997831|SMATrtOptResExportTool|21152|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATrtOptResExportTool - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:51.999826|SMATrtOptResExportTool|21152|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:52.002880|SMATrtOptResExportTool|21152|SMATrtOptResExportTool|main] Extracting results from opt_res_database
+(INFO    ) [13:38:52.034221|SMATrtOptResExportTool|21152|SMATrtOptResExportTool|main] SIMULIA Tosca Structure.SMATrtOptResExportTool finished successfully
+(INFO    ) [13:38:52.042477|tosca_python] Module SMATrtOptResExportTool has finished with exit code 0
+(INFO    ) [13:38:52.042477|tosca_python] Elapsed time of SMATrtOptResExportTool : 0:00:00.121902  -  current time: 2024-02-06 13:38:52.042477
+(INFO    ) [13:38:52.300353|tosca_python] Calling hooks after check point 'Design Cycle Complete'
+(INFO    ) [13:38:52.300353|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMALauncher.exe python -m driverWriteOnfToOdb --type TP --inp Opt-Process-1-Job --cycle 3 --perturbation 0
+(INFO    ) [13:38:53.392966|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:53.392966|tosca_python] Elapsed time of hook : 0:00:01.092613  -  current time: 2024-02-06 13:38:53.392966
+(NOTICE  ) [13:38:53.397380|tosca_python] Starting abaqus analysis - design cycle 4
+(INFO    ) [13:38:53.397380|tosca_python] Activating the solver
+(INFO    ) [13:38:53.398508|tosca_python] Calling hooks before module abaqus
+(INFO    ) [13:38:53.398508|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoAbaqusTsProvider.exe -j Opt-Process-1-Job -p C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 --cycle 4
+(INFO    ) [13:38:53.406139|hook] Timestamp file written successfully
+(INFO    ) [13:38:53.513165|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:38:53.513165|tosca_python] Elapsed time of hook : 0:00:00.114657  -  current time: 2024-02-06 13:38:53.513165
+(INFO    ) [13:38:54.933491|tosca_python] Fe-solver abaqus finished with job Opt-Process-1-Job.inp
+(INFO    ) [13:38:54.933491|tosca_python] Elapsed time (inc. overhead): 0:00:01.418945
+(INFO    ) [13:38:54.933491|tosca_python] Elapsed time of abaqus : 0:00:01.536111  -  current time: 13:38:54.933491
+(INFO    ) [13:38:54.933491|tosca_python] Solution complete
+(INFO    ) [13:38:54.933491|tosca_python] Checking solver output file: C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.msg
+(INFO    ) [13:38:54.939888|tosca_python] Searching for success check string: "THE ANALYSIS HAS BEEN COMPLETED"
+(INFO    ) [13:38:54.941046|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoOdbToVtmMain.exe --solver abaqus --loglevel INFO --format_matrices sim --cycle 4 --perturbation 0 C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:55.104023|res2vtm|14124|SMATocApplication|FED_Application] SIMULIA Tosca Structure.res2vtm - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:55.106016|res2vtm|14124|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:55.132928|res2vtm|14124|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:55.137418|res2vtm|14124|SMATsoOdbToVtmMain|main] Reading Abaqus ODB output file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job
+(INFO    ) [13:38:55.154443|res2vtm|14124|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading results from the abaqus result database C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\Opt-Process-1-Job.odb
+(INFO    ) [13:38:55.158478|res2vtm|14124|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of design responses for step 1, incr. 1
+(INFO    ) [13:38:55.179179|res2vtm|14124|SMATsoOdbToVtm|AbaqusOdbResultFile] Reading scalar field of sensitivities (element-based) for step 1, incr. 1
+(INFO    ) [13:38:55.200753|res2vtm|14124|SMATsoOdbToVtmMain|main] SIMULIA Tosca Structure.res2vtm finished successfully
+(INFO    ) [13:38:55.216692|tosca_python] Module SMATsoOdbToVtmMain has finished with exit code 0
+(INFO    ) [13:38:55.216692|tosca_python] Elapsed time of SMATsoOdbToVtmMain : 0:00:00.275646  -  current time: 2024-02-06 13:38:55.216692
+(NOTICE  ) [13:38:55.217779|tosca_python] Starting SIMULIA Tosca Structure optimization module - design cycle 4
+(INFO    ) [13:38:55.217779|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATsoToscaOpt.exe --loglevel INFO
+(INFO    ) [13:38:55.307824|SMATsoToscaOpt|30472|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoToscaOpt - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:55.309819|SMATsoToscaOpt|30472|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'optimization_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:55.337245|SMATsoToscaOpt|30472|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:55.339238|SMATsoToscaOpt|30472|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'fe_mtx_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt|30472|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_ADV_NONLINEAR
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt|30472|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_TOPO
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt|30472|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_INT_ABAQUS
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |               ___ ___ __  __ _   _ _    ___   _                          |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |              / __|_ _|  \/  | | | | |  |_ _| /_\                         |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |              \__ \| || |\/| | |_| | |__ | | / _ \                        |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |              |___/___|_|  |_|\___/|____|___/_/ \_\                       |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                    _______                                               |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                   |__   __|                                              |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                      | | ___  ___  ___ __ _                              |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                      | |/ _ \/ __|/ __/ _` |                             |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                      | | (_) \__ \ (_| (_| |                             |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                      |_|\___/|___/\___\__,_|                             |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                                                                          |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |           _____ _                   _                                    |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |          / ____| |                 | |                                   |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |         | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ ___                   |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |          \___ \| __| '__| | | |/ __| __| | | | '__/ _ \                  |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |          ____) | |_| |  | |_| | (__| |_| |_| | | |  __/                  |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |         |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  \___|                  |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                           OPTIMIZATION MODULE                            |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] |                        of SIMULIA Tosca Structure                        |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] | Version 3DEXPERIENCE R2021x                                              |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt] | DATE:   2/6/2024                                                         |
+(INFO    ) [13:38:55.562450|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.563504|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.563504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.563504|SMATsoToscaOpt] | Begin of DESIGN CYCLE NUMBER: 4                                          |
+(INFO    ) [13:38:55.563504|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.563504|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.563504|SMATsoToscaOpt] Checking for existence of results
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] | Calculating the convergence criteria                                     |
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] The objective function criterion is fulfilled
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] The density criterion is fulfilled
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] Optimization converged.
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] Both criteria checked.
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] Change in objective function:                  0.00000
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] Criterion for change in objective function:    0.00100
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] Change in design variables:                    0.00000
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] Criterion for change in design variables:      0.00500
+(INFO    ) [13:38:55.608376|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.611417|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.611417|SMATsoToscaOpt] | Update of Design Variable Constraints                                    |
+(INFO    ) [13:38:55.611417|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.611417|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] | TSTRUCT --- Report of OPTIMIZATION Results                               |
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  DESIGN CYCLE                :   4
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  OPTIMIZE name               : TASK-1
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  OBJ_FUNC name               : OBJECTIVE-1
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  OBJ_FUNC value              :     277678.
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] (Value of OBJ_FUNC calculated without frozen elements)
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] | Name   of OBJ_FUNC_TERM         Value          Weight        Reference   |
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]                   D-RESPONSE-2    277678.        1.00000        0.00000
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  Value of OBJ_FUNC (based on objective function terms):     277678.
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] * SIMULIA Tosca Structure INFORMATION *
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] Writing CONSTRAINTs with default normalization.
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] For NORM value  <= 1.0   -->    CONSTRAINT is OK ( For all CONSTRAINT types )
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] | Name   of CONSTRAINT            act. Value         TARGET VALUE    NORM  |
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]              OPT-CONSTRAINT-1   0.133105E-03  <=    0.401923E-03   0.33      TRUE
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] | STOP CONDITION satisfied for all OPTIMIZATION_AREA(s)                    |
+(INFO    ) [13:38:55.643851|SMATsoToscaOpt] --------------------------------------------------------------------------
+(INFO    ) [13:38:55.685705|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.685705|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.685705|SMATsoToscaOpt] | End of DESIGN CYCLE NUMBER: 4                                            |
+(INFO    ) [13:38:55.685705|SMATsoToscaOpt]  --------------------------------------------------------------------------
+(INFO    ) [13:38:55.685705|SMATsoToscaOpt] 
+(INFO    ) [13:38:55.726582|SMATsoToscaOpt] Application finished successfully
+(INFO    ) [13:38:55.748132|tosca_python] Module SMATsoToscaOpt has finished with exit code 0
+(INFO    ) [13:38:55.749124|tosca_python] Elapsed time of SMATsoToscaOpt : 0:00:00.530353  -  current time: 2024-02-06 13:38:55.748132
+(INFO    ) [13:38:55.749124|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtOptResExportTool.exe --loglevel INFO --cycle 4
+(INFO    ) [13:38:55.816386|SMATrtOptResExportTool|29396|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATrtOptResExportTool - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:38:55.817383|SMATrtOptResExportTool|29396|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:38:55.820373|SMATrtOptResExportTool|29396|SMATrtOptResExportTool|main] Extracting results from opt_res_database
+(INFO    ) [13:38:55.852669|SMATrtOptResExportTool|29396|SMATrtOptResExportTool|main] SIMULIA Tosca Structure.SMATrtOptResExportTool finished successfully
+(INFO    ) [13:38:55.859928|tosca_python] Module SMATrtOptResExportTool has finished with exit code 0
+(INFO    ) [13:38:55.859928|tosca_python] Elapsed time of SMATrtOptResExportTool : 0:00:00.110804  -  current time: 2024-02-06 13:38:55.859928
+(NOTICE  ) [13:38:55.861318|tosca_python] Last design cycle completed
+(NOTICE  ) [13:38:55.861318|tosca_python] Stopping solver process
+(INFO    ) [13:38:59.273006|abaqus] 06/02/2024 13:38:56
+(INFO    ) [13:38:59.273006|abaqus] End Abaqus/Standard Analysis
+(INFO    ) [13:38:59.273006|abaqus] Begin SIM Wrap-up
+(INFO    ) [13:38:59.273006|abaqus] 06/02/2024 13:38:57
+(INFO    ) [13:38:59.273006|abaqus] Run SMASimUtility.exe
+(INFO    ) [13:38:59.273006|abaqus] 06/02/2024 13:38:57
+(INFO    ) [13:38:59.273006|abaqus] End SIM Wrap-up
+(INFO    ) [13:38:59.273006|abaqus] Abaqus JOB Opt-Process-1-Job COMPLETED
+(INFO    ) [13:38:59.273006|tosca_python] ----------------------
+(INFO    ) [13:38:59.273006|tosca_python] Solver standard output
+(INFO    ) [13:38:59.273006|tosca_python] ----------------------
+(INFO    ) [13:38:59.273006|abaqus] Analysis initiated from SIMULIA established products
+(INFO    ) [13:38:59.273006|abaqus] Abaqus JOB Opt-Process-1-Job
+(INFO    ) [13:38:59.273006|abaqus] Abaqus 2022
+(INFO    ) [13:38:59.273006|abaqus] Abaqus License Manager checked out the following licenses:
+(INFO    ) [13:38:59.273006|abaqus] Abaqus/Standard checked out 5 tokens from Flexnet server abaqusae.cc.ic.ac.uk.
+(INFO    ) [13:38:59.273006|abaqus] <3131 out of 3200 licenses remain available>.
+(INFO    ) [13:38:59.273006|abaqus] Begin Abaqus/Standard Analysis
+(INFO    ) [13:38:59.273006|abaqus] 06/02/2024 13:38:36
+(INFO    ) [13:38:59.273006|abaqus] Run abaqusstd.exe
+(INFO    ) [13:38:59.273006|abaqus] 06/02/2024 13:38:56
+(INFO    ) [13:38:59.273006|abaqus] End Abaqus/Standard Analysis
+(INFO    ) [13:38:59.273006|abaqus] Begin SIM Wrap-up
+(INFO    ) [13:38:59.273006|abaqus] 06/02/2024 13:38:57
+(INFO    ) [13:38:59.273006|abaqus] Run SMASimUtility.exe
+(INFO    ) [13:38:59.273006|abaqus] 06/02/2024 13:38:57
+(INFO    ) [13:38:59.273006|abaqus] End SIM Wrap-up
+(INFO    ) [13:38:59.273006|abaqus] Abaqus JOB Opt-Process-1-Job COMPLETED
+(INFO    ) [13:38:59.473323|tosca_python] Calling hooks after check point 'Design Cycle Complete'
+(INFO    ) [13:38:59.474319|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMALauncher.exe python -m driverWriteOnfToOdb --type TP --inp Opt-Process-1-Job --cycle 4 --perturbation 0
+(INFO    ) [13:39:00.600046|tosca_python] Module hook has finished with exit code 0
+(INFO    ) [13:39:00.600046|tosca_python] Elapsed time of hook : 0:00:01.125727  -  current time: 2024-02-06 13:39:00.600046
+(NOTICE  ) [13:39:00.603035|tosca_python] Starting SIMULIA Tosca Structure report module
+(INFO    ) [13:39:00.619979|tosca_python] Calling: C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATrtReportMain.exe --loglevel INFO --add_user_data 001_OBJ_FUNC_REPORT_1.conf,001_OBJ_FUNC_REPORT_1.tab,002_CONSTR_VAL_REPORT_1.conf,002_CONSTR_VAL_REPORT_1.tab,003_CONSTR_VAL_NORM_REPORT_1.conf,003_CONSTR_VAL_NORM_REPORT_1.tab,004_VAR_DRESP_VAL_REPORT.conf,004_VAR_DRESP_VAL_REPORT.tab,005_VAR_DRESP_VAL_REPORT.conf,005_VAR_DRESP_VAL_REPORT.tab --input_file C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1\TOSCA_POST\Opt-Process-1_ALL_ELEMENTS_report.par
+(INFO    ) [13:39:00.747988|report|10928|SMATocApplication|FED_Application] SIMULIA Tosca Structure.report - version 3DEXPERIENCE R2022x - build R424 - 20210922T180013Z 64 bit
+(INFO    ) [13:39:00.774897|report|10928|SMATocLicensing|FED_LicenseInterface] Successfully checked out 1 tokens of license feature(s) TOSCA_ONF2VTF
+(INFO    ) [13:39:00.781880|report|10928|SMATrtReport|SMATrtVtfxCreator] Starting conversion of SIMULIA Tosca Structure optimization results to VTFx.
+(INFO    ) [13:39:00.783867|report|10928|SMATrtReport|SMATrtVtfxCreator] Creating vtfx binary file "TOSCA_POST\Opt-Process-1_ALL_ELEMENTS_report.vtfx".
+(INFO    ) [13:39:00.783867|report|10928|SMATocVtmEngine|SMATocVtmDatabase] Initializing the database engine 'opt_res_database'; applying vtm_cache_size = 1024 MB of cache.
+(INFO    ) [13:39:00.816757|report|10928|SMATrtReport|SMATrtVtfxCreator] Loading the ONF model from database.
+(INFO    ) [13:39:00.859133|report|10928|SMATrtReport|SMATrtDbToVtfxResults] Transferring data block ITERATION=0/ONF=756
+(INFO    ) [13:39:00.860125|report|10928|SMATrtReport|SMATrtDbToVtfxResults] Transferring data block ITERATION=1/ONF=756
+(INFO    ) [13:39:00.862117|report|10928|SMATrtReport|SMATrtDbToVtfxResults] Transferring data block ITERATION=2/ONF=756
+(INFO    ) [13:39:00.863116|report|10928|SMATrtReport|SMATrtDbToVtfxResults] Transferring data block ITERATION=3/ONF=756
+(INFO    ) [13:39:00.865108|report|10928|SMATrtReport|SMATrtDbToVtfxResults] Transferring data block ITERATION=4/ONF=756
+(INFO    ) [13:39:00.913945|report|10928|SMATrtReport|SMATrtVtfxCreator] VTFx file "TOSCA_POST\Opt-Process-1_ALL_ELEMENTS_report.vtfx" with results has been successfully created.
+(INFO    ) [13:39:00.928895|report|10928|SMATrtReportMain|main] SIMULIA Tosca Structure.report finished successfully
+(INFO    ) [13:39:00.937867|tosca_python] Module SMATrtReportMain has finished with exit code 0
+(INFO    ) [13:39:00.937867|tosca_python] Elapsed time of SMATrtReportMain : 0:00:00.317888  -  current time: 2024-02-06 13:39:00.937867
+(INFO    ) [13:39:00.938863|tosca_python] Number of smooth commands found: 0
+(NOTICE  ) [13:39:01.000277|tosca_python] Application finished successfully
+(INFO    ) [13:39:01.000277|tosca_python] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [13:39:01.000277|tosca_python] Time consumption overview table
+(INFO    ) [13:39:01.000277|tosca_python] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module    SMATrtOptResExportTool: 0:00:00.867434 - 2.408% (6 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module          SMATrtReportMain: 0:00:00.317888 - 0.882% (1 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module        SMATsoOdbToVtmMain: 0:00:01.470466 - 4.081% (5 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module            SMATsoToscaOpt: 0:00:03.544687 - 9.838% (5 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module           SMATsoToscaPrep: 0:00:02.099211 - 5.826% (1 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module            SMATsoFemModif: 0:00:00.159740 - 0.443% (1 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module            SMATsoFemToOnf: 0:00:00.161806 - 0.449% (1 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for module          SMATsoFemInclude: 0:00:00.117398 - 0.326% (1 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for fe-solver                 abaqus: 0:00:16.347523 - 45.372% (1 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Cumulative elapsed time for hooks                           : 0:00:05.560964 - 15.434% (5 calls)
+(INFO    ) [13:39:01.000277|tosca_python] Total elapsed time for this script                          : 0:00:05.382854 - 14.940%
+(INFO    ) [13:39:01.000277|tosca_python] Total elapsed time of SIMULIA Tosca Structure               : 0:00:36.029971 - Current time 13:39:01.000277
+(INFO    ) [13:39:01.000277|tosca_python] --------------------------------------------------------------------------------------------------------------

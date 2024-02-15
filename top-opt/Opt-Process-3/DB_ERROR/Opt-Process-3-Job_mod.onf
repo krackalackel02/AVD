@@ -1,0 +1,16 @@
+#
+# ONF 3.0
+#
+# Data block 890 - Distribution table descriptions
+   -1
+   890
+2
+1, 1, 1
+__SMATso_Distribution_Stiffness_1
+5832
+1-5832
+2, 2, 1
+__SMATso_Distribution_Mass_1
+5832
+1-5832
+   -1

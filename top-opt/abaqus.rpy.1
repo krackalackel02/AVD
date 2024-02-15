@@ -1,0 +1,365 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-18.57.30 176069
+# Run by Daniel Gutierrez on Tue Feb  6 13:27:57 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=127.248046875, 
+    height=136.969909667969)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(
+    pathName='C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Blank_iter1_4.cae')
+#: The model database "C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Blank_iter1_4.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Model-1'].parts['Blank']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Model-1'].rootAssembly
+c1 = a.instances['Blank-1'].cells
+pickedRegions = c1.getSequenceFromMask(mask=('[#1 ]', ), )
+a.deleteMesh(regions=pickedRegions)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Blank-1'].faces
+e1 = a.instances['Blank-1'].edges
+t = a.MakeSketchTransform(sketchPlane=f1[7], sketchUpEdge=e1[0], 
+    sketchPlaneSide=SIDE1, origin=(260.193908, 114.272207, 6.3))
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=1136.05, gridSpacing=28.4, transform=t)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=SUPERIMPOSE)
+a = mdb.models['Model-1'].rootAssembly
+a.projectReferencesOntoSketch(sketch=s, filter=COPLANAR_EDGES)
+s.CircleByCenterPerimeter(center=(-229.806092, -4.327793), point1=(-205.9, 
+    -21.3))
+s.CircleByCenterPerimeter(center=(90.193908, -4.327793), point1=(113.6, -28.4))
+s.CircleByCenterPerimeter(center=(230.193908, -4.327793), point1=(213.0, 
+    -35.5))
+s.RadialDimension(curve=g[9], textPoint=(-150.234680867187, -2.69819094921876), 
+    radius=30.0)
+s.RadialDimension(curve=g[10], textPoint=(-8.05181953906248, 
+    -19.1655676582031), radius=30.0)
+s.RadialDimension(curve=g[11], textPoint=(153.296752238281, -49.4299414375), 
+    radius=30.0)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Blank-1'].faces
+pickedFaces = f1.getSequenceFromMask(mask=('[#80 ]', ), )
+e11 = a.instances['Blank-1'].edges
+a.PartitionFaceBySketch(sketchUpEdge=e11[0], faces=pickedFaces, sketch=s)
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+a = mdb.models['Model-1'].rootAssembly
+c1 = a.instances['Blank-1'].cells
+cells1 = c1.getSequenceFromMask(mask=('[#1 ]', ), )
+region=a.Set(cells=cells1, name='Set-8')
+mdb.models['Model-1'].TopologyTask(name='Task-1', region=region)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTask='Task-1')
+mdb.models['Model-1'].optimizationTasks['Task-1'].SingleTermDesignResponse(
+    name='D-Response-1', region=MODEL, identifier='WEIGHT', drivingRegion=None, 
+    operation=SUM, stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].SingleTermDesignResponse(
+    name='D-Response-2', region=MODEL, identifier='SIG_TOPO_MISES', 
+    drivingRegion=None, operation=MAXIMUM, stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].ObjectiveFunction(
+    name='Objective-1', objectives=((OFF, 'D-Response-1', 1.0, 0.0, ''), ))
+mdb.models['Model-1'].optimizationTasks['Task-1'].OptimizationConstraint(
+    name='Opt-Constraint-1', designResponse='D-Response-1', 
+    restrictionMethod=RELATIVE_LESS_THAN_EQUAL, restrictionValue=0.2)
+mdb.models['Model-1'].optimizationTasks['Task-1'].designResponses['D-Response-2'].setValues(
+    identifier='ENERGY_STIFF_MEASURE', drivingRegion=None, operation=SUM, 
+    stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].objectiveFunctions['Objective-1'].setValues(
+    target=MAXIMIZE, objectives=((OFF, 'D-Response-2', 1.0, 0.0, ''), ))
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Blank-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#2 ]', ), )
+a.Set(faces=faces1, name='Set-9')
+#: The set 'Set-9' has been created (1 face).
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Blank-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#1 ]', ), )
+a.Set(faces=faces1, name='Set-10')
+#: The set 'Set-10' has been created (1 face).
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['Blank-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#400 ]', ), )
+a.Set(faces=faces1, name='Set-11')
+#: The set 'Set-11' has been created (1 face).
+a = mdb.models['Model-1'].rootAssembly
+region=a.sets['Set-11']
+mdb.models['Model-1'].optimizationTasks['Task-1'].FrozenArea(name='Restrict-1', 
+    region=region)
+a = mdb.models['Model-1'].rootAssembly
+region=a.sets['Set-10']
+mdb.models['Model-1'].optimizationTasks['Task-1'].FrozenArea(name='Restrict-2', 
+    region=region)
+a = mdb.models['Model-1'].rootAssembly
+region=a.sets['Set-9']
+mdb.models['Model-1'].optimizationTasks['Task-1'].FrozenArea(name='Restrict-3', 
+    region=region)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+mdb.OptimizationProcess(name='Opt-Process-1', model='Model-1', task='Task-1', 
+    description='', prototypeJob='Opt-Process-1-Job', maxDesignCycle=50, 
+    odbMergeFrequency=2, dataSaveFrequency=OPT_DATASAVE_SPECIFY_CYCLE, 
+    saveInitial=False)
+mdb.optimizationProcesses['Opt-Process-1'].Job(name='Opt-Process-1-Job', 
+    model='Model-1', atTime=None, waitMinutes=0, waitHours=0, queue=None, 
+    memory=90, memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    numThreadsPerMpiProcess=1, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+#: The optimization process "Opt-Process-1" has been created.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+a = mdb.models['Model-1'].rootAssembly
+partInstances =(a.instances['Blank-1'], )
+a.seedPartInstance(regions=partInstances, size=20.0, deviationFactor=0.1, 
+    minSizeFactor=0.1)
+a = mdb.models['Model-1'].rootAssembly
+partInstances =(a.instances['Blank-1'], )
+a.generateMesh(regions=partInstances)
+a = mdb.models['Model-1'].rootAssembly
+partInstances =(a.instances['Blank-1'], )
+a.deleteMesh(regions=partInstances)
+a = mdb.models['Model-1'].rootAssembly
+partInstances =(a.instances['Blank-1'], )
+a.seedPartInstance(regions=partInstances, size=5.0, deviationFactor=0.1, 
+    minSizeFactor=0.1)
+a = mdb.models['Model-1'].rootAssembly
+partInstances =(a.instances['Blank-1'], )
+a.generateMesh(regions=partInstances)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+mdb.optimizationProcesses['Opt-Process-1'].submit()
+#: Job monitoring output is now available in the viewport "Monitor: Opt-Process-1".
+#: Job Opt-Process-1-Job: Abaqus/Standard completed successfully.
+#: Job Opt-Process-1-Job completed successfully. 
+#: Optimization process Opt-Process-1 completed successfully.
+#: Model: C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-1/SAVE.odb/Opt-Process-1-Job_004.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       13
+#: Number of Node Sets:          12
+#: Number of Steps:              1
+mdb.CombineOptResults(
+    optResultLocation='C:\\Users\\Daniel Gutierrez\\Desktop\\Back up 28-06-23\\Imperial College\\Imperial 2023-2024\\AVD\\pt2\\github sims\\AVD\\iter 1.2\\Opt-Process-1', 
+    includeResultsFrom=LAST, optIter=LAST, models=ALL, steps=(
+    'Loading down with g', ), analysisFieldVariables=('S', 'U'))
+#: Model: C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-1/SAVE.odb/Opt-Process-1-Job_004.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       13
+#: Number of Node Sets:          12
+#: Number of Steps:              1
+o6 = session.openOdb(
+    name='C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-1/TOSCA_POST/Opt-Process-1-Job_post.odb')
+#: Model: C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-1/TOSCA_POST/Opt-Process-1-Job_post.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       13
+#: Number of Node Sets:          12
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o6)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['Model-1'].parts['Blank']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    step='Loading down with g')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=915.55, 
+    farPlane=1545.32, width=773.305, height=323.999, viewOffsetX=4.248, 
+    viewOffsetY=-2.40139)
+del mdb.models['Model-1'].loads['Gravity']
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.optimizationProcesses['Opt-Process-1'].submit()
+#: Error in Opt-Process-1:  [13:40:39.855900|tosca_python] Cannot rename directory C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 into C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1_1
+#: Error in Opt-Process-1: Optimization process failed with an error.
+#: Optimization process Opt-Process-1 aborted due to errors.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=ON, geometricRestrictions=ON, stopConditions=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+mdb.OptimizationProcess(name='Opt-Process-2', model='Model-1', task='Task-1', 
+    description='', prototypeJob='Opt-Process-2-Job', maxDesignCycle=50, 
+    odbMergeFrequency=2, dataSaveFrequency=OPT_DATASAVE_SPECIFY_CYCLE, 
+    saveInitial=False)
+mdb.optimizationProcesses['Opt-Process-2'].Job(name='Opt-Process-2-Job', 
+    model='Model-1', atTime=None, waitMinutes=0, waitHours=0, queue=None, 
+    memory=90, memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    numThreadsPerMpiProcess=1, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+#: The optimization process "Opt-Process-2" has been created.
+mdb.optimizationProcesses['Opt-Process-2'].submit()
+#: Job monitoring output is now available in the viewport "Monitor: Opt-Process-2".
+#: Error in job Opt-Process-2-Job: Too many attempts made for this increment
+#: Job Opt-Process-2-Job: Abaqus/Standard aborted due to errors.
+#: Error in Opt-Process-2:  [13:41:50.923304|tosca_python] Success check string was not found in the solver output file
+#: Error in Opt-Process-2:  [13:41:50.923304|tosca_python] Module abaqus failed
+#: Error in job Opt-Process-2-Job: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job Opt-Process-2-Job aborted due to errors.
+#: Error in Opt-Process-2:  [13:42:01.599068|tosca_python] Tosca Structure failed to run the optimization task
+#: Error in Opt-Process-2: Optimization process failed with an error.
+#: Optimization process Opt-Process-2 aborted due to errors.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=ON, geometricRestrictions=ON, stopConditions=ON)
+mdb.models['Model-1'].optimizationTasks['Task-1'].designResponses['D-Response-1'].setValues(
+    identifier='VOLUME', drivingRegion=None, operation=SUM, stepOptions=())
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+mdb.OptimizationProcess(name='Opt-Process-3', model='Model-1', task='Task-1', 
+    description='', prototypeJob='Opt-Process-3-Job', maxDesignCycle=50, 
+    odbMergeFrequency=2, dataSaveFrequency=OPT_DATASAVE_SPECIFY_CYCLE, 
+    saveInitial=False)
+mdb.optimizationProcesses['Opt-Process-3'].Job(name='Opt-Process-3-Job', 
+    model='Model-1', atTime=None, waitMinutes=0, waitHours=0, queue=None, 
+    memory=90, memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    numThreadsPerMpiProcess=1, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+#: The optimization process "Opt-Process-3" has been created.
+mdb.optimizationProcesses['Opt-Process-3'].submit()
+#: Job monitoring output is now available in the viewport "Monitor: Opt-Process-3".
+#: Error in job Opt-Process-3-Job: Too many attempts made for this increment
+#: Job Opt-Process-3-Job: Abaqus/Standard aborted due to errors.
+#: Error in Opt-Process-3:  [13:44:22.358786|tosca_python] Success check string was not found in the solver output file
+#: Error in Opt-Process-3:  [13:44:22.358786|tosca_python] Module abaqus failed
+#: Error in job Opt-Process-3-Job: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job Opt-Process-3-Job aborted due to errors.
+#: Error in Opt-Process-3:  [13:44:32.928037|tosca_python] Tosca Structure failed to run the optimization task
+#: Error in Opt-Process-3: Optimization process failed with an error.
+#: Optimization process Opt-Process-3 aborted due to errors.
+del mdb.optimizationProcesses['Opt-Process-1']
+del mdb.optimizationProcesses['Opt-Process-2']
+del mdb.optimizationProcesses['Opt-Process-3']
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=ON, geometricRestrictions=ON, stopConditions=ON)
+mdb.models['Model-1'].optimizationTasks['Task-1'].designResponses['D-Response-1'].setValues(
+    identifier='STRAIN_ENERGY', drivingRegion=None, operation=SUM, 
+    stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].designResponses['D-Response-1'].setValues(
+    identifier='VOLUME', drivingRegion=None, operation=SUM, stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].designResponses['D-Response-2'].setValues(
+    identifier='STRAIN_ENERGY', drivingRegion=None, operation=SUM, 
+    stepOptions=())
+mdb.models['Model-1'].optimizationTasks['Task-1'].objectiveFunctions['Objective-1'].setValues(
+    target=MINIMIZE)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+mdb.OptimizationProcess(name='Opt-Process-1', model='Model-1', task='Task-1', 
+    description='', prototypeJob='Opt-Process-1-Job', maxDesignCycle=50, 
+    odbMergeFrequency=2, dataSaveFrequency=OPT_DATASAVE_SPECIFY_CYCLE, 
+    saveInitial=False)
+mdb.optimizationProcesses['Opt-Process-1'].Job(name='Opt-Process-1-Job', 
+    model='Model-1', atTime=None, waitMinutes=0, waitHours=0, queue=None, 
+    memory=90, memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    numThreadsPerMpiProcess=1, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+#: The optimization process "Opt-Process-1" has been created.
+mdb.optimizationProcesses['Opt-Process-1'].submit()
+#: Error in Opt-Process-1:  [13:51:18.330426|tosca_python] Cannot rename directory C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 into C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1_1
+#: Error in Opt-Process-1: Optimization process failed with an error.
+#: Optimization process Opt-Process-1 aborted due to errors.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=ON, geometricRestrictions=ON, stopConditions=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+mdb.optimizationProcesses['Opt-Process-1'].setValues(maxDesignCycle=25, 
+    dataSaveFrequency=OPT_DATASAVE_SPECIFY_CYCLE)
+mdb.optimizationProcesses['Opt-Process-1'].jobs['Opt-Process-1-Job'].setValues(
+    numThreadsPerMpiProcess=1)
+mdb.optimizationProcesses['Opt-Process-1'].submit()
+#: Error in Opt-Process-1:  [13:53:46.186127|tosca_python] Cannot rename directory C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 into C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1_1
+#: Error in Opt-Process-1: Optimization process failed with an error.
+#: Optimization process Opt-Process-1 aborted due to errors.
+mdb.OptimizationProcess(name='Opt-Process-2', model='Model-1', task='Task-1', 
+    description='', prototypeJob='Opt-Process-2-Job', maxDesignCycle=25, 
+    odbMergeFrequency=2, dataSaveFrequency=OPT_DATASAVE_SPECIFY_CYCLE, 
+    saveInitial=False)
+mdb.optimizationProcesses['Opt-Process-2'].Job(name='Opt-Process-2-Job', 
+    model='Model-1', atTime=None, waitMinutes=0, waitHours=0, queue=None, 
+    memory=90, memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    numThreadsPerMpiProcess=1, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+#: The optimization process "Opt-Process-2" has been created.
+mdb.optimizationProcesses['Opt-Process-2'].submit()
+#: Job Opt-Process-2-Job: Abaqus/Standard completed successfully.
+#: Job Opt-Process-2-Job completed successfully. 
+mdb.save()
+#: The model database has been saved to "C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Blank_iter1_4.cae".
+mdb.save()
+#: The model database has been saved to "C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Blank_iter1_4.cae".
+#: Optimization process Opt-Process-2 completed successfully.
+#: Model: C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2/SAVE.odb/Opt-Process-2-Job_025.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       13
+#: Number of Node Sets:          12
+#: Number of Steps:              1
+mdb.CombineOptResults(
+    optResultLocation='C:\\Users\\Daniel Gutierrez\\Desktop\\Back up 28-06-23\\Imperial College\\Imperial 2023-2024\\AVD\\pt2\\github sims\\AVD\\iter 1.2\\Opt-Process-2', 
+    includeResultsFrom=LAST, optIter=LAST, models=ALL, steps=(
+    'Loading down with g', ), analysisFieldVariables=('S', 'U'))
+#: Model: C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2/SAVE.odb/Opt-Process-2-Job_025.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       13
+#: Number of Node Sets:          12
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-1/TOSCA_POST/Opt-Process-1-Job_post.odb'])
+o6 = session.openOdb(
+    name='C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2/TOSCA_POST/Opt-Process-2-Job_post.odb')
+#: Model: C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2/TOSCA_POST/Opt-Process-2-Job_post.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       13
+#: Number of Node Sets:          12
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o6)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=ON, geometricRestrictions=ON, stopConditions=ON)
+mdb.save()
+#: The model database has been saved to "C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Blank_iter1_4.cae".

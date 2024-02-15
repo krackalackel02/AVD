@@ -1,0 +1,21 @@
+#
+# ONF 3.1
+#
+# DATA BLOCK 210: Element groups
+#
+   -1
+   -2
+ITERATION=1
+   -2
+   210
+3
+27, 5396
+SOFT_GR_002
+436-2355, 2357-5832
+28, 435
+HARD_GR_002
+1-435
+29, 1
+TRANS_GR_002
+2356
+   -1

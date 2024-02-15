@@ -1,0 +1,8 @@
+Tosca                           : C:\SIMULIA\EstProducts\2022\win_b64
+Tosca Structure Server          : C:\SIMULIA\EstProducts\2022\win_b64\code\bin\SMATocToscaServerMain.exe
+Environment file                : C:\SIMULIA\EstProducts\2022\win_b64\code\command\tosca_env.cmd
+Python interpreter              : C:\SIMULIA\EstProducts\2022\win_b64\tools\SMApy\python3.7\python.exe
+Tosca Structure Python launcher : C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\SMATsoPyControlMain.pyc
+Python path                     : C:\SIMULIA\EstProducts\2022\win_b64\code\python3.7\lib\
+(ERROR   ) [13:53:46.186127|tosca_python] Cannot rename directory C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1 into C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Opt-Process-1_1
+Optimization process failed with an error.

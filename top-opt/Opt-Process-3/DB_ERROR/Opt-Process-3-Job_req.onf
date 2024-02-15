@@ -1,0 +1,44 @@
+#
+# ONF 3.0
+#
+#
+# ONF 3.0
+#
+# Data block 400 - Result request table
+   -1
+   400
+2
+1,640,5,1,-3,1,0
+1
+0.0
+2,642,5,1,-3,1,0
+1
+0.0
+   -1
+#
+# ONF 3.0
+#
+# Data block 440 - Result Request Info sensitivities 
+   -1
+   440
+1
+1
+D-RESPONSE-2
+29,0,0,0
+-
+-
+-1
+0.0000000E+00,0.0000000E+00,0.0000000E+00
+0.0000000E+00,0.0000000E+00,1.000000
+1.000000,0.0000000E+00,0.0000000E+00
+   -1
+#
+# ONF 3.0
+#
+# Data block 10032 - Elem Group Info for solver sensitivities 
+   -1
+ 10032
+1
+ALL_ELEMENTS
+1-5832
+   -1

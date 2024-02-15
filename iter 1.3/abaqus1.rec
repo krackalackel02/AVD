@@ -1,0 +1,365 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(520.0, 228.6))
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    30.0, 118.6), point1=(42.5, 145.0))
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    170.0, 118.6), point1=(150.0, 101.25))
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    490.0, 118.6), point1=(487.5, 83.75))
+mdb.models['Model-1'].sketches['__profile__'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[6], radius=9.0, 
+    textPoint=(85.3196792602539, 41.9957733154297))
+mdb.models['Model-1'].sketches['__profile__'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[7], radius=9.0, 
+    textPoint=(180.881011962891, 34.7354278564453))
+mdb.models['Model-1'].sketches['__profile__'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['__profile__'].geometry[8], radius=9.0, 
+    textPoint=(388.622955322266, 62.7397003173828))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Blank', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Blank'].BaseSolidExtrude(depth=6.3, sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Material(name='Aluminium alloy 6061-T6')
+mdb.models['Model-1'].materials['Aluminium alloy 6061-T6'].Elastic(table=((
+    68900.0, 0.33), ))
+mdb.models['Model-1'].materials['Aluminium alloy 6061-T6'].Density(table=((
+    2.7e-09, ), ))
+mdb.models['Model-1'].HomogeneousSolidSection(material=
+    'Aluminium alloy 6061-T6', name='Aluminium section', thickness=None)
+mdb.models['Model-1'].parts['Blank'].Set(cells=
+    mdb.models['Model-1'].parts['Blank'].cells.getSequenceFromMask(('[#1 ]', ), 
+    ), name='Aluminum blank')
+mdb.models['Model-1'].parts['Blank'].SectionAssignment(offset=0.0, offsetField=
+    '', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Blank'].sets['Aluminum blank'], sectionName=
+    'Aluminium section', thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=OFF, name='Blank-1', 
+    part=mdb.models['Model-1'].parts['Blank'])
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=28.4, name='_profile_', 
+    sheetSize=1136.05, transform=
+    mdb.models['Model-1'].rootAssembly.MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces[7], 
+    sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].edges[0], 
+    sketchOrientation=RIGHT, origin=(260.193908, 114.272207, 6.3)))
+mdb.models['Model-1'].rootAssembly.ReferencePoint(point=(170.0, 118.6, 3.15))
+mdb.models['Model-1'].rootAssembly.Set(name='Loading point', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[4], ))
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces.getSequenceFromMask(
+    ('[#80 ]', ), ), name='Loading set')
+mdb.models['Model-1'].rootAssembly.Set(name='m_Set-3', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.referencePoints[4], ))
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces.getSequenceFromMask(
+    ('[#10 ]', ), ), name='s_Set-3')
+mdb.models['Model-1'].MultipointConstraint(controlPoint=
+    mdb.models['Model-1'].rootAssembly.sets['m_Set-3'], csys=None, mpcType=
+    BEAM_MPC, name='Constraint-1', surface=
+    mdb.models['Model-1'].rootAssembly.sets['s_Set-3'], userMode=DOF_MODE_MPC, 
+    userType=0)
+mdb.models['Model-1'].constraints.changeKey(fromName='Constraint-1', toName=
+    'Loading Constraint')
+mdb.models['Model-1'].rootAssembly.sets.changeKey(fromName='m_Set-3', toName=
+    'loading point set')
+mdb.models['Model-1'].rootAssembly.sets.changeKey(fromName='s_Set-3', toName=
+    'loading inner circle set')
+mdb.models['Model-1'].StaticStep(description=
+    'Loading of the blank with gravity', name='Loading down with g', previous=
+    'Initial')
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces.getSequenceFromMask(
+    ('[#20 ]', ), ), name='Inner left')
+mdb.models['Model-1'].PinnedBC(createStepName='Loading down with g', localCsys=
+    None, name='Fixed left', region=
+    mdb.models['Model-1'].rootAssembly.sets['Inner left'])
+mdb.models['Model-1'].rootAssembly.Set(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces.getSequenceFromMask(
+    ('[#40 ]', ), ), name='Inner right')
+mdb.models['Model-1'].PinnedBC(createStepName='Loading down with g', localCsys=
+    None, name='Inner right', region=
+    mdb.models['Model-1'].rootAssembly.sets['Inner right'])
+mdb.models['Model-1'].Gravity(comp2=-9800.0, createStepName=
+    'Loading down with g', distributionType=UNIFORM, field='', name='Gravity')
+mdb.models['Model-1'].loads['Gravity'].setValues(distributionType=UNIFORM, 
+    field='', region=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].sets['Aluminum blank'])
+mdb.models['Model-1'].ConcentratedForce(cf2=-5000.0, createStepName=
+    'Loading down with g', distributionType=UNIFORM, field='', localCsys=None, 
+    name='Loading centre', region=
+    mdb.models['Model-1'].rootAssembly.sets['Loading point'])
+mdb.models['Model-1'].constraints['Loading Constraint'].setValues(controlPoint=
+    mdb.models['Model-1'].rootAssembly.sets['Loading point'])
+mdb.models['Model-1'].constraints['Loading Constraint'].setValues(surface=
+    mdb.models['Model-1'].rootAssembly.sets['loading inner circle set'])
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=28.4, name='_profile_', 
+    sheetSize=1136.05, transform=
+    mdb.models['Model-1'].rootAssembly.MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces[7], 
+    sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].edges[0], 
+    sketchOrientation=RIGHT, origin=(260.193908, 114.272207, 6.3)))
+mdb.models['Model-1'].rootAssembly.projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['_profile_'])
+mdb.models['Model-1'].sketches['_profile_'].CircleByCenterPerimeter(center=(
+    -229.806092, -4.327793), point1=(-205.9, -21.3))
+mdb.models['Model-1'].sketches['_profile_'].CircleByCenterPerimeter(center=(
+    90.193908, -4.327793), point1=(71.0, -28.4))
+mdb.models['Model-1'].sketches['_profile_'].CircleByCenterPerimeter(center=(
+    230.193908, -4.327793), point1=(213.0, -28.4))
+mdb.models['Model-1'].sketches['_profile_'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['_profile_'].geometry[9], radius=30.0, 
+    textPoint=(-205.057526326172, 43.1434533378906))
+mdb.models['Model-1'].sketches['_profile_'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['_profile_'].geometry[10], radius=30.0, 
+    textPoint=(21.3653252363281, 25.3408715507812))
+mdb.models['Model-1'].sketches['_profile_'].RadialDimension(curve=
+    mdb.models['Model-1'].sketches['_profile_'].geometry[11], radius=30.0, 
+    textPoint=(159.536772990234, 29.7915246269531))
+mdb.models['Model-1'].rootAssembly.PartitionFaceBySketch(faces=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces.getSequenceFromMask(
+    ('[#80 ]', ), ), sketch=mdb.models['Model-1'].sketches['_profile_'], 
+    sketchUpEdge=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].edges[0])
+mdb.models['Model-1'].parts['Blank'].getMassProperties()
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ), size=200)
+mdb.models['Model-1'].rootAssembly.setMeshControls(elemShape=TET, regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), ))
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ))
+mdb.Job(description='jobDescription', model='Model-1', name='Job-MESH-200')
+mdb.jobs['Job-MESH-200'].submit()
+mdb.jobs['Job-MESH-200'].waitForCompletion()
+mdb.Model(name='Model-1-Buckle', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-1-Buckle'].steps.changeKey(fromName='Loading down with g', 
+    toName='buckling')
+mdb.models['Model-1-Buckle'].steps['buckling'].setValues(description=
+    'Loading with buckling')
+mdb.models['Model-1-Buckle'].BuckleStep(blockSize=DEFAULT, description=
+    'buckling', eigensolver=LANCZOS, maintainAttributes=True, maxBlocks=DEFAULT
+    , minEigen=0.0, name='buckling', numEigen=1, previous='Initial')
+del mdb.models['Model-1-Buckle'].loads['Gravity']
+mdb.models['Model-1-Buckle'].loads['Loading centre'].setValues(cf2=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(description='jobDescription', model='Model-1-Buckle', name=
+    'Job-MESH-200-Buckle')
+mdb.jobs['Job-MESH-200-Buckle'].submit()
+mdb.jobs['Job-MESH-200-Buckle'].waitForCompletion()
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ), size=100)
+mdb.models['Model-1'].rootAssembly.setMeshControls(elemShape=TET, regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), ))
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ))
+mdb.Job(description='jobDescription', model='Model-1', name='Job-MESH-100')
+mdb.jobs['Job-MESH-100'].submit()
+mdb.jobs['Job-MESH-100'].waitForCompletion()
+mdb.Model(name='Model-1-Buckle', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-1-Buckle'].steps.changeKey(fromName='Loading down with g', 
+    toName='buckling')
+mdb.models['Model-1-Buckle'].steps['buckling'].setValues(description=
+    'Loading with buckling')
+mdb.models['Model-1-Buckle'].BuckleStep(blockSize=DEFAULT, description=
+    'buckling', eigensolver=LANCZOS, maintainAttributes=True, maxBlocks=DEFAULT
+    , minEigen=0.0, name='buckling', numEigen=1, previous='Initial')
+del mdb.models['Model-1-Buckle'].loads['Gravity']
+mdb.models['Model-1-Buckle'].loads['Loading centre'].setValues(cf2=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(description='jobDescription', model='Model-1-Buckle', name=
+    'Job-MESH-100-Buckle')
+mdb.jobs['Job-MESH-100-Buckle'].submit()
+mdb.jobs['Job-MESH-100-Buckle'].waitForCompletion()
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ), size=50)
+mdb.models['Model-1'].rootAssembly.setMeshControls(elemShape=TET, regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), ))
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ))
+mdb.Job(description='jobDescription', model='Model-1', name='Job-MESH-50')
+mdb.jobs['Job-MESH-50'].submit()
+mdb.jobs['Job-MESH-50'].waitForCompletion()
+mdb.Model(name='Model-1-Buckle', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-1-Buckle'].steps.changeKey(fromName='Loading down with g', 
+    toName='buckling')
+mdb.models['Model-1-Buckle'].steps['buckling'].setValues(description=
+    'Loading with buckling')
+mdb.models['Model-1-Buckle'].BuckleStep(blockSize=DEFAULT, description=
+    'buckling', eigensolver=LANCZOS, maintainAttributes=True, maxBlocks=DEFAULT
+    , minEigen=0.0, name='buckling', numEigen=1, previous='Initial')
+del mdb.models['Model-1-Buckle'].loads['Gravity']
+mdb.models['Model-1-Buckle'].loads['Loading centre'].setValues(cf2=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(description='jobDescription', model='Model-1-Buckle', name=
+    'Job-MESH-50-Buckle')
+mdb.jobs['Job-MESH-50-Buckle'].submit()
+mdb.jobs['Job-MESH-50-Buckle'].waitForCompletion()
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ), size=20.0)
+mdb.models['Model-1'].rootAssembly.setMeshControls(elemShape=TET, regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), ))
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ))
+mdb.Job(description='jobDescription', model='Model-1', name='Job-MESH-20')
+mdb.jobs['Job-MESH-20'].submit()
+mdb.jobs['Job-MESH-20'].waitForCompletion()
+mdb.Model(name='Model-1-Buckle', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-1-Buckle'].steps.changeKey(fromName='Loading down with g', 
+    toName='buckling')
+mdb.models['Model-1-Buckle'].steps['buckling'].setValues(description=
+    'Loading with buckling')
+mdb.models['Model-1-Buckle'].BuckleStep(blockSize=DEFAULT, description=
+    'buckling', eigensolver=LANCZOS, maintainAttributes=True, maxBlocks=DEFAULT
+    , minEigen=0.0, name='buckling', numEigen=1, previous='Initial')
+del mdb.models['Model-1-Buckle'].loads['Gravity']
+mdb.models['Model-1-Buckle'].loads['Loading centre'].setValues(cf2=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(description='jobDescription', model='Model-1-Buckle', name=
+    'Job-MESH-20-Buckle')
+mdb.jobs['Job-MESH-20-Buckle'].submit()
+mdb.jobs['Job-MESH-20-Buckle'].waitForCompletion()
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ), size=10.0)
+mdb.models['Model-1'].rootAssembly.setMeshControls(elemShape=TET, regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), ))
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ))
+mdb.Job(description='jobDescription', model='Model-1', name='Job-MESH-10')
+mdb.jobs['Job-MESH-10'].submit()
+mdb.jobs['Job-MESH-10'].waitForCompletion()
+mdb.Model(name='Model-1-Buckle', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-1-Buckle'].steps.changeKey(fromName='Loading down with g', 
+    toName='buckling')
+mdb.models['Model-1-Buckle'].steps['buckling'].setValues(description=
+    'Loading with buckling')
+mdb.models['Model-1-Buckle'].BuckleStep(blockSize=DEFAULT, description=
+    'buckling', eigensolver=LANCZOS, maintainAttributes=True, maxBlocks=DEFAULT
+    , minEigen=0.0, name='buckling', numEigen=1, previous='Initial')
+del mdb.models['Model-1-Buckle'].loads['Gravity']
+mdb.models['Model-1-Buckle'].loads['Loading centre'].setValues(cf2=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(description='jobDescription', model='Model-1-Buckle', name=
+    'Job-MESH-10-Buckle')
+mdb.jobs['Job-MESH-10-Buckle'].submit()
+mdb.jobs['Job-MESH-10-Buckle'].waitForCompletion()
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ), size=7.5)
+mdb.models['Model-1'].rootAssembly.setMeshControls(elemShape=TET, regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), ))
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ))
+mdb.Job(description='jobDescription', model='Model-1', name='Job-MESH-7')
+mdb.jobs['Job-MESH-7'].submit()
+mdb.jobs['Job-MESH-7'].waitForCompletion()
+mdb.Model(name='Model-1-Buckle', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-1-Buckle'].steps.changeKey(fromName='Loading down with g', 
+    toName='buckling')
+mdb.models['Model-1-Buckle'].steps['buckling'].setValues(description=
+    'Loading with buckling')
+mdb.models['Model-1-Buckle'].BuckleStep(blockSize=DEFAULT, description=
+    'buckling', eigensolver=LANCZOS, maintainAttributes=True, maxBlocks=DEFAULT
+    , minEigen=0.0, name='buckling', numEigen=1, previous='Initial')
+del mdb.models['Model-1-Buckle'].loads['Gravity']
+mdb.models['Model-1-Buckle'].loads['Loading centre'].setValues(cf2=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(description='jobDescription', model='Model-1-Buckle', name=
+    'Job-MESH-7-Buckle')
+mdb.jobs['Job-MESH-7-Buckle'].submit()
+mdb.jobs['Job-MESH-7-Buckle'].waitForCompletion()
+mdb.models['Model-1'].rootAssembly.seedPartInstance(deviationFactor=0.1, 
+    minSizeFactor=0.1, regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ), size=5.0)
+mdb.models['Model-1'].rootAssembly.setMeshControls(elemShape=TET, regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), technique=FREE)
+mdb.models['Model-1'].rootAssembly.setElementType(elemTypes=(ElemType(
+    elemCode=C3D20R, elemLibrary=STANDARD), ElemType(elemCode=C3D15, 
+    elemLibrary=STANDARD), ElemType(elemCode=C3D10, elemLibrary=STANDARD)), 
+    regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ), ))
+mdb.models['Model-1'].rootAssembly.generateMesh(regions=(
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'], ))
+mdb.Job(description='jobDescription', model='Model-1', name='Job-MESH-5')
+mdb.jobs['Job-MESH-5'].submit()
+mdb.jobs['Job-MESH-5'].waitForCompletion()
+mdb.Model(name='Model-1-Buckle', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-1-Buckle'].steps.changeKey(fromName='Loading down with g', 
+    toName='buckling')
+mdb.models['Model-1-Buckle'].steps['buckling'].setValues(description=
+    'Loading with buckling')
+mdb.models['Model-1-Buckle'].BuckleStep(blockSize=DEFAULT, description=
+    'buckling', eigensolver=LANCZOS, maintainAttributes=True, maxBlocks=DEFAULT
+    , minEigen=0.0, name='buckling', numEigen=1, previous='Initial')
+del mdb.models['Model-1-Buckle'].loads['Gravity']
+mdb.models['Model-1-Buckle'].loads['Loading centre'].setValues(cf2=-1.0, 
+    distributionType=UNIFORM, field='')
+mdb.Job(description='jobDescription', model='Model-1-Buckle', name=
+    'Job-MESH-5-Buckle')
+mdb.jobs['Job-MESH-5-Buckle'].submit()
+mdb.jobs['Job-MESH-5-Buckle'].waitForCompletion()

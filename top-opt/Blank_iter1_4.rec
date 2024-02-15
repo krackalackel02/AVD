@@ -1,0 +1,62 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.ModelFromInputFile(inputFileName=
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/Opt-Process-2-Copy_surface_ALL.inp'
+    , name='Opt-Process-2-Copy_surface_ALL')
+mdb.models['Opt-Process-2-Copy_surface_ALL'].parts['PART-1'].writeStepFile(
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/top-opt_iter38.stp')
+#* This part contains no geometry to export.
+mdb.models['Opt-Process-2-Copy_surface_ALL'].parts['PART-1'].writeStepFile(
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/top-opt_iter38.stp')
+#* This part contains no geometry to export.
+del mdb.models['Opt-Process-2-Copy_surface_ALL']
+mdb.ModelFromInputFile(inputFileName=
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/Opt-Process-2-Copy-Job.inp'
+    , name='Opt-Process-2-Copy-Job')
+del mdb.models['Opt-Process-2-Copy-Job']
+mdb.ModelFromInputFile(inputFileName=
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/Opt-Process-2-Copy_surface_ALL.inp'
+    , name='Opt-Process-2-Copy_surface_ALL')
+mdb.models['Opt-Process-2-Copy_surface_ALL'].rootAssembly.writeAcisFile(
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/top-opt_assembly.sat'
+    , 31)
+mdb.models['Opt-Process-2-Copy_surface_ALL'].rootAssembly.writeAcisFile(
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/top-opt_assembly_39.sat'
+    , 26)
+mdb.models['Opt-Process-2-Copy_surface_ALL'].parts['PART-1'].writeStepFile(
+    'C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/top-opt_iter38.stp')
+#* This part contains no geometry to export.
+mdb.meshEditOptions.setValues(enableUndo=True, maxUndoCacheElements=0.5)
+mdb.models['Opt-Process-2-Copy_surface_ALL'].ConstrainedSketch(name=
+    '__profile__', sheetSize=200.0)
+del mdb.models['Opt-Process-2-Copy_surface_ALL'].sketches['__profile__']
+mdb.models['Opt-Process-2-Copy_surface_ALL'].parts['PART-1'].setValues(space=
+    THREE_D, type=DEFORMABLE_BODY)
+mdb.models['Opt-Process-2-Copy_surface_ALL'].ConstrainedSketch(name=
+    '__profile__', sheetSize=200.0)
+del mdb.models['Opt-Process-2-Copy_surface_ALL'].sketches['__profile__']
+mdb.models['Model-1'].rootAssembly.deleteMesh(regions=
+    mdb.models['Model-1'].rootAssembly.instances['Blank-1'].cells.getSequenceFromMask(
+    ('[#1 ]', ), ))
+mdb.models['Model-1'].ConstrainedSketch(gridSpacing=28.4, name='__profile__', 
+    sheetSize=1136.05, transform=
+    mdb.models['Model-1'].rootAssembly.MakeSketchTransform(
+    sketchPlane=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].faces[2], 
+    sketchPlaneSide=SIDE1, 
+    sketchUpEdge=mdb.models['Model-1'].rootAssembly.instances['Blank-1'].edges[12], 
+    sketchOrientation=RIGHT, origin=(262.305188, 113.96959, 6.3)))
+mdb.models['Model-1'].rootAssembly.projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']

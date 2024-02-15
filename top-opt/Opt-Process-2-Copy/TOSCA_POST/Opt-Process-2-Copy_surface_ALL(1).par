@@ -1,0 +1,17 @@
+! Auto generated file by SIMULIA Tosca Structure Driver
+
+SMOOTH
+  ID_NAME = Opt-Process-2-Copy_surface_ALL
+  OUTPUT_FILE = "Opt-Process-2-Copy_surface_ALL"
+  TASK = ISO
+  ISO_VALUE = 0.3
+  SMOOTH_CYCLES = 5
+  REDUCTION_RATE = 0
+  REDUCTION_ANGLE = 15
+  TARGET_VOLUME = 0
+  RESULT_FILTERING = OFF
+  FORMAT = INP
+  DESIGN_CYCLE = 38
+  DATABASE = opt_res_database
+END_
+

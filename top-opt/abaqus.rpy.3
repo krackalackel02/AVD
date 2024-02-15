@@ -1,0 +1,123 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-18.57.30 176069
+# Run by Daniel Gutierrez on Thu Feb  8 15:50:01 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=127.248046875, 
+    height=143.409729003906)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Blank_iter1_4.cae')
+#: The model database "C:\Users\Daniel Gutierrez\Desktop\Back up 28-06-23\Imperial College\Imperial 2023-2024\AVD\pt2\github sims\AVD\iter 1.2\Blank_iter1_4.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['Blank']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTask='Task-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    step='Loading down with g')
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+odb = session.mdbData['Model-1-Buckle']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.mdbData['Model-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: Warning: The selected Primary Variable is not available in the current frame for any elements in the current display group.
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+o6 = session.openOdb(
+    name='C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/TOSCA_POST/Opt-Process-2-Copy-Job_post.odb')
+#: Model: C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/TOSCA_POST/Opt-Process-2-Copy-Job_post.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       13
+#: Number of Node Sets:          12
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].setValues(displayedObject=o6)
+session.viewports['Viewport: 1'].makeCurrent()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/TOSCA_POST/Opt-Process-2-Copy-Job_post.odb'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=873.772, 
+    farPlane=1444.53, width=508.007, height=231.893, viewOffsetX=-5.32642, 
+    viewOffsetY=0.109101)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/TOSCA_POST/Opt-Process-2-Copy-Job_post.odb'])
+odb = session.odbs['C:/Users/Daniel Gutierrez/Desktop/Back up 28-06-23/Imperial College/Imperial 2023-2024/AVD/pt2/github sims/AVD/iter 1.2/Opt-Process-2-Copy/TOSCA_POST/Opt-Process-2-Copy-Job_post.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=6 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=7 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=8 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=9 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=10 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=11 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=12 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=13 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=14 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=15 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=16 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=17 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=18 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=19 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=20 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=21 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=22 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=23 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=24 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=25 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=26 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=27 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=28 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=29 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=30 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=31 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=32 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=33 )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: Warning: The selected Primary Variable is not available in the current frame for any elements in the current display group.
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: Warning: The selected Primary Variable is not available in the current frame for any elements in the current display group.
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=38 )
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF, optimizationTasks=ON, 
+    geometricRestrictions=ON, stopConditions=ON)

@@ -1,0 +1,22 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB Job-MESH-100-Buckle
+Abaqus 2022
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens from Flexnet server abaqusae.cc.ic.ac.uk.
+<3154 out of 3200 licenses remain available>.
+Begin Analysis Input File Processor
+06/02/2024 13:10:40
+Run pre.exe
+06/02/2024 13:10:42
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+06/02/2024 13:10:42
+Run standard.exe
+06/02/2024 13:10:44
+End Abaqus/Standard Analysis
+Begin SIM Wrap-up
+06/02/2024 13:10:46
+Run SMASimUtility.exe
+06/02/2024 13:10:46
+End SIM Wrap-up
+Abaqus JOB Job-MESH-100-Buckle COMPLETED

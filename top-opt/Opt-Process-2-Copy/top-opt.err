@@ -1,0 +1,8 @@
+
+ACIS error message:
+	save file is from a later version of Acis
+
+Error: Failed to read SAT file.
+SAT-out did not complete successfully.
+Context: Record ending on line number 1
+         OR one of its fields.
