@@ -108,17 +108,17 @@ MODELS = ['GenDes1',
 
 def mesh_number(PART_NAME,start,stop,steps):
     if PART_NAME == "Blank":
-        start = 3.0+2.5*steps if start<3.0 else start
-        stop = 3.0 if stop<3.0 else stop
+        start = 4.0+2.5*steps if start<4.0 else start
+        stop = 4.0 if stop<4.0 else stop
         MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)] if steps>1 else [start]
         return MESH
     else:
         MESH = [round(start + ((stop - start) / (steps-1)) * i,2) for i in range(steps)] if steps>1 else [start]
         return MESH
         
-start=10.0
+start=3.0
 stop=2.75
-steps=5
+steps=1
 
 
 for part in MODELS:
@@ -161,6 +161,29 @@ for part in MODELS:
                 variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U2'), )
             session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_deflection_visualisation'), format=PNG, canvasObjects=(
                 session.viewports['Viewport: 1'], ))
+            session.printOptions.setValues(vpBackground=ON, compass=ON)
+            session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+                UNDEFORMED, ))
+            session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_undeformed_visualisation'), format=PNG, canvasObjects=(
+                session.viewports['Viewport: 1'], ))
+            print("HERE1")
+            absolute_path = os.path.join(current_directory, relative_path+'-Buckle.odb')
+            print("HERE2")
+            o2 = session.openOdb(name=absolute_path)
+            print("HERE3")
+            session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+            session.viewports['Viewport: 1'].makeCurrent()
+            print("HERE4")
+            session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+                CONTOURS_ON_DEF, ))
+            print("HERE5")
+            session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+                variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+                'Magnitude'), )
+            session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_buckled_visualisation'), format=PNG, canvasObjects=(
+                session.viewports['Viewport: 1'], ))
+            print("THERE")
+
 
 
 
