@@ -12,6 +12,8 @@ from sketch import *
 from visualization import *
 from connectorBehavior import *
 import os
+import sys
+import webbrowser
 # import matplotlib
 # matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -87,10 +89,12 @@ MODEL_LOAD = -7.5e3
 
 # MESH = [20.0]
 
-GEOMETRY_FOLDER = "iter 1_8"
+GEOMETRY_FOLDER = sys.argv[1] if len(sys.argv)==2 else "iter 1_10"
 current_directory = os.getcwd()
 geometry_directory = os.path.join(current_directory,GEOMETRY_FOLDER,'Geometry')
 texts_directory = os.path.join(current_directory,GEOMETRY_FOLDER, 'Results')
+with open(os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt'), 'w') as file:
+    pass
 
 # # # # # # # # # # # # # MESH PICKER
 MESH_START=3.0
@@ -103,7 +107,7 @@ MESH_STEPS=1
 MODELS = [os.path.splitext(file)[0] for file in os.listdir(geometry_directory) if file.endswith('.step')]
 
 
-###Run only 1 of the models
+# # ###Run only 1 of the models
 MODELS = MODELS[:1]
 
 # # # # Run Select Files
@@ -206,4 +210,16 @@ for part in MODELS:
     plotdeflect(DEFLECTION,ELEMENTS)
     plotstress(STRESS,ELEMENTS)
     plotbuckle(BUCKLING,ELEMENTS)
+    with open(os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt'), 'a') as file:
+        file.write("Part: {}\n".format(PART_NAME))
+        file.write("Buckle: {} [N]\n".format(BUCKLING[-1]))
+        file.write("Stress: {} [N]\n".format(STRESS[-1]))
+        file.write("Deflection: {} [mm]\n".format(DEFLECTION[-1]))
+        file.write("Mass: {} g\n".format(mass_in_grams))
 
+
+path=os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt')
+file_path=os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt')
+absolute_file_path = os.path.abspath(file_path)
+url_file_path = 'file://' + absolute_file_path
+webbrowser.open(url_file_path)

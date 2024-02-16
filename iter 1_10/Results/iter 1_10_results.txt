@@ -1,0 +1,5 @@
+Part: GenDes2Fixedv10
+Buckle: 7598.4 [N]
+Stress: 328.244 [N]
+Deflection: 0.672064 [mm]
+Mass: 203.360255765 g
