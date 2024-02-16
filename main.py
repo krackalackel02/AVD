@@ -14,6 +14,8 @@ from connectorBehavior import *
 import os
 import sys
 import webbrowser
+
+
 # import matplotlib
 # matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -89,11 +91,17 @@ MODEL_LOAD = -7.5e3
 
 # MESH = [20.0]
 
-GEOMETRY_FOLDER = sys.argv[1] if len(sys.argv)==2 else "iter 1_10"
+GEOMETRY_FOLDER = sys.argv[-1] if "iter" in sys.argv[-1].lower() else "iter 1_10"
 current_directory = os.getcwd()
 geometry_directory = os.path.join(current_directory,GEOMETRY_FOLDER,'Geometry')
+if not os.path.exists(geometry_directory):
+    os.makedirs(geometry_directory)
 texts_directory = os.path.join(current_directory,GEOMETRY_FOLDER, 'Results')
-with open(os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt'), 'w') as file:
+if not os.path.exists(texts_directory):
+    os.makedirs(texts_directory)
+result_file = os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt')
+with open(os.path.join(result_file), 'w') as file:
+    file.write("Folder: {}\n".format(GEOMETRY_FOLDER))
     pass
 
 # # # # # # # # # # # # # MESH PICKER
@@ -108,7 +116,7 @@ MODELS = [os.path.splitext(file)[0] for file in os.listdir(geometry_directory) i
 
 
 # # ###Run only 1 of the models
-MODELS = MODELS[:1]
+# MODELS = MODELS[:1]
 
 # # # # Run Select Files
 # MODELS = ['TopOptNewv1',
@@ -210,7 +218,7 @@ for part in MODELS:
     plotdeflect(DEFLECTION,ELEMENTS)
     plotstress(STRESS,ELEMENTS)
     plotbuckle(BUCKLING,ELEMENTS)
-    with open(os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt'), 'a') as file:
+    with open(result_file, 'a') as file:
         file.write("Part: {}\n".format(PART_NAME))
         file.write("Buckle: {} [N]\n".format(BUCKLING[-1]))
         file.write("Stress: {} [N]\n".format(STRESS[-1]))
@@ -218,8 +226,8 @@ for part in MODELS:
         file.write("Mass: {} g\n".format(mass_in_grams))
 
 
-path=os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt')
-file_path=os.path.join(texts_directory,GEOMETRY_FOLDER+'_results.txt')
-absolute_file_path = os.path.abspath(file_path)
+
+
+absolute_file_path = os.path.abspath(result_file)
 url_file_path = 'file://' + absolute_file_path
 webbrowser.open(url_file_path)

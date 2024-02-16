@@ -32,7 +32,7 @@ set "newFolder=iter %maxMajor%_%maxMinor%"
 echo Running Abaqus with folder: %newFolder%
 
 REM Uncomment the following line once debugging is complete and you're sure the correct folder is passed
-abaqus cae nogui="main.py" -- %newFolder%
+abaqus cae nogui="main.py" -- "%newFolder%"
 
 :: Debugging line before running Abaqus to ensure the correct folder is passed
 call "file remover.bat"
