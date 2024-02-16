@@ -14,9 +14,16 @@ DRESP
   ID_NAME = D-Response-1
   LIST = NO_LIST
   DEF_TYPE = SYSTEM
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
   TYPE = VOLUME
   EL_GROUP = ALL_ELEMENTS
   GROUP_OPER = SUM
+=======
+  TYPE = SIG_TOPO_MISES
+  EL_GROUP = ALL_ELEMENTS
+  GROUP_OPER = MAX
+  LC_SET = ALL, 1, ALL
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
 END_
 ! ----------------------------------------------------------------
 ! 
@@ -26,10 +33,16 @@ DRESP
   ID_NAME = D-Response-2
   LIST = NO_LIST
   DEF_TYPE = SYSTEM
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
   TYPE = STRAIN_ENERGY
   EL_GROUP = ALL_ELEMENTS
   GROUP_OPER = SUM
   LC_SET = ALL, 1, ALL
+=======
+  TYPE = WEIGHT
+  EL_GROUP = ALL_ELEMENTS
+  GROUP_OPER = SUM
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
 END_
 ! ----------------------------------------------------------------
 ! 
@@ -45,7 +58,11 @@ END_
 ! 
 OBJ_FUNC
   ID_NAME = Objective-1
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
   DRESP = D-Response-2, 1.
+=======
+  DRESP = D-Response-1, 1.
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
   TARGET = MIN
 END_
 ! ----------------------------------------------------------------
@@ -54,12 +71,17 @@ END_
 ! 
 CONSTRAINT
   ID_NAME = Opt-Constraint-1
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
   DRESP = D-Response-1
+=======
+  DRESP = D-Response-2
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
   MAGNITUDE = REL
   LE_VALUE = 0.2
 END_
 ! ----------------------------------------------------------------
 ! 
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
 ! Geometric Restriction: Restrict-1
 ! 
 DVCON_TOPO
@@ -87,22 +109,31 @@ DVCON_TOPO
 END_
 ! ----------------------------------------------------------------
 ! 
+=======
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
 ! Task: Task-1
 ! 
 OPTIMIZE
   ID_NAME = Task-1
   DV = Task-1_DESIGN_AREA_
   OBJ_FUNC = Objective-1
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
   DVCON = Restrict-1
   DVCON = Restrict-2
   DVCON = Restrict-3
+=======
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
   CONSTRAINT = Opt-Constraint-1
   STRATEGY = TOPO_SENSITIVITY
 END_
 OPT_PARAM
   ID_NAME = Task-1_OPT_PARAM_
   OPTIMIZE = Task-1
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
   AUTO_FROZEN = LOAD
+=======
+  AUTO_FROZEN = BOTH
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
   DENSITY_UPDATE = NORMAL
   DENSITY_LOWER = 0.001
   DENSITY_UPPER = 1.
@@ -116,10 +147,17 @@ OPT_PARAM
 END_
 STOP
   ID_NAME = Task-1_GLOBAL_STOP_CONDITION_
+<<<<<<< HEAD:top-opt/Opt-Process-1.par
   ITER_MAX = 25
 END_
 DRIVER
 driver.Solver.AddCallArgs = ['message', 'messaging_mechanism=DIRECT', 'listener_name=Daniel-Gutierrez', 'listener_resource=28208', 'direct_port=51861',  'memory=90%',]
+=======
+  ITER_MAX = 10
+END_
+DRIVER
+driver.Solver.AddCallArgs = ['message', 'messaging_mechanism=DIRECT', 'listener_name=Daniel-Gutierrez', 'listener_resource=16292', 'direct_port=51714',  'memory=90%',]
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1.par
 config.registerSaveRule(UpdateRules.MOVE, CheckPoints.CYCLE_COMPLETE, EventTimes.NEVER, [ '*.odb' ], 'SAVE.odb') 
 config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, EventTimes.LAST, [ '*.odb' ], 'SAVE.odb', '_%i' )
 config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, EventTimes.LAST, [ '*.msg' ], 'SAVE.msg', '_%i' )

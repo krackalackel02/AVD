@@ -14,9 +14,16 @@ DRESP
   ID_NAME = D-Response-1
   LIST = NO_LIST
   DEF_TYPE = SYSTEM
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
   TYPE = WEIGHT
   EL_GROUP = ALL_ELEMENTS
   GROUP_OPER = SUM
+=======
+  TYPE = SIG_TOPO_MISES
+  EL_GROUP = ALL_ELEMENTS
+  GROUP_OPER = MAX
+  LC_SET = ALL, 1, ALL
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
 END_
 ! ----------------------------------------------------------------
 ! 
@@ -26,10 +33,16 @@ DRESP
   ID_NAME = D-Response-2
   LIST = NO_LIST
   DEF_TYPE = SYSTEM
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
   TYPE = ENERGY_STIFF_MEASURE
   EL_GROUP = ALL_ELEMENTS
   GROUP_OPER = SUM
   LC_SET = ALL, 1, ALL
+=======
+  TYPE = WEIGHT
+  EL_GROUP = ALL_ELEMENTS
+  GROUP_OPER = SUM
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
 END_
 ! ----------------------------------------------------------------
 ! 
@@ -45,8 +58,13 @@ END_
 ! 
 OBJ_FUNC
   ID_NAME = Objective-1
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
   DRESP = D-Response-2, 1.
   TARGET = MAX
+=======
+  DRESP = D-Response-1, 1.
+  TARGET = MIN
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
 END_
 ! ----------------------------------------------------------------
 ! 
@@ -54,6 +72,7 @@ END_
 ! 
 CONSTRAINT
   ID_NAME = Opt-Constraint-1
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
   DRESP = D-Response-1
   MAGNITUDE = REL
   LE_VALUE = 0.2
@@ -84,6 +103,11 @@ DVCON_TOPO
   ID_NAME = Restrict-3
   EL_GROUP = Set-9_ELEM
   CHECK_TYPE = FROZEN
+=======
+  DRESP = D-Response-2
+  MAGNITUDE = REL
+  LE_VALUE = 0.5
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
 END_
 ! ----------------------------------------------------------------
 ! 
@@ -93,16 +117,23 @@ OPTIMIZE
   ID_NAME = Task-1
   DV = Task-1_DESIGN_AREA_
   OBJ_FUNC = Objective-1
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
   DVCON = Restrict-1
   DVCON = Restrict-2
   DVCON = Restrict-3
+=======
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
   CONSTRAINT = Opt-Constraint-1
   STRATEGY = TOPO_SENSITIVITY
 END_
 OPT_PARAM
   ID_NAME = Task-1_OPT_PARAM_
   OPTIMIZE = Task-1
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
   AUTO_FROZEN = LOAD
+=======
+  AUTO_FROZEN = BOTH
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
   DENSITY_UPDATE = NORMAL
   DENSITY_LOWER = 0.001
   DENSITY_UPPER = 1.
@@ -119,12 +150,23 @@ STOP
   ITER_MAX = 50
 END_
 DRIVER
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
 driver.Solver.AddCallArgs = ['message', 'messaging_mechanism=DIRECT', 'listener_name=Daniel-Gutierrez', 'listener_resource=28208', 'direct_port=51861',  'memory=90%',]
+=======
+driver.Solver.AddCallArgs = ['message', 'messaging_mechanism=DIRECT', 'listener_name=Daniel-Gutierrez', 'listener_resource=16292', 'direct_port=51714',  'memory=90%',]
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
 config.registerSaveRule(UpdateRules.MOVE, CheckPoints.CYCLE_COMPLETE, EventTimes.NEVER, [ '*.odb' ], 'SAVE.odb') 
 config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, EventTimes.LAST, [ '*.odb' ], 'SAVE.odb', '_%i' )
 config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, EventTimes.LAST, [ '*.msg' ], 'SAVE.msg', '_%i' )
 config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, EventTimes.LAST, [ '*.dat' ], 'SAVE.dat', '_%i' )
 config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, EventTimes.LAST, [ '*.sta' ], 'SAVE.sta', '_%i' )
+<<<<<<< HEAD:top-opt/Opt-Process-1/Opt-Process-1.par
+=======
+config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, (EventTimes.FREQ, 10), [ '*.odb' ], 'SAVE.odb', '_%i' )
+config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, (EventTimes.FREQ, 10), [ '*.msg' ], 'SAVE.msg', '_%i' )
+config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, (EventTimes.FREQ, 10), [ '*.dat' ], 'SAVE.dat', '_%i' )
+config.registerSaveRule( UpdateRules.COPY, CheckPoints.CYCLE_COMPLETE, (EventTimes.FREQ, 10), [ '*.sta' ], 'SAVE.sta', '_%i' )
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/Opt-Process-1.par
 driver.registerCheckPointHook(CheckPoints.ITER_COMPLETE, HookTypes.POST, EventTimes.EVER, [ driver.Solver.Path, 'python', '-m', 'driverWriteOnfToOdb', '--type', OptimizationTypes.toOnf(driver.OptimizationType), '--inp', SMATsoUtil.basename(driver.FemInput.MasterFile) ], True, silent=True)
 driver.Solver.RemoveUserRequests = False
 END_

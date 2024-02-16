@@ -6,6 +6,7 @@
 #
    -1
    200
+<<<<<<< HEAD:top-opt/Opt-Process-1/SAVE.onf/Opt-Process-1-Job_grp.onf
 20
 1, 11996
 "Blank-1_Aluminum blank"
@@ -67,12 +68,58 @@ SET-8_NODE
 20, 171
 SET-9_NODE
 3-5, 61-107, 568-688
+=======
+14
+1, 12210
+"Blank-1_Aluminum blank"
+1-12210
+2, 24
+"Inner left"
+13-24, 6118-6129
+3, 24
+"Inner right"
+1-12, 6106-6117
+4, 1
+"Loading point"
+12211
+5, 6105
+"Loading set"
+6106-12210
+6, 24
+"loading inner circle set"
+25-36, 6130-6141
+7, 1
+"loading point set"
+12211
+8, 12210
+SET-8
+1-12210
+9, 12210
+"Blank-1_Aluminum blank_NODE"
+1-12210
+10, 24
+"Inner left_NODE"
+13-24, 6118-6129
+11, 24
+"Inner right_NODE"
+1-12, 6106-6117
+12, 6105
+"Loading set_NODE"
+6106-12210
+13, 24
+"loading inner circle set_NODE"
+25-36, 6130-6141
+14, 12210
+SET-8_NODE
+1-12210
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/SAVE.onf/Opt-Process-1-Job_grp.onf
    -1
 #
 # DATA BLOCK 210: Element groups
 #
    -1
    210
+<<<<<<< HEAD:top-opt/Opt-Process-1/SAVE.onf/Opt-Process-1-Job_grp.onf
 20
 1, 5832
 "Blank-1_Aluminum blank"
@@ -134,4 +181,49 @@ SET-8_ELEM
 20, 146
 SET-9_ELEM
 145-290
+=======
+14
+1, 5939
+"Blank-1_Aluminum blank"
+1-5939
+2, 12
+"Inner left"
+132, 192, 193, 195-198, 201, 2111, 2112-2118:3
+3, 12
+"Inner right"
+62, 69, 71, 93, 119-123, 800, 832, 2119
+4, 5939
+"Loading set"
+1-5939
+5, 12
+"loading inner circle set"
+209-211, 233, 234, 284, 286, 309, 327, 2101, 2107, 2116
+6, 5939
+ELSET_MASS_CONTRIB
+1-5939
+7, 5939
+SET-8
+1-5939
+8, 5939
+_BLANK-1_ALL_ELEMENTS
+1-5939
+9, 5939
+"Blank-1_Aluminum blank_ELEM"
+1-5939
+10, 12
+"Inner left_ELEM"
+132, 192, 193, 195-198, 201, 2111, 2112-2118:3
+11, 12
+"Inner right_ELEM"
+62, 69, 71, 93, 119-123, 800, 832, 2119
+12, 5939
+"Loading set_ELEM"
+1-5939
+13, 12
+"loading inner circle set_ELEM"
+209-211, 233, 234, 284, 286, 309, 327, 2101, 2107, 2116
+14, 5939
+SET-8_ELEM
+1-5939
+>>>>>>> e548f7b3a2534b26fcb4b8e3171f1cc780b43667:iter 1.2/Opt-Process-1/SAVE.onf/Opt-Process-1-Job_grp.onf
    -1
