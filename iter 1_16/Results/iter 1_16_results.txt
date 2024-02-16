@@ -1,0 +1,6 @@
+Folder: iter 1_16
+Part: BlatantCopyOfGroup15
+Buckle: 4737.3 [N]
+Stress: 1437.74 [N]
+Deflection: 5.19094 [mm]
+Mass: 193.846959432 g

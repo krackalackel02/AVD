@@ -32,6 +32,11 @@ set "newFolder=iter %maxMajor%_%maxMinor%"
 echo Running Abaqus with folder: %newFolder%
 
 REM Uncomment the following line once debugging is complete and you're sure the correct folder is passed
-abaqus cae script="main.py" -- "NO PLOT" "%newFolder%"
+call abaqus cae nogui="main.py" -- "PLOT" "%newFolder%"
 
+:: Debugging line before running Abaqus to ensure the correct folder is passed
+echo  ALERT: Press Enter to run cleanup and remove odb files!!!!!!!
+echo  ALERT: or close window to keep odb files!!!
+pause
+call "file remover.bat"
 endlocal

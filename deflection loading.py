@@ -153,6 +153,6 @@ if not os.path.exists(texts_directory):
 assembly=mdb.models[MODEL_NAME].rootAssembly
 session.viewports['Viewport: 1'].setValues(displayedObject=assembly)
 mass_in_grams = mdb.models[MODEL_NAME].parts[PART_NAME].getMassProperties()['volume'] * MATERIAL_DESNITY * 1e6
-with open(os.path.join(texts_directory, PART_NAME + '_mass.txt'), 'w') as file:
-    file.write("Mass: {} g\n".format(mass_in_grams))
+# with open(os.path.join(texts_directory, PART_NAME + '_mass.txt'), 'w') as file:
+#     file.write("Mass: {} g\n".format(mass_in_grams))
 

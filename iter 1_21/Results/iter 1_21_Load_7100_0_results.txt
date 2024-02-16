@@ -1,0 +1,7 @@
+Folder: iter 1_21
+Part: GenDes2Fixedv64
+Load: 7100.0 [N]
+Buckle: 7524.5 [N]
+Stress: 234.266 [N]
+Deflection: 0.652698 [mm]
+Mass: 185.755453297 g

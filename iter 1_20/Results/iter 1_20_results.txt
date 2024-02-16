@@ -1,0 +1,6 @@
+Folder: iter 1_20
+Part: hello_world
+Buckle: 7557.4 [N]
+Stress: 275.006 [N]
+Deflection: 0.743409 [mm]
+Mass: 188.450713682 g
