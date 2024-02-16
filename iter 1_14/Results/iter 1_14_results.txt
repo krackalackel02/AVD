@@ -1,0 +1,36 @@
+Folder: iter 1_14
+Part: GenDes2Fixedv40
+Buckle: 8326.3 [N]
+Stress: 329.794 [N]
+Deflection: 0.692715 [mm]
+Mass: 210.103167884 g
+Part: GenDes2Fixedv41
+Buckle: 7452.1 [N]
+Stress: 231.194 [N]
+Deflection: 0.629736 [mm]
+Mass: 201.980326141 g
+Part: GenDes2Fixedv42
+Buckle: 8106.4 [N]
+Stress: 227.152 [N]
+Deflection: 0.637465 [mm]
+Mass: 201.35941895 g
+Part: GenDes2Fixedv43
+Buckle: 8013.3 [N]
+Stress: 229.468 [N]
+Deflection: 0.652586 [mm]
+Mass: 197.853195883 g
+Part: GenDes2Fixedv44
+Buckle: 11471.0 [N]
+Stress: 353.362 [N]
+Deflection: 1.23527 [mm]
+Mass: 189.3990024 g
+Part: GenDes2Fixedv45
+Buckle: 11341.0 [N]
+Stress: 351.92 [N]
+Deflection: 1.23959 [mm]
+Mass: 188.138975974 g
+Part: GenDes2Fixedv46
+Buckle: 11609.0 [N]
+Stress: 268.841 [N]
+Deflection: 0.900777 [mm]
+Mass: 214.619755824 g

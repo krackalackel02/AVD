@@ -79,6 +79,29 @@ def plotbuckle(BUCKLE, ELEMENTS):
     plt.savefig(os.path.join(texts_directory, PART_NAME+'_buckle_plot.png'))
     plt.close()
 
+def PrintView(FILENAME,UNDEFORM=False):
+    session.viewports['Viewport: 1'].view.fitView()
+    session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+    session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+        visibleEdges=FEATURE)
+    if not UNDEFORM:
+        cmap=session.viewports['Viewport: 1'].colorMappings['Default']
+        session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+        session.viewports['Viewport: 1'].view.setValues(nearPlane=967.319, 
+            farPlane=1096.37, width=592.232, height=324.696, cameraPosition=(215.168, 
+            52.8702, 1175), cameraTarget=(215.168, 52.8702, 3.15466), 
+            viewOffsetX=-40.94906, viewOffsetY=-7.02093)
+    else:
+        session.viewports['Viewport: 1'].view.fitView()
+        cmap=session.viewports['Viewport: 1'].colorMappings['Part instance']
+        session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+
+    session.pngOptions.setValues(imageSize=(1334, 730))
+    session.printOptions.setValues(vpBackground=ON, reduceColors=False, compass=ON)
+    session.printToFile(fileName=FILENAME, format=PNG, canvasObjects=(
+    session.viewports['Viewport: 1'], ))
+
+
 
 MODEL_NAME = "Model-1"
 MATERIAL_NAME = 'Aluminium alloy 6061-T6'
@@ -174,23 +197,14 @@ for part in MODELS:
             session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
                 variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
                 'Mises'), )
-            session.viewports['Viewport: 1'].view.fitView()
-            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
-            session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_stress_visualisation'), format=PNG, canvasObjects=(
-                session.viewports['Viewport: 1'], ))
+            PrintView(os.path.join(texts_directory,PART_NAME+'_stress_visualisation'))
             session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
                 variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U2'), )
-            session.viewports['Viewport: 1'].view.fitView()
-            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
-            session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_deflection_visualisation'), format=PNG, canvasObjects=(
-                session.viewports['Viewport: 1'], ))
+            PrintView(os.path.join(texts_directory,PART_NAME+'_deflection_visualisation'))
             session.printOptions.setValues(vpBackground=ON, compass=ON)
             session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
                 UNDEFORMED, ))
-            session.viewports['Viewport: 1'].view.fitView()
-            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
-            session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_undeformed_visualisation'), format=PNG, canvasObjects=(
-                session.viewports['Viewport: 1'], ))
+            PrintView(os.path.join(texts_directory,PART_NAME+'_undeformed_visualisation'),UNDEFORM=True)
             print("HERE1")
             absolute_path = os.path.join(current_directory, relative_path+'-Buckle.odb')
             print("HERE2")
@@ -205,10 +219,7 @@ for part in MODELS:
             session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
                 variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
                 'Magnitude'), )
-            session.viewports['Viewport: 1'].view.fitView()
-            session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
-            session.printToFile(fileName=os.path.join(texts_directory,PART_NAME+'_buckled_visualisation'), format=PNG, canvasObjects=(
-                session.viewports['Viewport: 1'], ))
+            PrintView(os.path.join(texts_directory,PART_NAME+'_buckled_visualisation'))
             print("THERE")
 
 

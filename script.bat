@@ -35,5 +35,5 @@ REM Uncomment the following line once debugging is complete and you're sure the 
 abaqus cae nogui="main.py" -- "%newFolder%"
 
 :: Debugging line before running Abaqus to ensure the correct folder is passed
-call "file remover.bat"
+
 endlocal
